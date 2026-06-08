@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Poradnik POD — CyberBober 1.2</title>
+<title>CyberBober 1.2 — Raporty POD · Subskrypcja BASIC & PRO</title>
 <meta name="description" content="CyberBober 1.2 — 3 raporty tygodniowo z gotowymi niszami POD, promptami AI i danymi SEO. Plan BASIC 29,99 zł · PRO 59,99 zł. Darmowy poradnik w zestawie.">
 <meta property="og:title" content="CyberBober 1.2 — Raporty POD dla twórców">
 <meta property="og:description" content="3 maile tygodniowo z gotowymi niszami, promptami AI i SEO. Od maila do live produktu w 25 minut.">
@@ -51,7 +51,7 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
 .sb-footer{padding:12px 16px;border-top:1px solid var(--border);font-size:10px;color:var(--muted);text-align:center}
 
 /* ── MAIN ── */
-#main{margin-left:var(--sidebar-w);flex:1;padding:0 0 0;transition:margin-left .3s}
+#main{margin-left:var(--sidebar-w);flex:1;padding:0 0 80px;transition:margin-left .3s}
 
 /* ── LANDING ── */
 .landing{background:linear-gradient(180deg,#06060f 0%,#0f0f1a 40%,#0f0f1a 100%);position:relative;overflow:hidden;scroll-margin-top:0}
@@ -449,7 +449,12 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
 .landing{background:linear-gradient(180deg,#06060f 0%,#0f0f1a 40%,#0f0f1a 100%);position:relative;overflow:hidden;scroll-margin-top:0}
 </style>
 </head>
+</head>
 <body>
+
+<button id="menu-toggle" onclick="toggleSidebar()">☰</button>
+<div id="progress-bar"></div>
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <!-- SIDEBAR -->
 <nav id="sidebar">
@@ -460,9 +465,9 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
   </div>
   <div class="sb-nav">
     <div class="nav-sep">Subskrypcja</div>
-    <a href="#landing" class="nav-link" style="background:#f59e0b15;border:1px solid #f59e0b30;margin-bottom:6px">
+    <a href="index.html" class="nav-link" style="background:#f59e0b15;border:1px solid #f59e0b30;margin-bottom:6px">
       <span class="ch-icon">🦫</span>
-      <span><span class="ch-num" style="color:var(--gold)">CyberBober 1.2</span><span style="color:var(--gold);font-weight:700">Kup dostęp</span></span>
+      <span><span class="ch-num" style="color:var(--gold)">← Powrót</span><span style="color:var(--gold);font-weight:700">Strona główna</span></span>
     </a>
     <div class="nav-sep">Poradnik</div>
     <a href="#intro" class="nav-link active">
@@ -497,8 +502,8 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
   <div class="sb-footer">🦫 CyberBober 1.2 © 2026</div>
 </nav>
 
-<main id="main">
 
+<main id="main">
 <!-- PORADNIK HERO -->
 <section class="hero" id="intro">  <span class="beaver">🦫</span>
   <div class="sub">CyberBober 1.2</div>
@@ -1092,9 +1097,28 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
   <div style="margin-top:24px;font-size:11px;color:var(--muted)">🦫 CyberBober 1.2 Poradnik POD © 2026 • Dla klientów BASIC i PRO</div>
 </div>
 
+
+<footer style="background:#06060f;border-top:1px solid var(--border);padding:28px 48px;text-align:center">
+  <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px">
+    <span style="font-size:22px">🦫</span>
+    <strong style="font-family:'Orbitron',monospace;font-size:13px;font-weight:900;color:var(--gold)">CyberBober 1.2</strong>
+  </div>
+  <div style="font-size:11px;color:var(--muted);line-height:1.8">
+    <strong style="color:var(--text)">OOMMEN STUDIO INTELLIGENCE UNIT</strong> · 2026<br>
+    Automatyczny system raportów POD oparty na AI · Wszelkie prawa zastrzeżone
+  </div>
+  <div style="margin-top:12px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap">
+    <a href="index.html" style="font-size:11px;color:var(--purple);text-decoration:none">← Strona główna</a>
+    <a href="https://buy.stripe.com/6oU5kD5qP1TH4zf824cEw00" target="_blank" style="font-size:11px;color:var(--muted);text-decoration:none">Subskrypcja BASIC</a>
+    <a href="https://buy.stripe.com/eVqfZh1azfKx2r7824cEw01" target="_blank" style="font-size:11px;color:var(--muted);text-decoration:none">Subskrypcja PRO</a>
+  </div>
+</footer>
+
 </main>
 
 <script>
+// Poradnik page - sidebar always visible on desktop
+
 // ACTIVE NAV
 const links=document.querySelectorAll('.nav-link');
 const chapters=document.querySelectorAll('article[id],section[id]');
@@ -1136,23 +1160,6 @@ document.querySelectorAll('input[type=checkbox]').forEach(cb=>{
   cb.addEventListener('change',()=>localStorage.setItem(key,cb.checked?'1':'0'));
 });
 </script>
-
-<footer style="background:#06060f;border-top:1px solid var(--border);padding:28px 48px;text-align:center;margin-left:0">
-  <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:10px">
-    <span style="font-size:22px">🦫</span>
-    <strong style="font-family:'Orbitron',monospace;font-size:13px;font-weight:900;color:var(--gold)">CyberBober 1.2</strong>
-  </div>
-  <div style="font-size:11px;color:var(--muted);line-height:1.8">
-    <strong style="color:var(--text)">OOMMEN STUDIO INTELLIGENCE UNIT</strong> · 2026<br>
-    Automatyczny system raportów POD oparty na AI
-  </div>
-  <div style="margin-top:12px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap">
-    <a href="index.html" style="font-size:11px;color:var(--purple);text-decoration:none">← Strona główna</a>
-    <a href="https://buy.stripe.com/6oU5kD5qP1TH4zf824cEw00" target="_blank" style="font-size:11px;color:var(--muted);text-decoration:none">Subskrypcja BASIC</a>
-    <a href="https://buy.stripe.com/eVqfZh1azfKx2r7824cEw01" target="_blank" style="font-size:11px;color:var(--muted);text-decoration:none">Subskrypcja PRO</a>
-  </div>
-</footer>
-</main>
 
 </body>
 </html>
