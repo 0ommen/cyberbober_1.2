@@ -417,19 +417,35 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
   :root{--sidebar-w:0px}
   #sidebar{transform:translateX(-240px);width:240px}
   #sidebar.open{transform:translateX(0)}
-  #main{margin-left:0}
+  #main{margin-left:0 !important;width:100% !important;max-width:100% !important}
   #menu-toggle{display:flex}
-  .chapter{padding:48px 20px 0}
+  .chapter{padding:48px 20px 0;max-width:100% !important}
   .hero{padding:50px 20px 36px}
   .ch-footer-bar{padding:16px 20px}
   .dont-do,.variant-grid{grid-template-columns:1fr}
   .pc-grid{grid-template-columns:1fr}
+  .landing{margin-left:0 !important;width:100% !important}
+  .lp-nav,.lp-hero,.pricing-section,.features-section,.free-section,.lp-divider{padding-left:20px !important;padding-right:20px !important;max-width:100% !important}
+  .pricing-grid{grid-template-columns:1fr}
+  .free-card{flex-direction:column;text-align:center}
+  .lp-h1{font-size:22px}
+  .features-grid{grid-template-columns:1fr 1fr}
+  .model-grid{grid-template-columns:1fr}
+  .pipeline{flex-wrap:wrap;gap:6px}
+  .pipe-arrow{width:100%;text-align:center}
+  .sources{grid-template-columns:1fr 1fr}
+  .tag-groups{grid-template-columns:1fr}
+  .platform-card .pc-grid{grid-template-columns:1fr 1fr}
+  .removal-grid{grid-template-columns:1fr 1fr}
+  .variant-grid{grid-template-columns:1fr}
 }
 
-/* ── LANDING FULL WIDTH ── */
-body.on-landing #sidebar{transform:translateX(-240px)}
-body.on-landing #main{margin-left:0;width:100%}
-body.on-landing #menu-toggle{display:none}
+/* ── LANDING FULL WIDTH (desktop only) ── */
+@media(min-width:769px){
+  body.on-landing #sidebar{transform:translateX(-240px)}
+  body.on-landing #main{margin-left:0;width:100%;transition:margin-left .3s}
+  body.on-landing #menu-toggle{display:none}
+}
 .landing{background:linear-gradient(180deg,#06060f 0%,#0f0f1a 40%,#0f0f1a 100%);position:relative;overflow:hidden;scroll-margin-top:0}
 </style>
 </head>
@@ -1227,11 +1243,11 @@ body.on-landing #menu-toggle{display:none}
 </main>
 
 <script>
-// LANDING vs EBOOK mode
+// LANDING vs EBOOK mode — desktop only
 function updateMode(){
-  const landing=document.getElementById('landing');
+  if(window.innerWidth<=768)return; // mobile: CSS handles everything
   const intro=document.getElementById('intro');
-  if(!landing||!intro)return;
+  if(!intro)return;
   const introTop=intro.getBoundingClientRect().top;
   if(introTop>80){
     document.body.classList.add('on-landing');
@@ -1239,7 +1255,14 @@ function updateMode(){
     document.body.classList.remove('on-landing');
   }
 }
-// Init on load
+// On resize: recalculate
+window.addEventListener('resize',()=>{
+  if(window.innerWidth<=768){
+    document.body.classList.remove('on-landing');
+  } else {
+    updateMode();
+  }
+},{passive:true});
 document.addEventListener('DOMContentLoaded',()=>{
   updateMode();
   window.addEventListener('scroll',updateMode,{passive:true});
