@@ -470,31 +470,31 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
       <span><span class="ch-num" style="color:var(--gold)">CyberBober 1.2</span><span style="color:var(--gold);font-weight:700">Kup dostęp</span></span>
     </a>
     <div class="nav-sep">Poradnik</div>
-    <a href="poradnik.html#intro" class="nav-link">
+    <a href="platforma.html#intro" class="nav-link">
       <span class="ch-icon">👋</span>
       <span><span class="ch-num">Wstęp</span>O poradniku</span>
     </a>
-    <a href="poradnik.html#ch1" class="nav-link">
+    <a href="platforma.html#ch1" class="nav-link">
       <span class="ch-icon">🔍</span>
       <span><span class="ch-num">Rozdział 01</span>Nisza & Trendy</span>
     </a>
-    <a href="poradnik.html#ch2" class="nav-link">
+    <a href="platforma.html#ch2" class="nav-link">
       <span class="ch-icon">✍️</span>
       <span><span class="ch-num">Rozdział 02</span>Prompty AI</span>
     </a>
-    <a href="poradnik.html#ch3" class="nav-link">
+    <a href="platforma.html#ch3" class="nav-link">
       <span class="ch-icon">🖼️</span>
       <span><span class="ch-num">Rozdział 03</span>Generowanie grafik</span>
     </a>
-    <a href="poradnik.html#ch4" class="nav-link">
+    <a href="platforma.html#ch4" class="nav-link">
       <span class="ch-icon">🏷️</span>
       <span><span class="ch-num">Rozdział 04</span>SEO & Tagowanie</span>
     </a>
-    <a href="poradnik.html#ch5" class="nav-link">
+    <a href="platforma.html#ch5" class="nav-link">
       <span class="ch-icon">🏪</span>
       <span><span class="ch-num">Rozdział 05</span>Platformy POD</span>
     </a>
-    <a href="poradnik.html#ch6" class="nav-link">
+    <a href="platforma.html#ch6" class="nav-link">
       <span class="ch-icon">📧</span>
       <span><span class="ch-num">Rozdział 06</span>Mail → Produkt</span>
     </a>
@@ -636,7 +636,7 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
         <h3>Darmowy Poradnik POD 🦫</h3>
         <p>Nie jesteś gotowy na subskrypcję? Zacznij od darmowego e-booka — 6 rozdziałów o niszach, promptach, generowaniu grafik, SEO i platformach POD. Zero opłat, zero rejestracji.</p>
       </div>
-      <a href="poradnik.html" class="free-btn">Czytaj za darmo →</a>
+      <a href="platforma.html" class="free-btn">Czytaj za darmo →</a>
     </div>
   </div>
 
@@ -729,7 +729,7 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
     Projekt i wykonanie: OSIU - Kopiowanie zabronione. Wszelkie prawa zastrzeżone ©
   </div>
   <div style="margin-top:12px;display:flex;justify-content:center;gap:20px;flex-wrap:wrap">
-    <a href="poradnik.html" style="font-size:11px;color:var(--green);text-decoration:none">📖 Darmowy Poradnik</a>
+    <a href="platforma.html" style="font-size:11px;color:var(--green);text-decoration:none">📖 Darmowy Poradnik</a>
     <a href="https://buy.stripe.com/6oU5kD5qP1TH4zf824cEw00" target="_blank" style="font-size:11px;color:var(--muted);text-decoration:none">Subskrypcja BASIC</a>
     <a href="https://buy.stripe.com/eVqfZh1azfKx2r7824cEw01" target="_blank" style="font-size:11px;color:var(--muted);text-decoration:none">Subskrypcja PRO</a>
   </div>
@@ -751,7 +751,7 @@ function updateActiveNav(){
   if(!current && sections.length>0) current=sections[0].id;
   navLinks.forEach(l=>{
     const href=l.getAttribute('href');
-    if(href==='index.html' || href==='poradnik.html') return;
+    if(href==='index.html' || href==='platforma.html') return;
     const id=href.replace('#','');
     if(id===current){
       l.classList.add('active');
