@@ -577,7 +577,8 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
     <div class="pricing-grid">
 
       <!-- BASIC -->
-      <div class="pricing-card">
+      <div class="pricing-card" style="border-color:var(--purple)">
+        <div class="pc-popular" style="background:var(--purple)">⭐ Najpopularniejszy</div>
         <div class="pc-plan" style="color:var(--purple)">BASIC</div>
         <div class="pc-price" style="color:var(--text)">29<span>,99 zł</span></div>
         <div class="pc-period">miesięcznie · odnawia się automatycznie</div>
@@ -600,7 +601,7 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
 
       <!-- PRO -->
       <div class="pricing-card featured">
-        <div class="pc-popular">⭐ NAJPOPULARNIEJSZY</div>
+        <div class="pc-popular" style="background:var(--red)">🔒 Limitowana liczba miejsc</div>
         <div class="pc-plan" style="color:var(--gold)">PRO</div>
         <div class="pc-price" style="color:var(--gold)">59<span>,99 zł</span></div>
         <div class="pc-period">miesięcznie · odnawia się automatycznie</div>
@@ -737,6 +738,33 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
 </main>
 
 <script>
+// ACTIVE NAV — highlight based on scroll position
+const navLinks=document.querySelectorAll('.nav-link');
+
+function updateActiveNav(){
+  const sections=document.querySelectorAll('article[id],section[id]');
+  let current='';
+  sections.forEach(s=>{
+    const top=s.getBoundingClientRect().top;
+    if(top<=120) current=s.id;
+  });
+  if(!current && sections.length>0) current=sections[0].id;
+  navLinks.forEach(l=>{
+    const href=l.getAttribute('href');
+    if(href==='index.html' || href==='poradnik.html') return;
+    const id=href.replace('#','');
+    if(id===current){
+      l.classList.add('active');
+    } else {
+      l.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, {passive:true});
+document.addEventListener('DOMContentLoaded', updateActiveNav);
+updateActiveNav();
+
 // SIDEBAR TOGGLE (mobile)
 function toggleSidebar(){
   document.getElementById('sidebar').classList.toggle('open');
