@@ -1,0 +1,148 @@
+/* ===================================================================
+   Oommen Studio — Insider POD Raport
+   Shared stylesheet — extends the visual language of the individual
+   research reports (dark panels, "certified badge" seals, mono labels)
+   to the hub / platform-list / empty-state layer.
+   =================================================================== */
+
+:root{
+  --bg: #121316;
+  --panel: #1b1d22;
+  --panel-2: #22242b;
+  --line: #33353c;
+  --text: #f1f1ee;
+  --text-dim: #a9abb4;
+  --accent: #ffd23f;    /* yellow  — used for Amazon KDP */
+  --accent-2: #ff5d5d;  /* red     — used for Redbubble */
+  --accent-3: #5ee6c8;  /* teal    — used for Spreadshirt.de */
+  --accent-4: #b98bff;  /* purple  — used for TeePublic */
+  --accent-5: #ff9f5b;  /* orange  — used for Etsy */
+  --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height:1.5;
+  padding-bottom: 80px;
+}
+a{color:inherit;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+/* ---------- top bar / breadcrumb ---------- */
+.topbar{
+  border-bottom: 1px solid var(--line);
+  padding: 16px 0;
+  background: rgba(18,19,22,0.92);
+}
+.topbar .wrap{display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;}
+.crumbs{font-family: var(--mono); font-size:12.5px; color:var(--text-dim); display:flex; align-items:center; gap:6px; flex-wrap:wrap;}
+.crumbs a{color:var(--text-dim); text-decoration:none;}
+.crumbs a:hover{color:var(--accent);}
+.crumbs .sep{opacity:.4;}
+.crumbs .current{color:var(--text); font-weight:700;}
+.topbar .home-link{
+  font-size:12.5px; font-family:var(--mono); text-decoration:none;
+  color: var(--bg); background: var(--accent);
+  padding:6px 12px; border-radius:999px; font-weight:700;
+}
+
+/* ---------- hero ---------- */
+header.hero{
+  background:
+    radial-gradient(circle at 12% 20%, rgba(255,210,63,0.10), transparent 40%),
+    radial-gradient(circle at 88% 0%, rgba(185,139,255,0.12), transparent 45%),
+    linear-gradient(180deg, #17181c 0%, #121316 100%);
+  border-bottom: 3px solid var(--accent);
+  padding: 52px 0 36px;
+}
+.eyebrow{
+  display:inline-block; font-family: var(--mono); font-size: 12px;
+  letter-spacing: .12em; text-transform: uppercase; color: var(--bg);
+  background: var(--accent); padding: 5px 12px; border-radius: 999px;
+  font-weight:700; margin-bottom: 18px;
+}
+h1{font-size: 36px; line-height:1.1; margin: 0 0 14px; font-weight: 900; letter-spacing: -0.01em;}
+h1 span{color:var(--accent);}
+.hero p.lead{font-size: 16px; color: var(--text-dim); max-width: 680px; margin: 0;}
+
+/* ---------- section heading ---------- */
+section{padding: 40px 0 10px;}
+section h2{font-size: 20px; margin: 0 0 18px; border-left: 4px solid var(--accent); padding-left: 12px;}
+
+/* ---------- platform badge (seal) ---------- */
+.badge{
+  width:56px; height:56px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-family: var(--mono); font-weight:800; font-size:15px; letter-spacing:-0.02em;
+  border: 2.5px solid var(--accent-color, var(--accent));
+  color: var(--accent-color, var(--accent));
+  background: var(--panel-2);
+  position: relative; flex-shrink:0;
+}
+.badge::before{
+  content:''; position:absolute; inset:-6px; border-radius:50%;
+  border: 1px dashed var(--accent-color, var(--accent)); opacity:.45;
+}
+.badge.lg{width:72px; height:72px; font-size:18px;}
+
+/* ---------- platform grid (hub page) ---------- */
+.platform-grid{
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 16px; margin: 0 0 26px;
+}
+.platform-card{
+  background: var(--panel); border:1px solid var(--line); border-radius: 16px;
+  padding: 20px; text-decoration:none; color: var(--text);
+  display:flex; flex-direction:column; gap:14px;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.platform-card:hover{border-color: var(--accent-color, var(--accent)); transform: translateY(-2px);}
+.platform-card .p-head{display:flex; align-items:center; gap:14px;}
+.platform-card .p-name{font-size:18px; font-weight:800; margin:0;}
+.platform-card .p-sub{font-size:12px; color:var(--text-dim); font-family:var(--mono);}
+.platform-card .p-status{
+  font-size: 13.5px; color: var(--text-dim); margin-top: auto;
+  display:flex; align-items:center; justify-content:space-between; gap:8px;
+  border-top: 1px solid var(--line); padding-top: 12px;
+}
+.platform-card .p-status .count{color:var(--text); font-weight:700;}
+.platform-card .p-status .arrow{color: var(--accent-color, var(--accent)); font-family:var(--mono);}
+.platform-card.empty{opacity:.7;}
+.platform-card.empty .p-status{color: var(--text-dim);}
+
+/* ---------- report list (platform page) ---------- */
+.report-list{display:flex; flex-direction:column; gap: 12px; margin-bottom: 30px;}
+.report-row{
+  background: var(--panel); border:1px solid var(--line); border-radius: 14px;
+  padding: 18px 20px; text-decoration:none; color: var(--text);
+  display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  transition: border-color .15s ease;
+}
+.report-row:hover{border-color: var(--accent-color, var(--accent));}
+.report-row .r-date{
+  font-family: var(--mono); font-size:12px; color: var(--accent-color, var(--accent));
+  border: 1px solid var(--line); border-radius:999px; padding:4px 10px; white-space:nowrap;
+}
+.report-row .r-body{flex:1; min-width:200px;}
+.report-row .r-title{font-size:16px; font-weight:800; margin:0 0 4px;}
+.report-row .r-desc{font-size:13.5px; color:var(--text-dim); margin:0;}
+.report-row .r-go{font-family:var(--mono); font-size:13px; color:var(--text-dim);}
+.report-row:hover .r-go{color:var(--accent-color, var(--accent));}
+
+/* ---------- empty state ---------- */
+.empty-state{
+  background: var(--panel); border: 1px dashed var(--line); border-radius: 16px;
+  padding: 44px 28px; text-align:center; margin-bottom: 30px;
+}
+.empty-state .badge{margin: 0 auto 18px;}
+.empty-state h3{font-size:18px; margin: 0 0 8px;}
+.empty-state p{font-size:14px; color:var(--text-dim); max-width:440px; margin:0 auto;}
+
+/* ---------- footer ---------- */
+footer.site-foot{
+  padding: 40px 0 0; margin-top: 20px; border-top: 1px solid var(--line);
+  font-size:12.5px; color: var(--text-dim); text-align:center;
+}
