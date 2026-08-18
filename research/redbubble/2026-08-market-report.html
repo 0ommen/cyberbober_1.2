@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redbubble Market Report — Sierpień 2026</title>
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../favicon-180.png">
+<style>
+  :root{
+    --bg: #121316;
+    --panel: #1b1d22;
+    --panel-2: #22242b;
+    --line: #33353c;
+    --text: #f1f1ee;
+    --text-dim: #a9abb4;
+    --accent: #ffd23f;
+    --accent-2: #ff5d5d;
+    --accent-3: #5ee6c8;
+    --accent-4: #b98bff;
+    --accent-5: #6fb3ff;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height:1.5;
+    padding-bottom: 80px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  header.hero{
+    background:
+      radial-gradient(circle at 12% 20%, rgba(255,210,63,0.10), transparent 40%),
+      radial-gradient(circle at 88% 0%, rgba(185,139,255,0.12), transparent 45%),
+      linear-gradient(180deg, #17181c 0%, #121316 100%);
+    border-bottom: 3px solid var(--accent);
+    padding: 56px 0 40px;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--accent);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-weight:700;
+    margin-bottom: 18px;
+  }
+  h1{
+    font-size: 38px;
+    line-height:1.1;
+    margin: 0 0 14px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+  }
+  h1 span{color:var(--accent);}
+  .hero p.lead{
+    font-size: 16px;
+    color: var(--text-dim);
+    max-width: 760px;
+    margin: 0 0 26px;
+  }
+  .stat-row{
+    display:flex; flex-wrap:wrap; gap:14px; margin-top: 18px;
+  }
+  .stat{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 16px;
+    min-width: 150px;
+  }
+  .stat .n{font-size:20px; font-weight:800; color:var(--accent-3);}
+  .stat .l{font-size:12px; color:var(--text-dim); text-transform:uppercase; letter-spacing:.05em;}
+
+  section.block{ padding: 46px 0 10px; border-bottom: 1px solid var(--line); }
+  section.block h2{
+    font-size: 24px;
+    margin: 0 0 6px;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    font-weight: 900;
+  }
+  section.block .subtitle{
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0 0 22px;
+    padding-left: 16px;
+  }
+  section.block > .wrap > p.body-text{
+    color: var(--text-dim);
+    font-size: 14.5px;
+    max-width: 820px;
+    margin: 0 0 20px;
+  }
+  section.block > .wrap > p.body-text b{color:var(--text);}
+
+  .findings{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 14px;
+    margin: 8px 0 8px;
+  }
+  .finding-card{
+    background: var(--panel);
+    border:1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .finding-card .tag{
+    font-family: var(--mono);
+    font-size:11px;
+    color:var(--bg);
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:6px;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .finding-card h3{
+    font-size: 15px;
+    margin: 0 0 6px;
+  }
+  .finding-card p{margin:0; font-size:13.5px; color:var(--text-dim); line-height:1.5;}
+  .finding-card b{color:var(--text);}
+  .finding-card .ex{
+    margin-top:10px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--text-dim);
+    border-top: 1px dashed var(--line);
+    padding-top: 8px;
+  }
+
+  .callout{
+    background: linear-gradient(135deg, rgba(255,210,63,0.08), rgba(185,139,255,0.08));
+    border: 1px dashed var(--accent);
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 14px;
+    color: var(--text-dim);
+    margin: 8px 0 24px;
+  }
+  .callout b{color:var(--accent);}
+  .callout.warn{border-color: var(--accent-2);}
+  .callout.warn b{color:var(--accent-2);}
+
+  nav.jumpnav{
+    position: sticky; top:0; z-index: 50;
+    background: rgba(18,19,22,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+    margin-top: 30px;
+  }
+  nav.jumpnav .wrap{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+  nav.jumpnav a{
+    font-size:13px;
+    color: var(--text);
+    text-decoration:none;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    padding:7px 12px;
+    border-radius:999px;
+    transition: all .15s ease;
+    white-space:nowrap;
+  }
+  nav.jumpnav a:hover{border-color:var(--accent); color:var(--accent);}
+
+  /* charts */
+  .chart-card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px 10px;
+    margin-bottom: 18px;
+  }
+  .chart-card .chart-title{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 2px;
+  }
+  .chart-card .chart-sub{
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 18px;
+  }
+  .bar-row{
+    display:grid;
+    grid-template-columns: 160px 1fr 70px;
+    align-items:center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .bar-row .bl{
+    font-size: 12.5px;
+    color: var(--text-dim);
+    text-align:right;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .bar-track{
+    background: var(--panel-2);
+    border-radius: 6px;
+    height: 14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .bar-fill{
+    height: 100%;
+    border-radius: 6px;
+    background: var(--accent);
+  }
+  .bar-fill.alt{background: var(--accent-3);}
+  .bar-val{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text);
+    font-weight:700;
+  }
+
+  table.data-table{
+    width:100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 10px 0 20px;
+  }
+  table.data-table th{
+    text-align:left;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing:.05em;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 10px;
+    font-weight:700;
+  }
+  table.data-table td{
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-dim);
+  }
+  table.data-table td.strong{color:var(--text); font-weight:700;}
+  table.data-table tr:hover td{background: rgba(255,255,255,0.02);}
+  table.data-table .up{color: var(--accent-3); font-family: var(--mono);}
+  table.data-table .flat{color: var(--text-dim); font-family: var(--mono);}
+
+  .pill-row{display:flex; flex-wrap:wrap; gap:8px; margin: 6px 0 20px;}
+  .pill{
+    font-size:12px;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    color: var(--text-dim);
+    padding: 5px 11px;
+    border-radius: 999px;
+  }
+
+  .two-col{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 780px){ .two-col{grid-template-columns: 1fr;} }
+
+  footer.report-footer{
+    padding: 50px 20px 30px;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  footer.report-footer .wrap{max-width:1080px;}
+  .sources-list{
+    columns: 2;
+    gap: 30px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .sources-list li{margin-bottom:8px; break-inside: avoid;}
+  .sources-list a{color: var(--accent-5); text-decoration:none;}
+  .sources-list a:hover{text-decoration:underline;}
+  footer.report-footer b{color:var(--accent);}
+</style>
+</head>
+<body>
+
+<div style="border-bottom:1px solid var(--line); background:rgba(18,19,22,0.92);">
+  <div class="wrap" style="max-width:1080px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+    <div style="font-family:var(--mono); font-size:12.5px; color:var(--text-dim); display:flex; align-items:center; gap:6px;">
+      <a href="../index.html" style="color:var(--text-dim); text-decoration:none;">Insider POD Raport</a>
+      <span style="opacity:.4;">/</span>
+      <a href="index.html" style="color:var(--text-dim); text-decoration:none;">Redbubble</a>
+      <span style="opacity:.4;">/</span>
+      <span style="color:var(--text); font-weight:700;">sierpień 2026</span>
+    </div>
+    <a href="../../platforma.html" style="font-size:12.5px; font-family:var(--mono); text-decoration:none; color:var(--bg); background:var(--accent); padding:6px 12px; border-radius:999px; font-weight:700;">← Platforma CyberBober</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Redbubble × eRank — Raport Rynkowy</span>
+    <h1>Sierpień 2026: co się dzieje i co <span>naprawdę sprzedaje się</span> na Redbubble</h1>
+    <p class="lead">
+      Ogólny, niespersonalizowany przegląd rynku Redbubble na sierpień 2026 — oparty na bezpośrednim przeglądzie
+      list "Trending" w 4 kluczowych kategoriach, danych keywordowych eRank (Etsy jako wskaźnik wyprzedzający
+      popytu na design) oraz aktualnych raportach branżowych print-on-demand (Printful, Printify, EverBee, Accio)
+      i skanie trendów TikTok.
+    </p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">4</div><div class="l">kategorie RB przeanalizowane</div></div>
+      <div class="stat"><div class="n">14</div><div class="l">nazwanych estetyk POD 2026</div></div>
+      <div class="stat"><div class="n">+24.2%</div><div class="l">CAGR kategorii home decor</div></div>
+      <div class="stat"><div class="n">82%</div><div class="l">kupujących ceni personalizację</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="jumpnav">
+  <div class="wrap">
+    <a href="#tldr">TL;DR</a>
+    <a href="#metodologia">Metodologia</a>
+    <a href="#sezon">Sezonowość</a>
+    <a href="#erank">Dane eRank</a>
+    <a href="#kategorie">Co się sprzedaje</a>
+    <a href="#estetyki">Estetyki i nisze</a>
+    <a href="#format">Format produktu</a>
+    <a href="#ryzyka">Na co uważać</a>
+    <a href="#rekomendacje">Rekomendacje</a>
+    <a href="#zrodla">Źródła</a>
+  </div>
+</nav>
+
+<section class="block" id="tldr">
+  <div class="wrap">
+    <h2>TL;DR</h2>
+    <p class="subtitle">Najważniejsze wnioski w 5 punktach</p>
+    <p class="body-text">
+      Sierpień na Redbubble to zderzenie dwóch sezonów naraz: <b>końca lata i startu roku szkolnego</b>
+      (spersonalizowane naklejki z imieniem, koszulki "Class of 2026") oraz <b>bardzo wczesnego rozruchu
+      Halloween</b> — fraza "halloween" rośnie w rankingu eRank mocniej niż jakakolwiek inna kategoria sezonowa,
+      mimo że do października zostało jeszcze ponad miesiąc. Równolegle rynek napędzają trzy silne prądy
+      kulturowe: <b>muzyka i trasy koncertowe 2026</b> (plakaty z tras Hayley Williams i Bensona Boone,
+      odrodzenie koszulek zespołów rockowych), <b>fandomy i pop-kultura</b> (kreepypasta/horror internetowy,
+      anime, fantasy książkowe jak Mistborn) oraz <b>kryptydy i paranormalne</b ("Believe in Bigfoot/UFO"
+      pojawia się niezależnie w naklejkach, koszulkach i plakatach). Format <b>odznaki/plakietki</b> i prosty,
+      bold design wciąż wygrywają w naklejkach, a w home decor rośnie estetyka <b>nostalgii i nisz roślinno-
+      -księżycowych</b> (toile +80% r/r, motywy księżyca +63% r/r wg Printful).
+    </p>
+  </div>
+</section>
+
+<section class="block" id="metodologia">
+  <div class="wrap">
+    <h2>Metodologia</h2>
+    <p class="subtitle">Skąd pochodzą dane w tym raporcie</p>
+    <p class="body-text">
+      Dane zebrano 18 sierpnia 2026 z trzech źródeł: <b>(1)</b> bezpośredni przegląd list posortowanych jako
+      "Trending" na Redbubble w 4 kategoriach (Shop ogólny, Stickers, Wall Art, T-Shirts) — realne, aktualnie
+      wystawione i dobrze radzące sobie produkty; <b>(2)</b> eRank Trend Buzz i Monthly Trends (dane z Etsy,
+      największego rynku wzorcowego dla popytu na design — traktowane jako wskaźnik wyprzedzający, nie jako
+      dane bezpośrednio z Redbubble); <b>(3)</b> aktualne raporty branżowe print-on-demand (Printful, Printify,
+      EverBee, Accio) oraz skan trendów TikTok pod kątem estetyk przekładalnych na merch. Pełna lista źródeł
+      znajduje się na końcu raportu.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="sezon">
+  <div class="wrap">
+    <h2>Sezonowość sierpnia — co napędza ruch</h2>
+    <p class="subtitle">Nakładające się sezony i wydarzenia kulturowe</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">SEZON</span>
+        <h3>Halloween startuje zaskakująco wcześnie</h3>
+        <p>W danych eRank fraza <b>"halloween"</b> ma jeden z najmocniejszych i najbardziej stabilnych wyników
+        w rankingu 30-dniowym (49 850 pkt. search interest), a "halloween shirt" osobno generuje 41 850 pkt.
+        Kupujący zaczynają szukać kostiumów i dekoracji już w sierpniu.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">SEZON</span>
+        <h3>Powrót do szkoły + "Class of 2026"</h3>
+        <p>Na liście trending Redbubble regularnie pojawiają się koszulki "Class of 2026 Graduation" oraz
+        spersonalizowane naklejki z imieniem dziecka (np. sklep LocalKiwi: Nikolai!, Evelyn!, Harper!) —
+        klasyczny sierpniowy popyt na personalizację do szkoły.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">TIKTOK</span>
+        <h3>"Summer-to-school duality"</h3>
+        <p>Trendy na TikTok w sierpniu 2026 łączą estetykę końca lata (iced coffee, lake days) z powrotem do
+        akademika i szkoły — dobry moment na designy, które mieszają obie estetyki zamiast wybierać jedną.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">WYDARZENIE</span>
+        <h3>Mundial 2026 w tle</h3>
+        <p>Frazy typu "world cup png" i "mexico soccer png" trendują w kategorii Art & Collectibles na eRank —
+        efekt trwającego szumu wokół Mistrzostw Świata 2026. Uwaga: projekty z herbami/logo drużyn są
+        obarczone ryzykiem praw autorskich — bezpieczniejsze są motywy flag i kibicowskie ogólne.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#ff9b6f; color:#2b1400;">SEZON+1</span>
+        <h3>Christmas budzi się wcześnie</h3>
+        <p>Fraza "jewelry box" odnotowała skok o <b>+2935 pozycji</b> w rankingu dziennym eRank, a "digital
+        planner" o +1556 — typowe sygnały przedświątecznych, prezentowych zakupów planujących z dużym
+        wyprzedzeniem. Warto zacząć przygotowywać kolekcję świąteczną już we wrześniu.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#8fe36b; color:#0d2400;">EWERGREEN</span>
+        <h3>Humor i zwierzęta nie tracą pary</h3>
+        <p>Niezależnie od sezonu, proste, zabawne naklejki zwierzęce (koty, psy, capybary) i uniwersalny humor
+        ("wow. this sucks.", memy o poniedziałkach) utrzymują wysoką pozycję na liście trending we wszystkich
+        4 przebadanych kategoriach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="erank">
+  <div class="wrap">
+    <h2>Dane eRank — co rośnie najszybciej</h2>
+    <p class="subtitle">Trend Buzz, ostatnie 30 dni, rynek USA (Etsy jako wskaźnik wyprzedzający)</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Top 10 fraz wg Search Interest (30 dni)</div>
+      <div class="chart-sub">Wyższy słupek = wyższy, znormalizowany wskaźnik zainteresowania wyszukiwaniem w eRank</div>
+      <div id="chart1"></div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Fraza</th><th>Search Interest</th><th>Zmiana rankingu (30 dni)</th><th>Konkurencja (Etsy)</th></tr>
+      </thead>
+      <tbody id="erank-table"></tbody>
+    </table>
+
+    <div class="callout">
+      <b>Ciekawostka z danych:</b> "jewelry box" i "digital planner" to dwie frazy z największym skokiem
+      pozycji w rankingu <i>dziennym</i> (odpowiednio +2935 i +1556) — mimo że ich bezwzględny wolumen
+      wyszukiwań jest niższy niż top fraz sezonowych. To klasyczny wczesny sygnał nadchodzącego sezonu
+      prezentowego: warto obserwować takie "skoki rankingu", a nie tylko bezwzględny wolumen.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="kategorie">
+  <div class="wrap">
+    <h2>Co faktycznie sprzedaje się teraz na Redbubble</h2>
+    <p class="subtitle">Obserwacje z realnych list "Trending" w 4 kategoriach (Shop, Stickers, Wall Art, T-Shirts)</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">MUZYKA</span>
+        <h3>Plakaty koncertowe i "gig poster" aesthetic</h3>
+        <p>Dominująca siła w Wall Art: aktualne trasy 2026 (<b>Hayley Williams EDAABP Tour</b>, <b>Benson
+        Boone Wanted Man Tour</b>, Fontaines D.C.) obok odrodzenia estetyki plakatu winylowego dla starszych
+        wykonawców (Roxy Music, Sade, Mac Miller, Cake). Koszulki idą tym samym torem — AC/DC, Dave Matthews
+        Band, Rush, TLC, Stereolab.</p>
+        <div class="ex">przykłady: blackeyedmarti, Catsi-Nook-Art, GrinReaperGoods, HermanAA</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-2); color:#2b0a0a;">FANDOM</span>
+        <h3>Kreepypasta, anime i fantasy książkowe</h3>
+        <p>Postacie internetowego horroru (Jeff the Killer, Ticci Toby, Marble Hornets) mają stały, wierny
+        popyt na naklejki. Równolegle silne fandomy książkowe/growe: <b>Mistborn</b> (Brandon Sanderson) jako
+        seria art printów, Arcane, Evangelion, My Hero Academia.</p>
+        <div class="ex">przykłady: sta1rz, joe12south (seria Mistborn), StuartMooreArt</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">SPORT</span>
+        <h3>Kobiecy koszykarski fandom (WNBA) rośnie</h3>
+        <p>Sklep wyspecjalizowany w fan-arcie WNBA (wnbaartshop) ma wiele pozycji jednocześnie w top
+        trending — silny, rosnący i wciąż stosunkowo mało obsadzony temat w porównaniu do NBA/NFL.</p>
+        <div class="ex">przykłady: wnbaartshop (McBuckets, Gabby Williams, A'ja and Lish)</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">PARANORMALNE</span>
+        <h3>Kryptydy i UFO — spójny sygnał w 3 kategoriach</h3>
+        <p>"Believe in UFOs" i "Believe in Bigfoot" (ten sam sklep, ten sam prosty, plakatowy styl typograficzny)
+        pojawiają się jednocześnie w Shop ogólnym i T-Shirts, a motyw "I Want to Believe" (X-Files) w Wall Art —
+        to nie przypadek, tylko realny, wielokanałowy trend.</p>
+        <div class="ex">przykłady: MutedRainbow, jacobcdietz, mikemaxdesigns</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">SZKOŁA</span>
+        <h3>Personalizacja na powrót do szkoły</h3>
+        <p>Proste naklejki z samym imieniem (bez dodatkowej grafiki) sprzedają się w seriach po kilkanaście
+        naraz w jednym sklepie — najtańszy, najszybszy do wyprodukowania format personalizacji.</p>
+        <div class="ex">przykłady: LocalKiwi (Nikolai!, Evelyn!, Harper!, Ethan!)</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#8fe36b; color:#0d2400;">HUMOR</span>
+        <h3>Zwierzęcy chaos i "gremlin" energia</h3>
+        <p>Kontynuacja trendu z poprzednich raportów — koty/zwierzęta w "gremlin mode", żartobliwe podpisy w
+        stylu "Don't Feed Her After Midnight" — wciąż w czołówce naklejek i koszulek.</p>
+        <div class="ex">przykłady: cheeselB (Gremlin Chorus), NicDoesFunArt (Box Cat)</div>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <b>Do odnotowania:</b> na liście trending obecne są też koszulki o wydźwięku politycznym/kulturowym
+      (np. hasła związane z tożsamością płciową, bronią). To realny, aktywny segment sprzedaży na Redbubble,
+      ale wiąże się z wyższym ryzykiem wizerunkowym i moderacyjnym — w tym ogólnym raporcie odnotowujemy go
+      jako sygnał rynkowy, bez rekomendowania go jako kierunku do naśladowania.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="estetyki">
+  <div class="wrap">
+    <h2>Estetyki i nisze — perspektywa branżowa 2026</h2>
+    <p class="subtitle">Na podstawie raportów Printful, Printify i EverBee (cały rynek print-on-demand, nie tylko Redbubble)</p>
+
+    <div class="pill-row">
+      <span class="pill">AI Dreamscapes</span>
+      <span class="pill">Dark Feminine Energy</span>
+      <span class="pill">Groovy Patterns (lata 70.)</span>
+      <span class="pill">Moody Florals</span>
+      <span class="pill">Grungy Plaid</span>
+      <span class="pill">Maximalism / Cluttercore</span>
+      <span class="pill">Quiet Luxury</span>
+      <span class="pill">Ombre / Gradients</span>
+      <span class="pill">Mermaidcore</span>
+      <span class="pill">Plant Prints</span>
+      <span class="pill">Vintage Toile</span>
+      <span class="pill">Moon Motifs</span>
+      <span class="pill">Coordinated Prints</span>
+      <span class="pill">Twilight Forest Rave</span>
+    </div>
+
+    <div class="two-col">
+      <div class="chart-card">
+        <div class="chart-title">Wzrost r/r wybranych estetyk home &amp; living</div>
+        <div class="chart-sub">Źródło: Printful Design Trends 2026</div>
+        <div id="chart2"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Najbardziej dochodowe nisze POD wg EverBee</div>
+        <div class="chart-sub">Ranking jakościowy (nie liczbowy) z uzasadnieniem wzrostu</div>
+        <table class="data-table" style="margin-top:6px;">
+          <tbody>
+            <tr><td class="strong">Pet Lovers</td><td>rynek pet food: 109 mld $ (2024) → 153 mld $ (2030)</td></tr>
+            <tr><td class="strong">Profession-specific</td><td>lojalność klienta, marketing szeptany</td></tr>
+            <tr><td class="strong">Astrologia</td><td>globalna, zaangażowana baza fanów</td></tr>
+            <tr><td class="strong">Outdoor / Adventure</td><td>+7.4 mld $ rynku odzieży outdoor 2025–2029</td></tr>
+            <tr><td class="strong">Humor / Memy</td><td>organiczny zasięg społecznościowy</td></tr>
+            <tr><td class="strong">Retro / Vintage</td><td>nostalgia ponadpokoleniowa</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="body-text">
+      Wspólny mianownik: <b>nostalgia i estetyki Y2K</b> rezonują szczególnie mocno z Gen Z i Gen Alpha, którzy
+      szukają "kulturowej trafności" swoich zakupów, a <b>personalizacja</b> (kolor, tekst, zdjęcie) jest dziś
+      oczekiwana przez 82% kupujących — nie jest już dodatkiem, tylko standardem.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="format">
+  <div class="wrap">
+    <h2>Format produktu — gdzie jest wzrost</h2>
+    <p class="subtitle">Na podstawie danych branżowych (Printify, Accio, Wix)</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">APPAREL</span>
+        <h3>Odzież wciąż króluje</h3>
+        <p>Największy udział w przychodach całej branży POD — <b>39,45%</b> w 2024 r. Koszulki, bluzy i
+        oversized fit pozostają głównym motorem sprzedaży.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">HOME DECOR</span>
+        <h3>Najszybszy wzrost</h3>
+        <p>Kategoria home & living rośnie w tempie <b>24,2% CAGR</b> — szybciej niż jakakolwiek inna główna
+        kategoria produktowa w POD.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">MAŁE FORMATY</span>
+        <h3>Naklejki i etui na telefon</h3>
+        <p>Wg Accio to dwa najbardziej "niezawodne" formaty pod względem powtarzalności popytu — naklejki dzięki
+        niskiej cenie wejścia, etui dzięki cyklowi premier nowych modeli telefonów.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">MOBILE</span>
+        <h3>Zakupy mobilne dominują</h3>
+        <p><b>59%</b> sprzedaży detalicznej online w 2025 odbywa się na urządzeniach mobilnych — miniatury
+        produktów i pierwsze 2–3 sekundy oglądania na małym ekranie decydują o kliknięciu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ryzyka">
+  <div class="wrap">
+    <h2>Na co uważać</h2>
+    <p class="subtitle">Ryzyka i pułapki widoczne w danych</p>
+    <p class="body-text">
+      <b>Nasycenie top fraz sezonowych.</b> "Halloween" i "wall art" mają jednocześnie wysoki wolumen wyszukiwań
+      i ogromną konkurencję (odpowiednio ~4,1 mln i ~15,2 mln ofert na samym Etsy) — wejście z ogólnikowym
+      designem w tych frazach będzie trudne bez unikalnego kąta.<br><br>
+      <b>Prawa autorskie przy Mundialu 2026 i fandomach.</b> Design z herbami drużyn narodowych, logo lig czy
+      podobiznami postaci z popularnych seriali/gier niesie realne ryzyko usunięcia oferty — bezpieczniejsze są
+      motywy inspirowane (kolory, symbole ogólne, oryginalna typografia) niż bezpośrednie kopie.<br><br>
+      <b>Rozjazd między wolumenem keywordowym a realnym popytem mem-owym.</b> Podobnie jak w poprzednich
+      raportach — frazy napędzane kulturą internetową (np. kreepypasta, "gremlin cat") często mają niski,
+      "niewidoczny" wolumen w klasycznych narzędziach keywordowych, mimo realnej, dużej sprzedaży na samym
+      Redbubble. Nie należy odrzucać niszy tylko dlatego, że eRank pokazuje "Unknown".
+    </p>
+  </div>
+</section>
+
+<section class="block" id="rekomendacje">
+  <div class="wrap">
+    <h2>Rekomendacje na najbliższe tygodnie</h2>
+    <p class="subtitle">Ogólne, niezależne od konkretnego sklepu</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">TERAZ</span>
+        <h3>Publikuj sezon Halloween już dziś</h3>
+        <p>Sygnał w danych jest jednoznaczny — kupujący szukają już w sierpniu. Czekanie do września oznacza
+        start z opóźnieniem względem popytu.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">WRZESIEŃ</span>
+        <h3>Zacznij przygotowywać kolekcję świąteczną</h3>
+        <p>Skoki rankingowe "jewelry box" i "digital planner" to wczesny sygnał sezonu prezentowego —
+        publikacja w październiku daje czas na zaindeksowanie przed grudniowym szczytem.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">FORMAT</span>
+        <h3>Stawiaj na prosty, bold format odznaki/plakietki</h3>
+        <p>Niezależnie od tematu, format "circular badge" / plakietka z grubym konturem powtarza się jako
+        skuteczny wzór w naklejkach i koszulkach z listy trending.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">DYWERSYFIKACJA</span>
+        <h3>Łącz ewergriny z trend-jackingiem</h3>
+        <p>Zwierzęta i uniwersalny humor dają stabilną, powtarzalną sprzedaż; fandomy i muzyka dają skoki
+        sprzedaży, ale krócej żyją. Dobry miesięczny plan publikacji łączy oba typy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="report-footer" id="zrodla">
+  <div class="wrap">
+    <b>Źródła</b>
+    <ul class="sources-list">
+      <li><a href="https://www.redbubble.com/explore/trending" target="_blank" rel="noopener">Redbubble — lista Trending (Shop ogólny)</a></li>
+      <li><a href="https://www.redbubble.com/shop/stickers?sortOrder=trending" target="_blank" rel="noopener">Redbubble — Stickers, sortowanie Trending</a></li>
+      <li><a href="https://www.redbubble.com/shop/wall-art?sortOrder=trending" target="_blank" rel="noopener">Redbubble — Wall Art, sortowanie Trending</a></li>
+      <li><a href="https://www.redbubble.com/shop/t-shirts?sortOrder=trending" target="_blank" rel="noopener">Redbubble — T-Shirts, sortowanie Trending</a></li>
+      <li><a href="https://members.erank.com/trend-buzz/etsy/us/thirty" target="_blank" rel="noopener">eRank — Trend Buzz (Etsy, USA, 30 dni)</a></li>
+      <li><a href="https://members.erank.com/trending/etsy/all/202607" target="_blank" rel="noopener">eRank — Monthly Trends (lipiec 2026)</a></li>
+      <li><a href="https://printify.com/blog/print-on-demand-trends/" target="_blank" rel="noopener">Printify — Print-on-demand trends 2026</a></li>
+      <li><a href="https://www.printful.com/blog/print-on-demand-design-trends" target="_blank" rel="noopener">Printful — 2026 Design Trends (Apparel & Home)</a></li>
+      <li><a href="https://everbee.io/2026-print-on-demand-market-trends-lucrative-niches/" target="_blank" rel="noopener">EverBee — 2026 Market Trends & Lucrative Niches</a></li>
+      <li><a href="https://www.accio.com/business/redbubble-trending-searches-2026" target="_blank" rel="noopener">Accio — Redbubble Trending Searches 2026</a></li>
+      <li><a href="https://newengen.com/insights/august-tiktok-trends/" target="_blank" rel="noopener">Newengen — August 2026 TikTok Trends</a></li>
+    </ul>
+    <p style="margin-top:20px;">Ogólny raport rynkowy — bez personalizacji pod konkretny sklep · dane zebrane 18 sierpnia 2026</p>
+  </div>
+</footer>
+
+<script>
+const erankData = [
+  {k:"tshirt", v:64870, change:"↓1", comp:"10 171 530"},
+  {k:"wall art", v:55860, change:"↑1", comp:"15 248 319"},
+  {k:"halloween", v:49850, change:"–", comp:"4 118 370"},
+  {k:"halloween shirt", v:41850, change:"–", comp:"1 246 507"},
+  {k:"womens clothing", v:39840, change:"↓1", comp:"12 162 657"},
+  {k:"earrings", v:37840, change:"↑1", comp:"2 872 064"},
+  {k:"jewelry", v:37840, change:"↓2", comp:"12 852 273"},
+  {k:"digital products", v:35840, change:"↓3", comp:"156 839"},
+  {k:"furniture", v:33830, change:"↓3", comp:"368 568"},
+  {k:"crochet pattern", v:32840, change:"↑2", comp:"600 496"}
+];
+
+const aestheticData = [
+  {k:"Vintage Toile (home decor)", v:80},
+  {k:"Moon Motifs", v:63},
+  {k:"Plant Prints", v:50}
+];
+
+function el(tag, attrs, ...children){
+  const e = document.createElement(tag);
+  if(attrs) for(const k in attrs){
+    if(k === 'class') e.className = attrs[k];
+    else if(k === 'html') e.innerHTML = attrs[k];
+    else e.setAttribute(k, attrs[k]);
+  }
+  children.forEach(c => {
+    if(c === null || c === undefined) return;
+    if(typeof c === 'string') e.appendChild(document.createTextNode(c));
+    else e.appendChild(c);
+  });
+  return e;
+}
+
+function buildBarChart(container, data, opts){
+  const max = Math.max(...data.map(d => d.v));
+  data.forEach(d => {
+    const pct = Math.max(4, (d.v / max) * 100);
+    const track = el('div', {class:'bar-track'},
+      el('div', {class: 'bar-fill' + (opts.alt ? ' alt' : ''), style: 'width:' + pct + '%'})
+    );
+    const row = el('div', {class:'bar-row'},
+      el('div', {class:'bl'}, d.k),
+      track,
+      el('div', {class:'bar-val'}, opts.suffix ? (d.v + opts.suffix) : d.v.toLocaleString('pl-PL'))
+    );
+    container.appendChild(row);
+  });
+}
+
+buildBarChart(document.getElementById('chart1'), erankData, {alt:false});
+buildBarChart(document.getElementById('chart2'), aestheticData, {alt:true, suffix:'%'});
+
+const tbody = document.getElementById('erank-table');
+erankData.forEach(d => {
+  const changeClass = d.change.includes('↑') ? 'up' : 'flat';
+  tbody.appendChild(el('tr', null,
+    el('td', {class:'strong'}, d.k),
+    el('td', null, d.v.toLocaleString('pl-PL')),
+    el('td', {class: changeClass}, d.change),
+    el('td', null, d.comp)
+  ));
+});
+</script>
+</body>
+</html>
