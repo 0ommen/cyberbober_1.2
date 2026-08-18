@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alpha PNG Engine, CyberBober 1.2</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=JetBrains+Mono:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0f; --dark2:#14141c; --border:#26262f;
+    --ink:#e9e9ec; --dim:#8a8a97;
+    --gold:#f59e0b; --purple:#a855f7; --red:#f87171; --green:#34d399; --teal:#14b8a6;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'JetBrains Mono',monospace;
+    min-height:100vh;
+  }
+
+  .topbar{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:16px 28px;border-bottom:1px solid var(--border);
+    background:#0d0d13;position:sticky;top:0;z-index:10;
+  }
+  .topbar a{color:var(--dim);text-decoration:none;font-size:12.5px;font-weight:600;
+    display:flex;align-items:center;gap:6px;transition:color .15s}
+  .topbar a:hover{color:var(--ink)}
+  .tb-brand{display:flex;align-items:center;gap:10px}
+  .tb-brand span{font-family:'Orbitron',monospace;font-size:13px;font-weight:900;color:var(--gold);letter-spacing:.5px}
+
+  .hero{
+    text-align:center;padding:64px 24px 48px;
+    background:radial-gradient(ellipse at top,#2a0a0a 0%,#0a0a0f 65%);
+    border-bottom:1px solid var(--border);
+    position:relative;overflow:hidden;
+  }
+  .hero::before{
+    content:'🩺';position:absolute;font-size:400px;opacity:.03;
+    top:-100px;right:-60px;pointer-events:none;
+  }
+  .hero-badge{
+    display:inline-block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--red);font-weight:800;background:#f8717115;border:1px solid #f8717140;
+    padding:6px 16px;border-radius:20px;margin-bottom:20px;
+  }
+  .hero h1{
+    font-family:'Orbitron',monospace;font-size:clamp(26px,4vw,42px);font-weight:900;
+    margin:0 0 14px;letter-spacing:-.01em;
+    background:linear-gradient(135deg,#fff,#fca5a5);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p{color:var(--dim);font-size:14.5px;line-height:1.7;max-width:60ch;margin:0 auto}
+
+  .wrap{max-width:900px;margin:0 auto;padding:48px 24px 80px}
+
+  .drop{
+    border:2px dashed var(--border);border-radius:20px;
+    padding:56px 24px;text-align:center;cursor:pointer;
+    transition:border-color .2s ease, background .2s ease, transform .15s ease;
+    background:var(--dark2);
+  }
+  .drop:hover{transform:translateY(-2px)}
+  .drop.drag{border-color:var(--red);background:#1a0f0f}
+  .drop input{display:none}
+  .drop .icon{font-size:44px;margin-bottom:16px;display:block}
+  .drop .label{font-size:14px;color:var(--ink);letter-spacing:.05em;text-transform:uppercase;font-weight:700}
+  .drop .hint{margin-top:10px;font-size:12px;color:var(--dim)}
+
+  .result{margin-top:32px;display:none}
+  .result.show{display:block;animation:fadein .3s ease}
+  @keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+  .verdict{
+    padding:24px 28px;border-radius:16px;margin-bottom:24px;
+    font-size:17px;font-weight:800;border:1px solid var(--border);
+    display:flex;align-items:center;gap:14px;
+  }
+  .verdict.ok{border-color:var(--green);color:var(--green);background:#34d39912}
+  .verdict.warn{border-color:var(--gold);color:var(--gold);background:#f59e0b12}
+  .verdict.bad{border-color:var(--red);color:var(--red);background:#f8717112}
+  .dot{width:12px;height:12px;border-radius:50%;background:currentColor;flex:none;box-shadow:0 0 12px currentColor}
+
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border);
+    border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:24px}
+  .cell{background:var(--dark2);padding:18px 16px}
+  .cell .k{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
+  .cell .v{font-size:17px;font-weight:800;color:var(--ink)}
+
+  .canvases{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
+  .cbox{background:var(--dark2);border:1px solid var(--border);border-radius:16px;padding:14px}
+  .cbox .lbl{font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--dim);margin-bottom:10px;font-weight:700}
+  .cbox canvas{width:100%;height:auto;display:block;border-radius:10px;
+    background:linear-gradient(45deg,#ffffff10 25%,transparent 25%),linear-gradient(-45deg,#ffffff10 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ffffff10 75%),linear-gradient(-45deg,transparent 75%,#ffffff10 75%);
+    background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0}
+
+  .notes{font-size:13.5px;color:var(--dim);line-height:1.7;border-left:3px solid var(--red);
+    padding:14px 18px;background:#f8717108;border-radius:0 12px 12px 0;margin-bottom:24px}
+  .notes strong{color:var(--ink)}
+
+  .again{
+    background:none;border:1px solid var(--border);color:var(--ink);
+    padding:12px 22px;font-family:inherit;font-size:12px;font-weight:700;
+    letter-spacing:.05em;text-transform:uppercase;cursor:pointer;border-radius:10px;
+  }
+  .again:hover{border-color:var(--red);color:var(--red)}
+
+  .fix{
+    background:linear-gradient(135deg,#fca5a5,#f87171);border:none;color:#0f0f1a;
+    padding:12px 22px;font-family:inherit;font-size:12px;font-weight:800;
+    letter-spacing:.05em;text-transform:uppercase;cursor:pointer;border-radius:10px;
+    box-shadow:0 4px 16px -4px #f8717160;
+  }
+  .fix:hover{transform:translateY(-1px)}
+  .fix:active{transform:translateY(0)}
+
+  .how{margin-top:56px}
+  .how h2{font-family:'Orbitron',monospace;font-size:15px;color:var(--gold);letter-spacing:.05em;margin-bottom:20px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .step{background:var(--dark2);border:1px solid var(--border);border-radius:14px;padding:20px}
+  .step .n{font-family:'Orbitron',monospace;font-size:22px;font-weight:900;color:var(--red);opacity:.5;margin-bottom:8px}
+  .step p{font-size:13px;color:var(--dim);line-height:1.6;margin:0}
+  .step strong{color:var(--ink)}
+
+  .thresholds{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .th{border-radius:12px;padding:16px 18px;border:1px solid var(--border)}
+  .th.g{border-color:var(--green);background:#34d39908}
+  .th.y{border-color:var(--gold);background:#f59e0b08}
+  .th.r{border-color:var(--red);background:#f8717108}
+  .th .t{font-weight:800;font-size:12.5px;margin-bottom:4px}
+  .th.g .t{color:var(--green)} .th.y .t{color:var(--gold)} .th.r .t{color:var(--red)}
+  .th .d{font-size:12px;color:var(--dim);line-height:1.5}
+
+  @media (max-width:640px){
+    .grid,.canvases,.steps,.thresholds{grid-template-columns:1fr}
+  }
+
+  footer{text-align:center;padding:32px 24px;color:var(--dim);font-size:11.5px;border-top:1px solid var(--border);margin-top:40px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="index.html" class="tb-brand" style="text-decoration:none">🦫 <span>CYBERBOBER 1.2</span></a>
+  <div style="display:flex;align-items:center;gap:18px">
+    <a href="research/index.html">📊 Insider POD Raport</a>
+    <a href="platforma.html">← Wróć do platformy szkoleniowej</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-badge">🔴 Narzędzie CyberBobera</div>
+  <h1>Alpha PNG Engine</h1>
+  <p>Wykrywa resztki szachownicy i pół-przezroczyste piksele, które platformy POD, zwłaszcza Spreadshirt, odrzucają jako „design features semi-transparent areas" lub „not fully cropped". Jeśli coś jest nie tak, jednym kliknięciem naprawia plik i od razu go pobierasz, bez Photopea. Analiza w 100% lokalna, plik nigdzie nie jest wysyłany.</p>
+</div>
+
+<div class="wrap">
+  <div class="drop" id="drop">
+    <input type="file" id="file" accept="image/png">
+    <span class="icon">📤</span>
+    <div class="label">Wybierz lub upuść plik PNG</div>
+    <div class="hint">Działa całkowicie w przeglądarce, zero uploadu na serwer</div>
+  </div>
+
+  <div class="result" id="result">
+    <div class="verdict" id="verdict"></div>
+
+    <div class="grid">
+      <div class="cell"><div class="k">Wymiary</div><div class="v" id="dims">—</div></div>
+      <div class="cell"><div class="k">Nieprzezroczyste</div><div class="v" id="opaque">—</div></div>
+      <div class="cell"><div class="k">W pełni przezroczyste</div><div class="v" id="clear">—</div></div>
+      <div class="cell"><div class="k">Pół-przezroczyste</div><div class="v" id="semi">—</div></div>
+    </div>
+
+    <div class="canvases">
+      <div class="cbox"><div class="lbl">Podgląd</div><canvas id="preview"></canvas></div>
+      <div class="cbox"><div class="lbl">Mapa problemów (czerwony = pół-przezroczysty piksel)</div><canvas id="heatmap"></canvas></div>
+    </div>
+
+    <div class="notes" id="notes"></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <button class="fix" id="fixBtn" style="display:none">⚡ Napraw i pobierz PNG</button>
+      <button class="again" id="again">↺ Sprawdź kolejny plik</button>
+    </div>
+  </div>
+
+  <div class="how">
+    <h2>◆ PROGI DECYZYJNE</h2>
+    <div class="thresholds">
+      <div class="th g"><div class="t">✅ &lt; 0,05%</div><div class="d">Bezpiecznie. To zwykły antyaliasing krawędzi.</div></div>
+      <div class="th y"><div class="t">⚠️ 0,05–0,5%</div><div class="d">Zerknij na mapę: linia po konturze OK, plamki w tle NIE.</div></div>
+      <div class="th r"><div class="t">🚫 &gt; 0,5%</div><div class="d">Wysokie ryzyko odrzucenia. Popraw przed uploadem.</div></div>
+    </div>
+  </div>
+
+  <div class="how">
+    <h2>◆ NAJSZIEBCIEJ: PRZECISK „NAPRAW I POBIERZ"</h2>
+    <p style="font-size:13px;color:var(--dim);line-height:1.7;max-width:70ch">Gdy wynik pokaże ⚠️ lub 🚫, kliknij <strong style="color:var(--red)">„⚡ Napraw i pobierz PNG"</strong> nad wynikami: narzędzie samo ustawia każdy piksel kanału alfa na 0 albo 255 (dokładnie ten sam Threshold, który dotąd robiłeś ręcznie w Photopea) i od razu pobiera gotowy plik jako <code>nazwa-naprawiony.png</code>. Nie musisz nic robić w Photopea.</p>
+  </div>
+
+  <div class="how">
+    <h2>◆ METODA RĘCZNA (opcjonalnie, w Photopea)</h2>
+    <p style="font-size:12.5px;color:var(--dim);margin-bottom:16px">Przydatna, jeśli chcesz mieć pełną kontrolę nad progiem albo pracujesz już w Photopea nad czyś innym:</p>
+    <div class="steps">
+      <div class="step"><div class="n">01</div><p><strong>Remove BG</strong> jak zwykle w Photopea, tak jak dotychczas.</p></div>
+      <div class="step"><div class="n">02</div><p><strong>Layer → Add Layer Mask → From Transparency</strong>, tworzy edytowalny kanał skali szarości.</p></div>
+      <div class="step"><div class="n">03</div><p><strong>Image → Adjustments → Threshold</strong> na masce (próg ~128), zeruje piksele pośrednie.</p></div>
+    </div>
+    <p style="font-size:12.5px;color:var(--dim);margin-top:16px">Pełna instrukcja krok po kroku: <a href="platforma.html#ch3" style="color:var(--red)">Rozdział 3.5 platformy szkoleniowej →</a></p>
+  </div>
+</div>
+
+<footer>🦫 CyberBober 1.2, Narzędzia dla twórców POD © 2026</footer>
+
+<script>
+const drop = document.getElementById('drop');
+const fileInput = document.getElementById('file');
+const resultEl = document.getElementById('result');
+const verdictEl = document.getElementById('verdict');
+const notesEl = document.getElementById('notes');
+const previewCanvas = document.getElementById('preview');
+const heatCanvas = document.getElementById('heatmap');
+const againBtn = document.getElementById('again');
+const fixBtn = document.getElementById('fixBtn');
+
+let currentImg = null;
+let currentFilename = 'design';
+
+drop.addEventListener('click', () => fileInput.click());
+drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('drag'); });
+drop.addEventListener('dragleave', () => drop.classList.remove('drag'));
+drop.addEventListener('drop', e => {
+  e.preventDefault(); drop.classList.remove('drag');
+  if (e.dataTransfer.files[0]) handleFile(e.dataTransfer.files[0]);
+});
+fileInput.addEventListener('change', e => { if (e.target.files[0]) handleFile(e.target.files[0]); });
+againBtn.addEventListener('click', () => {
+  resultEl.classList.remove('show'); fileInput.value=''; currentImg = null;
+  drop.scrollIntoView({behavior:'smooth', block:'center'});
+});
+fixBtn.addEventListener('click', () => { if (currentImg) fixAndDownload(currentImg); });
+
+function handleFile(file){
+  if (!file.type.includes('png')) { alert('To musi być plik PNG.'); return; }
+  currentFilename = file.name.replace(/\.png$/i, '');
+  const img = new Image();
+  const url = URL.createObjectURL(file);
+  img.onload = () => analyze(img);
+  img.src = url;
+}
+
+function analyze(img){
+  currentImg = img;
+  const w = img.width, h = img.height;
+  const work = document.createElement('canvas');
+  work.width = w; work.height = h;
+  const wctx = work.getContext('2d');
+  wctx.drawImage(img, 0, 0);
+  const data = wctx.getImageData(0,0,w,h).data;
+
+  let opaque=0, clear=0, semi=0;
+  const total = w*h;
+  const heat = wctx.createImageData(w,h);
+
+  for (let i=0; i<data.length; i+=4){
+    const a = data[i+3];
+    if (a === 255) opaque++;
+    else if (a === 0) clear++;
+    else semi++;
+
+    if (a === 0){
+      heat.data[i]=0; heat.data[i+1]=0; heat.data[i+2]=0; heat.data[i+3]=0;
+    } else if (a === 255){
+      heat.data[i]=60; heat.data[i+1]=60; heat.data[i+2]=64; heat.data[i+3]=255;
+    } else {
+      heat.data[i]=239; heat.data[i+1]=68; heat.data[i+2]=68; heat.data[i+3]=255;
+    }
+  }
+
+  const semiPct = (semi/total*100);
+
+  const maxDim = 420;
+  const scale = Math.min(maxDim/w, maxDim/h, 1);
+  [previewCanvas, heatCanvas].forEach(c => { c.width = Math.round(w*scale); c.height = Math.round(h*scale); });
+  previewCanvas.getContext('2d').drawImage(img,0,0,previewCanvas.width,previewCanvas.height);
+
+  const heatFull = document.createElement('canvas');
+  heatFull.width=w; heatFull.height=h;
+  heatFull.getContext('2d').putImageData(heat,0,0);
+  heatCanvas.getContext('2d').drawImage(heatFull,0,0,heatCanvas.width,heatCanvas.height);
+
+  document.getElementById('dims').textContent = `${w} × ${h}px`;
+  document.getElementById('opaque').textContent = opaque.toLocaleString('pl-PL');
+  document.getElementById('clear').textContent = clear.toLocaleString('pl-PL');
+  document.getElementById('semi').textContent = `${semi.toLocaleString('pl-PL')} (${semiPct.toFixed(3)}%)`;
+
+  let level, msg, note;
+  if (semiPct > 0.5){
+    level='bad';
+    msg='WYSOKIE RYZYKO, platforma prawdopodobnie odrzuci';
+    note='<strong>Za dużo pół-przezroczystych pikseli.</strong> To dokładnie ten problem, który platformy POD zgłaszają jako "semi-transparent areas" i "not fully cropped". Kliknij "Napraw i pobierz" poniżej, albo popraw ręcznie w Photopea (Rozdział 3.5).';
+    fixBtn.style.display = 'inline-block';
+  } else if (semiPct > 0.05){
+    level='warn';
+    msg='DO POPRAWY, krawędzie nie są w 100% czyste';
+    note='<strong>Niewielka ilość pół-przezroczystych pikseli</strong>, zerknij na mapę problemów po prawej: cienka linia wzdłuż konturu = normalny antyaliasing, bezpieczne, możesz zostawić. Plamki/kropki w środku tła = resztki szachownicy, jeśli wolisz mieć pewność, kliknij "Napraw i pobierz".';
+    fixBtn.style.display = 'inline-block';
+  } else {
+    level='ok';
+    msg='CZYSTO, plik gotowy do uploadu';
+    note='Brak istotnych śladów pół-przezroczystości. Kanał alfa jest praktycznie binarny (0 / 255), tak jak wymagają najbardziej rygorystyczne platformy POD.';
+    fixBtn.style.display = 'none';
+  }
+
+  verdictEl.className = 'verdict ' + level;
+  verdictEl.innerHTML = `<span class="dot"></span> ${msg}`;
+  notesEl.innerHTML = note;
+
+  resultEl.classList.add('show');
+  resultEl.scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function fixAndDownload(img){
+  const w = img.width, h = img.height;
+  const canvas = document.createElement('canvas');
+  canvas.width = w; canvas.height = h;
+  const ctx = canvas.getContext('2d');
+  ctx.drawImage(img, 0, 0);
+  const imageData = ctx.getImageData(0, 0, w, h);
+  const data = imageData.data;
+
+  // Threshold na kanale alfa: próg 128 — to samo co Layer Mask + Threshold w Photopea
+  const THRESHOLD = 128;
+  for (let i = 0; i < data.length; i += 4) {
+    data[i+3] = data[i+3] >= THRESHOLD ? 255 : 0;
+  }
+
+  ctx.putImageData(imageData, 0, 0);
+
+  canvas.toBlob(blob => {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${currentFilename}-naprawiony.png`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }, 'image/png');
+}
+
+</script>
+</body>
+</html>
