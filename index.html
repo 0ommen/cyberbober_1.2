@@ -114,6 +114,40 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
 .free-btn{display:inline-block;padding:12px 24px;background:var(--green);color:#001a0a;border-radius:10px;font-size:13px;font-weight:700;text-decoration:none;transition:all .2s;white-space:nowrap}
 .free-btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
 
+/* ── HUB TILES ── */
+.hub-tiles{max-width:1040px;margin:0 auto;padding:0 48px 72px;position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.hub-tile{
+  background:linear-gradient(160deg,var(--tile-bg,#141420) 0%,#0e0e17 100%);
+  border:1px solid var(--tile-line,var(--border));
+  border-radius:20px;padding:30px 26px;
+  display:flex;flex-direction:column;gap:16px;
+  text-decoration:none;position:relative;overflow:hidden;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.hub-tile::before{
+  content:'';position:absolute;top:-40%;right:-30%;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle,var(--tile-glow,transparent) 0%,transparent 70%);
+  opacity:.5;pointer-events:none;
+}
+.hub-tile:hover{transform:translateY(-5px);border-color:var(--tile-accent,var(--border));box-shadow:0 16px 36px -14px var(--tile-glow,transparent)}
+.hub-tile-icon{
+  width:54px;height:54px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;font-size:24px;
+  background:var(--tile-accent-soft,#ffffff10);border:2px solid var(--tile-accent,var(--border));
+  position:relative;z-index:1;
+}
+.hub-tile-eyebrow{font-family:'Orbitron',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tile-accent,var(--muted));font-weight:800;position:relative;z-index:1}
+.hub-tile h3{font-size:17px;font-weight:800;color:var(--text);margin:2px 0 2px;position:relative;z-index:1}
+.hub-tile p{font-size:12.5px;color:var(--muted);line-height:1.65;margin:0;flex:1;position:relative;z-index:1}
+.hub-tile-cta{
+  align-self:flex-start;font-family:'Source Code Pro',monospace;font-size:12px;font-weight:700;
+  color:var(--tile-accent,var(--text));display:flex;align-items:center;gap:6px;position:relative;z-index:1;
+}
+.hub-tile:hover .hub-tile-cta{gap:10px}
+@media (max-width:760px){
+  .hub-tiles{grid-template-columns:1fr;padding-left:20px;padding-right:20px}
+}
+
 /* WHAT YOU GET */
 .features-section{padding:0 48px 72px;position:relative;z-index:2;max-width:780px;margin:0 auto}
 .features-title{font-size:20px;font-weight:700;color:var(--text);text-align:center;margin-bottom:8px}
@@ -519,6 +553,7 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
     </div>
     <div style="display:flex;align-items:center;gap:18px">
       <a href="research/index.html" style="color:var(--muted);text-decoration:none;font-size:12.5px;font-weight:600">📊 Insider POD Raport</a>
+      <a href="narzedzia.html" style="color:var(--muted);text-decoration:none;font-size:12.5px;font-weight:600">🩺 Alpha PNG Engine</a>
       <a href="#pricing" class="lp-nav-cta">Kup subskrypcję →</a>
     </div>
   </div>
@@ -637,39 +672,33 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
     </p>
   </div>
 
-  <!-- FREE EBOOK -->
-  <div class="free-section">
-    <div class="free-card">
-      <div class="free-card-icon">📖</div>
-      <div class="free-card-text">
-        <h3>PLATFORMA SZKOLENIOWA POD</h3>
-        <p>Wejdź i ucz się, czeka na Ciebie 6 modułów, które pokażą Ci, jak krok po kroku wdrożyć w życie dane od CyberBobera. Nauczysz się szybkiej analizy nisz, tworzenia promptów, generowania grafik oraz optymalizacji SEO i GEO pod gotowe raporty. Zero opłat, zero rejestracji. Wchodzisz, poznajesz system i od razu budujesz swoje portfolio nawet bez subskrypcji.</p>
-      </div>
-      <a href="platforma.html" class="free-btn">WEJDŹ →</a>
-    </div>
-  </div>
+  <!-- HUB TILES: PLATFORMA / INSIDER / ALPHA -->
+  <div class="hub-tiles">
 
-  <!-- INSIDER POD RAPORT + PNG TOOL -->
-  <div class="free-section">
-    <div class="free-card" style="background:#0a140a;border-color:#34d39930">
-      <div class="free-card-icon">📊</div>
-      <div class="free-card-text">
-        <h3>INSIDER POD RAPORT</h3>
-        <p>Ręczny research rynkowy dla Redbubble, TeePublic, Spreadshirt.de, Amazon KDP i Etsy: trendy, konkurencja i gotowe koncepty designów. Otwarte dla każdego, bez logowania.</p>
-      </div>
-      <a href="research/index.html" class="free-btn" style="background:var(--green)">ZOBACZ RAPORTY →</a>
-    </div>
-  </div>
+    <a href="platforma.html" class="hub-tile" style="--tile-accent:var(--gold);--tile-accent-soft:#f59e0b18;--tile-glow:#f59e0b40;--tile-bg:#1a1508">
+      <div class="hub-tile-icon">📖</div>
+      <div class="hub-tile-eyebrow">Za darmo, bez rejestracji</div>
+      <h3>Platforma szkoleniowa</h3>
+      <p>6 modułów: analiza nisz, prompty, grafiki, SEO i GEO pod gotowe raporty. Wchodzisz i od razu budujesz portfolio.</p>
+      <span class="hub-tile-cta">WEJDŹ →</span>
+    </a>
 
-  <div class="free-section">
-    <div class="free-card" style="background:#1a0a0a;border-color:#f8717130">
-      <div class="free-card-icon">🩺</div>
-      <div class="free-card-text">
-        <h3>ALPHA PNG ENGINE</h3>
-        <p>Wykrywa resztki szachownicy i pół-przezroczyste piksele, które platformy POD odrzucają. Jednym kliknięciem naprawia plik i pobiera gotowy PNG, bez Photopea, 100% lokalnie w przeglądarce.</p>
-      </div>
-      <a href="narzedzia.html" class="free-btn" style="background:var(--red);color:#1a0a0a">SPRAWDŹ PLIK →</a>
-    </div>
+    <a href="research/index.html" class="hub-tile" style="--tile-accent:var(--green);--tile-accent-soft:#34d39918;--tile-glow:#34d39940;--tile-bg:#0d1a13">
+      <div class="hub-tile-icon">📊</div>
+      <div class="hub-tile-eyebrow">Otwarte dla każdego</div>
+      <h3>Insider POD Raport</h3>
+      <p>Ręczny research: Redbubble, TeePublic, Spreadshirt.de, Amazon KDP, Etsy. Trendy, konkurencja, gotowe koncepty.</p>
+      <span class="hub-tile-cta">ZOBACZ RAPORTY →</span>
+    </a>
+
+    <a href="narzedzia.html" class="hub-tile" style="--tile-accent:var(--red);--tile-accent-soft:#f8717118;--tile-glow:#f8717140;--tile-bg:#1a0d0d">
+      <div class="hub-tile-icon">🩺</div>
+      <div class="hub-tile-eyebrow">100% lokalnie, w przeglądarce</div>
+      <h3>Alpha PNG Engine</h3>
+      <p>Wykrywa resztki szachownicy i pół-przezroczyste piksele. Naprawia i pobiera gotowy plik jednym kliknięciem.</p>
+      <span class="hub-tile-cta">SPRAWDŹ PLIK →</span>
+    </a>
+
   </div>
 
   <!-- DIVIDER -->
