@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TeePublic Market Report, Sierpień 2026</title>
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../favicon-180.png">
+<style>
+  :root{
+    --bg: #121316;
+    --panel: #1b1d22;
+    --panel-2: #22242b;
+    --line: #33353c;
+    --text: #f1f1ee;
+    --text-dim: #a9abb4;
+    --accent: #ffd23f;
+    --accent-2: #ff5d5d;
+    --accent-3: #5ee6c8;
+    --accent-4: #b98bff;
+    --accent-5: #6fb3ff;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height:1.5;
+    padding-bottom: 80px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  header.hero{
+    background:
+      radial-gradient(circle at 12% 20%, rgba(255,210,63,0.10), transparent 40%),
+      radial-gradient(circle at 88% 0%, rgba(185,139,255,0.12), transparent 45%),
+      linear-gradient(180deg, #17181c 0%, #121316 100%);
+    border-bottom: 3px solid var(--accent);
+    padding: 56px 0 40px;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--accent);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-weight:700;
+    margin-bottom: 18px;
+  }
+  h1{
+    font-size: 38px;
+    line-height:1.1;
+    margin: 0 0 14px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+  }
+  h1 span{color:var(--accent);}
+  .hero p.lead{
+    font-size: 16px;
+    color: var(--text-dim);
+    max-width: 760px;
+    margin: 0 0 26px;
+  }
+  .stat-row{
+    display:flex; flex-wrap:wrap; gap:14px; margin-top: 18px;
+  }
+  .stat{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 16px;
+    min-width: 150px;
+  }
+  .stat .n{font-size:20px; font-weight:800; color:var(--accent-3);}
+  .stat .l{font-size:12px; color:var(--text-dim); text-transform:uppercase; letter-spacing:.05em;}
+
+  section.block{ padding: 46px 0 10px; border-bottom: 1px solid var(--line); }
+  section.block h2{
+    font-size: 24px;
+    margin: 0 0 6px;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    font-weight: 900;
+  }
+  section.block .subtitle{
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0 0 22px;
+    padding-left: 16px;
+  }
+  section.block > .wrap > p.body-text{
+    color: var(--text-dim);
+    font-size: 14.5px;
+    max-width: 820px;
+    margin: 0 0 20px;
+  }
+  section.block > .wrap > p.body-text b{color:var(--text);}
+
+  .findings{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 14px;
+    margin: 8px 0 8px;
+  }
+  .finding-card{
+    background: var(--panel);
+    border:1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .finding-card .tag{
+    font-family: var(--mono);
+    font-size:11px;
+    color:var(--bg);
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:6px;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .finding-card h3{
+    font-size: 15px;
+    margin: 0 0 6px;
+  }
+  .finding-card p{margin:0; font-size:13.5px; color:var(--text-dim); line-height:1.5;}
+  .finding-card b{color:var(--text);}
+  .finding-card .ex{
+    margin-top:10px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--text-dim);
+    border-top: 1px dashed var(--line);
+    padding-top: 8px;
+  }
+
+  .callout{
+    background: linear-gradient(135deg, rgba(255,210,63,0.08), rgba(185,139,255,0.08));
+    border: 1px dashed var(--accent);
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 14px;
+    color: var(--text-dim);
+    margin: 8px 0 24px;
+  }
+  .callout b{color:var(--accent);}
+  .callout.warn{border-color: var(--accent-2);}
+  .callout.warn b{color:var(--accent-2);}
+
+  nav.jumpnav{
+    position: sticky; top:0; z-index: 50;
+    background: rgba(18,19,22,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+    margin-top: 30px;
+  }
+  nav.jumpnav .wrap{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+  nav.jumpnav a{
+    font-size:13px;
+    color: var(--text);
+    text-decoration:none;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    padding:7px 12px;
+    border-radius:999px;
+    transition: all .15s ease;
+    white-space:nowrap;
+  }
+  nav.jumpnav a:hover{border-color:var(--accent); color:var(--accent);}
+
+  /* charts */
+  .chart-card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px 10px;
+    margin-bottom: 18px;
+  }
+  .chart-card .chart-title{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 2px;
+  }
+  .chart-card .chart-sub{
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 18px;
+  }
+  .bar-row{
+    display:grid;
+    grid-template-columns: 160px 1fr 70px;
+    align-items:center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .bar-row .bl{
+    font-size: 12.5px;
+    color: var(--text-dim);
+    text-align:right;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .bar-track{
+    background: var(--panel-2);
+    border-radius: 6px;
+    height: 14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .bar-fill{
+    height: 100%;
+    border-radius: 6px;
+    background: var(--accent);
+  }
+  .bar-fill.alt{background: var(--accent-3);}
+  .bar-val{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text);
+    font-weight:700;
+  }
+
+  table.data-table{
+    width:100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 10px 0 20px;
+  }
+  table.data-table th{
+    text-align:left;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing:.05em;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 10px;
+    font-weight:700;
+  }
+  table.data-table td{
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-dim);
+  }
+  table.data-table td.strong{color:var(--text); font-weight:700;}
+  table.data-table tr:hover td{background: rgba(255,255,255,0.02);}
+  table.data-table .up{color: var(--accent-3); font-family: var(--mono);}
+  table.data-table .flat{color: var(--text-dim); font-family: var(--mono);}
+  table.data-table .warn-cell{color: var(--accent-2); font-family: var(--mono);}
+
+  .pill-row{display:flex; flex-wrap:wrap; gap:8px; margin: 6px 0 20px;}
+  .pill{
+    font-size:12px;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    color: var(--text-dim);
+    padding: 5px 11px;
+    border-radius: 999px;
+  }
+
+  .two-col{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 780px){ .two-col{grid-template-columns: 1fr;} }
+
+  footer.report-footer{
+    padding: 50px 20px 30px;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  footer.report-footer .wrap{max-width:1080px;}
+  .sources-list{
+    columns: 2;
+    gap: 30px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .sources-list li{margin-bottom:8px; break-inside: avoid;}
+  .sources-list a{color: var(--accent-5); text-decoration:none;}
+  .sources-list a:hover{text-decoration:underline;}
+  footer.report-footer b{color:var(--accent);}
+
+  /* niche idea cards */
+  .niche-block{ margin-bottom: 40px; }
+  .niche-block:last-child{ margin-bottom: 10px; }
+  .niche-head{
+    display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    margin-bottom: 8px;
+  }
+  .niche-title-block .num{
+    font-family: var(--mono);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight:700;
+    letter-spacing:.08em;
+  }
+  .niche-block h3.niche-name{
+    font-size: 22px;
+    margin: 4px 0 6px;
+    font-weight: 900;
+  }
+  .niche-block .signal-pill{
+    display:inline-block;
+    font-size:12px;
+    font-weight:700;
+    padding:4px 10px;
+    border-radius:999px;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+  .niche-block .rationale{
+    color: var(--text-dim);
+    font-size: 14.5px;
+    max-width: 780px;
+    margin: 6px 0 20px;
+  }
+  .niche-block .rationale b{color:var(--text);}
+
+  .ideas{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  @media (max-width: 820px){ .ideas{grid-template-columns: 1fr;} }
+
+  .idea-card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .idea-card .idea-head{
+    padding: 14px 18px;
+    display:flex; align-items:center; justify-content:space-between;
+    border-bottom: 1px solid var(--line);
+  }
+  .idea-card .idea-label{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .idea-a .idea-head{background: rgba(255,210,63,0.08);}
+  .idea-a .idea-label{color: var(--accent);}
+  .idea-b .idea-head{background: rgba(94,230,200,0.08);}
+  .idea-b .idea-label{color: var(--accent-3);}
+
+  .field{
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .field:last-child{border-bottom:none;}
+  .field-top{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom: 8px;
+  }
+  .field-name{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing:.08em;
+    color: var(--text-dim);
+    font-weight: 700;
+  }
+  .copy-btn{
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight:700;
+    color: var(--bg);
+    background: var(--text);
+    border: none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: transform .1s ease, background .15s ease;
+  }
+  .copy-btn:hover{background: var(--accent);}
+  .copy-btn:active{transform: scale(0.94);}
+  .copy-btn.copied{background: var(--accent-3); color:#0a0a0a;}
+
+  .field-title{
+    font-size: 16px;
+    font-weight: 800;
+    line-height:1.3;
+  }
+  .field-desc{
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height:1.55;
+  }
+  .field-prompt{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: #d8dae0;
+    background: #0e0f12;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px;
+    line-height:1.5;
+    white-space: pre-wrap;
+  }
+  .tag-list{
+    display:flex; flex-wrap:wrap; gap:6px;
+  }
+  .tag-chip{
+    font-size: 11.5px;
+    background: var(--panel-2);
+    border: 1px solid var(--line);
+    color: var(--text-dim);
+    padding: 4px 9px;
+    border-radius: 999px;
+  }
+
+  .toast{
+    position: fixed;
+    bottom: 22px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--accent-3);
+    color: #0a0a0a;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    opacity: 0;
+    transition: all .25s ease;
+    pointer-events:none;
+    z-index: 100;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  }
+  .toast.show{opacity:1; transform: translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<div style="border-bottom:1px solid var(--line); background:rgba(18,19,22,0.92);">
+  <div class="wrap" style="max-width:1080px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+    <div style="font-family:var(--mono); font-size:12.5px; color:var(--text-dim); display:flex; align-items:center; gap:6px;">
+      <a href="../index.html" style="color:var(--text-dim); text-decoration:none;">Insider POD Raport</a>
+      <span style="opacity:.4;">/</span>
+      <a href="index.html" style="color:var(--text-dim); text-decoration:none;">TeePublic</a>
+      <span style="opacity:.4;">/</span>
+      <span style="color:var(--text); font-weight:700;">sierpień 2026</span>
+    </div>
+    <a href="../../platforma.html" style="font-size:12.5px; font-family:var(--mono); text-decoration:none; color:var(--bg); background:var(--accent); padding:6px 12px; border-radius:999px; font-weight:700;">← Platforma CyberBober</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">TeePublic — Raport Rynkowy</span>
+    <h1>Sierpień 2026: co się dzieje i co <span>naprawdę sprzedaje się</span> na TeePublic</h1>
+    <p class="lead">
+      Ogólny, niespersonalizowany przegląd rynku TeePublic na sierpień 2026 — oparty na bezpośrednim przeglądzie
+      list "Best Sellers" i "Trending" w kategoriach T-Shirts i Stickers (wraz z globalnym modułem Trending Tags),
+      danych keywordowych eRank (Etsy jako wskaźnik wyprzedzający — TeePublic nie jest bezpośrednio wspierany
+      przez eRank) oraz aktualnych raportach branżowych print-on-demand (Merch Titans, Accio, teeinblue, Trendlytic).
+    </p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">2</div><div class="l">kategorie TeePublic przeanalizowane</div></div>
+      <div class="stat"><div class="n">123%</div><div class="l">CTR topowej analizowanej frazy</div></div>
+      <div class="stat"><div class="n">$1–2</div><div class="l">realny zarobek/szt. podczas wyprzedaży (vs ~$4 bazowo)</div></div>
+      <div class="stat"><div class="n">925</div><div class="l">konkurencja przy 1 663 wyszukiwaniach/mies.</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="jumpnav">
+  <div class="wrap">
+    <a href="#tldr">TL;DR</a>
+    <a href="#metodologia">Metodologia</a>
+    <a href="#sezon">Sezonowość</a>
+    <a href="#erank">Dane eRank</a>
+    <a href="#kategorie">Co się sprzedaje</a>
+    <a href="#nisze">5 Nisz + Produkty</a>
+    <a href="#estetyki">Estetyki i nisze</a>
+    <a href="#format">Format produktu</a>
+    <a href="#ryzyka">Na co uważać</a>
+    <a href="#rekomendacje">Rekomendacje</a>
+    <a href="#zrodla">Źródła</a>
+  </div>
+</nav>
+
+<section class="block" id="tldr">
+  <div class="wrap">
+    <h2>TL;DR</h2>
+    <p class="subtitle">Najważniejsze wnioski w 5 punktach</p>
+    <p class="body-text">
+      TeePublic to platforma zbudowana wokół <b>ciągłej presji rabatowej</b> — niemal każdy produkt widnieje
+      z odliczaniem "Offer ends in..." i cenami $18/$24 zamiast bazowych, co realnie ścina zarobek twórcy z ok.
+      <b>$4 do $1–2 za sztukę</b> podczas częstych wyprzedaży (wg Merch Titans). Widoczność zależy niemal
+      wyłącznie od algorytmu wyszukiwania platformy, dlatego <b>miniatury muszą działać z daleka</b> — proste,
+      wysokokontrastowe kompozycje wygrywają z detalicznymi ilustracjami. Największy wykryty sygnał danych to
+      nisza <b>gamelit/dungeon-crawl</b> — fraza analizowana w eRank ma 1 663 śr. wyszukiwań/mies. przy CTR
+      123% i konkurencji zaledwie 925 — wyraźnie niedoceniona przy realnym popycie. Równolegle katalog
+      TeePublic jest mocno napędzany <b>viralowymi memami internetowymi</b> (aktualnie: szalony popularny
+      szop pracz "Jimothy", który zdążył już zostać upolityczniony — ryzykowny grunt) oraz <b>nostalgią
+      sportową i muzyczną</b> (retro drużyny, płyty winylowe, kultowi wykonawcy). Raporty branżowe (Merch
+      Titans, Accio) wskazują minimalistyczną, "pinterestową" estetykę linii jako najbezpieczniejszy,
+      najbardziej przyszłościowy kierunek na 2026 — mniejsze ryzyko prawne niż fandom pop-kulturowy, wciąż
+      solidny popyt.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="metodologia">
+  <div class="wrap">
+    <h2>Metodologia</h2>
+    <p class="subtitle">Skąd pochodzą dane w tym raporcie</p>
+    <p class="body-text">
+      Dane zebrano 21 sierpnia 2026 z trzech źródeł: <b>(1)</b> bezpośredni przegląd list "Best Sellers" oraz
+      "Trending" na TeePublic w kategoriach T-Shirts i Stickers, wraz z globalnym modułem "Trending Tags"
+      widocznym na każdej stronie kategorii; <b>(2)</b> eRank Keyword Tool i Trend Buzz (dane z Etsy — eRank
+      <u>nie obsługuje bezpośrednio TeePublic</u> jako marketplace, więc dane Etsy traktowane są tu jako
+      wskaźnik wyprzedzający ogólnego zainteresowania tematem, nie jako dane bezpośrednio z platformy);
+      <b>(3)</b> aktualne raporty branżowe print-on-demand (Merch Titans, Accio, teeinblue, Trendlytic)
+      opisujące model cenowy, algorytm widoczności i trendy TeePublic na 2026 rok. Pełna lista źródeł
+      znajduje się na końcu raportu.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="sezon">
+  <div class="wrap">
+    <h2>Sezonowość i dynamika sprzedaży</h2>
+    <p class="subtitle">Na TeePublic to nie kalendarz, tylko prędkość trendu i cykl wyprzedaży napędzają ruch</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">MECHANIKA</span>
+        <h3>Wyprzedaż to nie wyjątek, tylko stały stan platformy</h3>
+        <p>Każdy przejrzany produkt (T-Shirts, Stickers) miał aktywny licznik "Offer ends in 1 day..." i cenę
+        obniżoną (np. $18 zamiast $24) — TeePublic prowadzi sitewide sales praktycznie bez przerwy, co
+        bezpośrednio wpływa na realny zarobek sprzedawcy.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">VIRAL</span>
+        <h3>Trendy memowe wybuchają i gasną bardzo szybko</h3>
+        <p>Cały moduł "Jimothy Fever 🦝" (4 różne designy od 3 różnych twórców w top widoczności) pokazuje, jak
+        szybko platforma reaguje na świeży wirusowy trend internetowy — ale też jak krótkie jest okno na
+        wejście, zanim temat "wygaśnie".</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">EWERGREEN</span>
+        <h3>Nostalgia muzyczna i sportowa nie ma "sezonu"</h3>
+        <p>Retro płyty winylowe, kultowi wykonawcy (Steely Dan, Michael Jackson) i drużyny sportowe z lat 80.
+        pojawiają się w top listach stale, niezależnie od pory roku — to bardziej estetyka pokoleniowa niż
+        sezonowy trend.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">LATO</span>
+        <h3>Rezydualny popyt patriotyczny</h3>
+        <p>Projekt "4th-july" wciąż widoczny w sekcji Trending Today mimo że święto minęło ponad miesiąc
+        temu — sygnał, że popularne sezonowe designy potrafią sprzedawać się długo po dacie, jeśli mają dobrą
+        pozycję w wynikach.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#ff9b6f; color:#2b1400;">GAMELIT</span>
+        <h3>Fandom książkowy/growy rośnie skokowo</h3>
+        <p>Wykres wyszukiwań eRank dla frazy związanej z popularną serią dungeon-crawl pokazuje wyraźny,
+        gwałtowny wzrost z ostrym szczytem na przełomie stycznia/lutego 2026 i utrzymującym się podwyższonym
+        poziomem od tego czasu — klasyczny wzorzec "fandomu w fazie wzrostu", a nie chwilowego spike'a.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#8fe36b; color:#0d2400;">REGION</span>
+        <h3>Lokalna duma miejska powtarza się niezależnie</h3>
+        <p>Ten sam pomysł ("[Miasto] pride shirt") pojawił się od dwóch różnych, niepowiązanych twórców
+        jednocześnie w top listach — silny sygnał, że format "duma z mojego miasta" ma stały, powtarzalny
+        popyt niezależny od konkretnej lokalizacji.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="erank">
+  <div class="wrap">
+    <h2>Dane eRank — kontekst popytu (Etsy jako proxy)</h2>
+    <p class="subtitle">Trend Buzz (30 dni, rynek USA) + głębszy research 1 frazy celowanej pod trend gamelit</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Top 10 fraz wg Search Interest (30 dni, cały rynek Etsy)</div>
+      <div class="chart-sub">Ogólny obraz popytu na Etsy — kontekst, nie dane bezpośrednio z TeePublic</div>
+      <div id="chart1"></div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Fraza</th><th>Search Interest</th><th>Zmiana rankingu (30 dni)</th><th>Konkurencja (Etsy)</th></tr>
+      </thead>
+      <tbody id="erank-table"></tbody>
+    </table>
+
+    <div class="chart-card">
+      <div class="chart-title">Spotlight: "dungeon crawler carl shirt" — głęboki research</div>
+      <div class="chart-sub">Fraza wybrana na podstawie realnej, powtarzającej się obecności tego fandomu na TeePublic (2 różne listingi w top Trending)</div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">1 663</div><div class="l">śr. wyszukiwania / mies.</div></div>
+        <div class="stat"><div class="n">2 040</div><div class="l">śr. kliknięcia / mies.</div></div>
+        <div class="stat"><div class="n">123%</div><div class="l">CTR</div></div>
+        <div class="stat"><div class="n">925</div><div class="l">konkurencja (Etsy)</div></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>Ciekawostka i zastrzeżenie z danych:</b> przy tej frazie eRank pokazuje nietypowy rozkład geograficzny
+      wyszukujących — <b>56,8% z Wietnamu</b> i tylko 33,1% ze Stanów Zjednoczonych. To może oznaczać, że
+      część wolumenu to inni sprzedawcy POD researchujący niszę, a nie wyłącznie końcowi kupujący — warto
+      traktować bezwzględny wolumen jako sygnał zainteresowania niszą, a nie w 100% jako popyt konsumencki.
+      Mimo to kombinacja wysokiego CTR i niskiej konkurencji pozostaje realnie mocnym sygnałem.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="kategorie">
+  <div class="wrap">
+    <h2>Co faktycznie sprzedaje się teraz na TeePublic</h2>
+    <p class="subtitle">Obserwacje z realnych list "Best Sellers" i "Trending" (T-Shirts, Stickers) oraz modułu Trending Tags</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">VIRAL</span>
+        <h3>Memy internetowe dostają własną, wydzieloną witrynę</h3>
+        <p>Aktualny wirusowy mem (szop pracz "Jimothy") ma własny, wyeksponowany moduł "Jimothy Fever 🦝" na
+        stronie głównej kategorii — TeePublic wyraźnie faworyzuje świeże, wirusowe tematy w swoim algorytmie
+        odkrywania.</p>
+        <div class="ex">przykłady: Angela Alvarez, StarMa, Arto Mosi (4 designy "Jimothy" jednocześnie w top)</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-2); color:#2b0a0a;">MUZYKA</span>
+        <h3>Nostalgia muzyczna — winyl, rock, kultowi wykonawcy</h3>
+        <p>Retro typografia zespołów i wykonawców (Steely Dan, Michael Jackson, Alice in Chains, No Doubt) oraz
+        motyw płyt winylowych 45 rpm to stały, silny segment niezależny od aktualnych premier muzycznych.</p>
+        <div class="ex">przykłady: DankFutura, Midcenturydave, Robo-Bonez, TropiParadise</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">SPORT</span>
+        <h3>Retro duma drużynowa i miejska</h3>
+        <p>Vintage, "distressed" typografia drużyn (hokej, baseball, koszykówka) oraz miast/regionów dominuje
+        kategorię Sports — silniejszy motyw nostalgii niż aktualnego sezonu sportowego.</p>
+        <div class="ex">przykłady: Hey Riddle Riddle, BrewingU, boxersettle, CultOfRomance</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">GAMELIT</span>
+        <h3>Fandom książkowo-growy (dungeon-crawl/LitRPG)</h3>
+        <p>Ten sam fandom pojawił się dwukrotnie, niezależnie, w top liście Trending — silny, potwierdzony też
+        w danych eRank (patrz sekcja powyżej) sygnał rosnącej niszy.</p>
+        <div class="ex">przykłady: Zenvyre, Yoben</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">HUMOR</span>
+        <h3>Absurdalny, "internetowy" humor tekstowy</h3>
+        <p>Krótkie, wyrwane z kontekstu frazy ("Wait-What", "Meh", "Walking HR Violation", "I whisper wtf to
+        myself...") sprzedają się jako czysty tekst na czarnym tle — zero grafiki, czysta rozpoznawalność
+        miniaturki.</p>
+        <div class="ex">przykłady: Zenithcore, SHIrT Happens, kapotka, ZombieNinjas</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#8fe36b; color:#0d2400;">KAWAII</span>
+        <h3>Kawaii/anime estetyka wciąż mocna</h3>
+        <p>Bestseller numer jeden w kategorii T-Shirts to kawaii kot z ramenem w stylu japońskim — spójne z
+        szerszym trendem anime/sakura widocznym też w kategorii Anime.</p>
+        <div class="ex">przykłady: ThatHorrorBozo, Irene Koh Studio, Gloomeeey</div>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <b>Do odnotowania:</b> w przeglądanych listach obecne są designy z realnymi nazwiskami sportowców i
+      celebrytów (Kobe Bryant, Tiger Woods, zawodnik UFC) oraz z nieaktualną, zastrzeżoną nazwą drużyny NFL —
+      to aktywny, ale wysoce ryzykowny prawnie segment (prawa wizerunkowe, znaki towarowe). W tym ogólnym
+      raporcie odnotowujemy go jako sygnał rynkowy, bez rekomendowania go jako kierunku do naśladowania.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="nisze">
+  <div class="wrap">
+    <h2>5 nisz i gotowe pomysły na produkt</h2>
+    <p class="subtitle">Wyprowadzone bezpośrednio z sygnałów opisanych powyżej — ogólne, bez personalizacji pod konkretny sklep. Każda nisza: Pomysł A (typografia + prosta grafika) i Pomysł B (sama grafika), z tytułem, 15 tagami, opisem sprzedażowym i promptem do Nano Banana 2 Pro. Każde pole ma przycisk Copy.</p>
+    <div id="niches-root"></div>
+  </div>
+</section>
+
+<section class="block" id="estetyki">
+  <div class="wrap">
+    <h2>Estetyki i nisze — perspektywa branżowa 2026</h2>
+    <p class="subtitle">Na podstawie raportów Merch Titans, Accio i teeinblue (cały rynek print-on-demand, kontekst dla TeePublic)</p>
+
+    <div class="pill-row">
+      <span class="pill">Vintage / Retro Y2K</span>
+      <span class="pill">Bubble Lettering</span>
+      <span class="pill">Varsity Style</span>
+      <span class="pill">Event-Driven Pop Culture</span>
+      <span class="pill">Pinterest Minimalist Line Art</span>
+      <span class="pill">Kawaii / Sakura</span>
+      <span class="pill">Gamelit / LitRPG</span>
+      <span class="pill">Meme Velocity Culture</span>
+      <span class="pill">Regional Hometown Pride</span>
+      <span class="pill">Retro Sports Nostalgia</span>
+    </div>
+
+    <div class="two-col">
+      <div class="chart-card">
+        <div class="chart-title">3 kategorie bestsellerów TeePublic 2026 — ranking wg ryzyka i trwałości</div>
+        <div class="chart-sub">Ranking jakościowy (nie liczbowy), źródło: Accio — TeePublic Best Selling Designs 2026</div>
+        <table class="data-table" style="margin-top:6px;">
+          <tbody>
+            <tr><td class="strong">Pinterest Aesthetic / Minimalist</td><td>Najbezpieczniejszy wybór — stały popyt, niskie ryzyko prawne</td></tr>
+            <tr><td class="strong">Vintage / Retro Y2K</td><td>Mocny popyt, ale wysokie nasycenie rynku</td></tr>
+            <tr><td class="strong">Event-Driven Pop Culture</td><td>Największe skoki sprzedaży, ale krótki cykl życia i ryzyko praw autorskich</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Model cenowy TeePublic — realny zarobek twórcy</div>
+        <div class="chart-sub">Źródło: Merch Titans — TeePublic Review 2026</div>
+        <table class="data-table" style="margin-top:6px;">
+          <tbody>
+            <tr><td class="strong">Cena bazowa</td><td>~$20 detalicznie → ok. $4 zarobku twórcy</td></tr>
+            <tr><td class="strong">Cena podczas wyprzedaży</td><td>$14 lub niżej → ok. $1–2 zarobku twórcy</td></tr>
+            <tr><td class="strong">Kontrola ceny</td><td>Ustalana wyłącznie przez platformę, sprzedawca jej nie zmienia</td></tr>
+            <tr><td class="strong">Widoczność</td><td>Zależna od algorytmu wyszukiwania i promocji platformy</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="body-text">
+      Wspólny wniosek z raportów branżowych: <b>bold, proste, wysokokontrastowe kompozycje wygrywają w
+      miniaturkach</b> wyszukiwarki TeePublic — dokładnie ten sam kierunek, który stosujemy już w promptach do
+      Nano Banana 2 Pro w tym raporcie (płaskie tło, grube kontury, brak gradientów).
+    </p>
+  </div>
+</section>
+
+<section class="block" id="format">
+  <div class="wrap">
+    <h2>Format produktu — specyfika TeePublic</h2>
+    <p class="subtitle">Czym różni się model TeePublic od Redbubble i Spreadshirt</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">CENA STAŁA</span>
+        <h3>Zero kontroli nad ceną</h3>
+        <p>W przeciwieństwie do niektórych platform, TeePublic samo ustala ceny i harmonogram wyprzedaży —
+        strategia musi zakładać niższy realny zarobek na sztukę niż cena katalogowa sugeruje.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">MINIATURKA</span>
+        <h3>Projektuj pod małą miniaturkę w wynikach</h3>
+        <p>Kupujący przewijają dziesiątki miniaturek w ułamku sekundy — prosta, rozpoznawalna kompozycja z
+        grubym konturem wygrywa z detalicznymi, "artystycznymi" ilustracjami.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">DYWERSYFIKACJA</span>
+        <h3>Traktuj jako dodatkowy kanał, nie jedyny</h3>
+        <p>Merch Titans wprost rekomenduje jednoczesne listowanie na TeePublic i Redbubble — algorytm i
+        promocje jednej platformy mogą się zmienić bez ostrzeżenia, więc dywersyfikacja kanałów ogranicza
+        ryzyko.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">TAGOWANIE</span>
+        <h3>Konkretne, zorientowane na kupującego tagi</h3>
+        <p>Rekomendacja branżowa: "funny cat shirt" zamiast ogólnikowego "cat" — konkretne frazy intencji
+        zakupowej trafiają lepiej w algorytm wyszukiwania niż pojedyncze, ogólne słowa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ryzyka">
+  <div class="wrap">
+    <h2>Na co uważać</h2>
+    <p class="subtitle">Ryzyka i pułapki widoczne w danych</p>
+    <p class="body-text">
+      <b>Kompresja marży podczas wyprzedaży.</b> Realny zarobek potrafi spaść z ok. $4 do $1–2 za sztukę, gdy
+      produkt trafia na sitewide sale — a jak pokazuje przegląd list, dzieje się to niemal bez przerwy. Warto
+      liczyć rentowność niszy w oparciu o cenę wyprzedażową, nie katalogową.<br><br>
+      <b>Prawa wizerunkowe i znaki towarowe.</b> W przeglądanych listach obecne są designy z podobiznami
+      prawdziwych sportowców/celebrytów oraz nieaktualną nazwą drużyny NFL — realne ryzyko usunięcia oferty i
+      konsekwencji dla konta. Podobnie ryzykowne jest użycie dokładnego, chronionego tytułu serii książkowej
+      (np. w niszy gamelit) zamiast oryginalnej nazwy własnej.<br><br>
+      <b>Viralowe memy bywają upolitycznione.</b> Aktualny wirusowy trend "Jimothy" (szop pracz) doczekał się
+      już politycznie nacechowanej wersji, która wywołała krytykę w mediach — wchodzenie w viralowe tematy
+      wymaga bieżącego sprawdzenia, w jakim kierunku dany mem akurat "poszedł" kulturowo, zanim się w niego
+      zainwestuje.<br><br>
+      <b>Brak bezpośrednich danych eRank dla TeePublic.</b> Liczby wolumenu/konkurencji w tym raporcie pochodzą
+      z Etsy i są traktowane jako wskaźnik wyprzedzający, nie jako dokładne dane sprzedażowe z TeePublic —
+      dodatkowo, jak pokazuje sekcja eRank, część wolumenu wyszukiwań może pochodzić od innych sprzedawców POD
+      researchujących niszę, a nie wyłącznie od kupujących.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="rekomendacje">
+  <div class="wrap">
+    <h2>Rekomendacje na najbliższe tygodnie</h2>
+    <p class="subtitle">Ogólne, niezależne od konkretnego sklepu</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">TERAZ</span>
+        <h3>Wejdź w niszę gamelit/dungeon-crawl już teraz</h3>
+        <p>Niska konkurencja (925) przy solidnym, potwierdzonym popycie (123% CTR, wyraźny trend wzrostowy) —
+        ale z oryginalnymi nazwami własnymi, nie z dokładnym tytułem chronionej serii.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">BEZPIECZNIE</span>
+        <h3>Buduj bufor w minimalistycznej estetyce</h3>
+        <p>Wg raportów branżowych to najniższe ryzyko prawne przy stałym popycie — dobry sposób na
+        zrównoważenie krótkotrwałych, ryzykownych trendów viralowych.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">MARŻA</span>
+        <h3>Licz rentowność po cenie wyprzedażowej</h3>
+        <p>Skoro sitewide sale to stan stały, a nie wyjątek — planuj wolumen i liczbę designów tak, jakby
+        realny zarobek wynosił $1–2 za sztukę, nie $4.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">DYWERSYFIKACJA</span>
+        <h3>Cross-listuj z Redbubble i Spreadshirt</h3>
+        <p>Masz już obecność na wszystkich trzech platformach — te same silne, ewergrinowe nisze (np. zwierzęcy
+        chaotyczny humor) warto publikować równolegle, żeby nie być zależnym od algorytmu jednej platformy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="report-footer" id="zrodla">
+  <div class="wrap">
+    <b>Źródła</b>
+    <ul class="sources-list">
+      <li><a href="https://www.teepublic.com/t-shirts?sort=best_selling" target="_blank" rel="noopener">TeePublic — T-Shirts, sortowanie Best Sellers</a></li>
+      <li><a href="https://www.teepublic.com/t-shirts?sort=trending" target="_blank" rel="noopener">TeePublic — T-Shirts, sortowanie Trending</a></li>
+      <li><a href="https://www.teepublic.com/stickers?sort=best_selling" target="_blank" rel="noopener">TeePublic — Stickers, sortowanie Best Sellers</a></li>
+      <li><a href="https://members.erank.com/keyword-tool" target="_blank" rel="noopener">eRank — Keyword Tool (dungeon crawler carl shirt)</a></li>
+      <li><a href="https://members.erank.com/trend-buzz/etsy/us/thirty" target="_blank" rel="noopener">eRank — Trend Buzz (Etsy, USA, 30 dni)</a></li>
+      <li><a href="https://merchtitans.com/blog/teepublic-review-2026" target="_blank" rel="noopener">Merch Titans — TeePublic Review 2026</a></li>
+      <li><a href="https://www.accio.com/business/teepublic-best-selling-designs-2026" target="_blank" rel="noopener">Accio — TeePublic Best Selling Designs 2026</a></li>
+      <li><a href="https://teeinblue.com/blogs/en/print-on-demand-trends" target="_blank" rel="noopener">teeinblue — Print-on-demand Trends 2026</a></li>
+      <li><a href="https://www.forbes.com/sites/danidiplacido/2026/07/26/who-is-jimothy-the-viral-round-raccoon-explained/" target="_blank" rel="noopener">Forbes — Who Is "Jimothy"? The Viral Round Raccoon, Explained</a></li>
+    </ul>
+    <p style="margin-top:20px;">Ogólny raport rynkowy — bez personalizacji pod konkretny sklep · dane zebrane 21 sierpnia 2026</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Skopiowano!</div>
+
+<script>
+const erankData = [
+  {k:"tshirt", v:64870, change:"↓1", comp:"10 171 530"},
+  {k:"wall art", v:55860, change:"↑1", comp:"15 248 319"},
+  {k:"halloween", v:49850, change:"–", comp:"4 118 370"},
+  {k:"halloween shirt", v:41850, change:"–", comp:"1 246 507"},
+  {k:"womens clothing", v:39840, change:"↓1", comp:"12 162 657"},
+  {k:"earrings", v:37840, change:"↑1", comp:"2 872 064"},
+  {k:"jewelry", v:37840, change:"↓2", comp:"12 852 273"},
+  {k:"digital products", v:35840, change:"↓3", comp:"156 839"},
+  {k:"furniture", v:33830, change:"↓3", comp:"368 568"},
+  {k:"crochet pattern", v:32840, change:"↑2", comp:"600 496"}
+];
+
+function el(tag, attrs, ...children){
+  const e = document.createElement(tag);
+  if(attrs) for(const k in attrs){
+    if(k === 'class') e.className = attrs[k];
+    else if(k === 'html') e.innerHTML = attrs[k];
+    else e.setAttribute(k, attrs[k]);
+  }
+  children.forEach(c => {
+    if(c === null || c === undefined) return;
+    if(typeof c === 'string') e.appendChild(document.createTextNode(c));
+    else e.appendChild(c);
+  });
+  return e;
+}
+
+function buildBarChart(container, data, opts){
+  const max = Math.max(...data.map(d => d.v));
+  data.forEach(d => {
+    const pct = Math.max(4, (d.v / max) * 100);
+    const track = el('div', {class:'bar-track'},
+      el('div', {class: 'bar-fill' + (opts.alt ? ' alt' : ''), style: 'width:' + pct + '%'})
+    );
+    const row = el('div', {class:'bar-row'},
+      el('div', {class:'bl'}, d.k),
+      track,
+      el('div', {class:'bar-val'}, opts.suffix ? (d.v + opts.suffix) : d.v.toLocaleString('pl-PL'))
+    );
+    container.appendChild(row);
+  });
+}
+
+buildBarChart(document.getElementById('chart1'), erankData, {alt:false});
+
+const tbody = document.getElementById('erank-table');
+erankData.forEach(d => {
+  const changeClass = d.change.includes('↑') ? 'up' : 'flat';
+  tbody.appendChild(el('tr', null,
+    el('td', {class:'strong'}, d.k),
+    el('td', null, d.v.toLocaleString('pl-PL')),
+    el('td', {class: changeClass}, d.change),
+    el('td', null, d.comp)
+  ));
+});
+</script>
+
+<script>
+/* ===== 5 Niches + Product Ideas ===== */
+const NICHE_DATA = [
+  {
+    id: "gamelit",
+    signal: "🐉 Gamelit — potwierdzony w eRank (123% CTR, niska konkurencja)",
+    name: "LitRPG Dungeon-Crawl Gamelit Humor",
+    rationale: "Ten sam fandom (gry/książki dungeon-crawl w stylu LitRPG) pojawił się dwukrotnie, niezależnie, w top liście Trending na TeePublic, a analiza eRank potwierdza realny, rosnący popyt (1 663 śr. wyszukiwań/mies., 123% CTR) przy zaledwie 925 konkurencyjnych ofertach. Poniższe pomysły celowo używają oryginalnych, własnych nazw zamiast dokładnego tytułu chronionej serii książkowej, żeby uniknąć ryzyka praw autorskich.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Rolled a Natural 1 Again Badge – Funny Dungeon Crawl Shirt Design",
+        tags: ["dungeon crawl shirt design","litrpg gift shirt","funny gamer badge design","tabletop gaming humor shirt","dice roll shirt design","gamelit fan gift","dungeon crawler humor tee","nat 1 funny shirt","rpg gamer badge","fantasy gaming shirt design","dungeon master gift shirt","tabletop rpg humor design","gamer luck shirt design","dice nerd gift shirt","fantasy adventure badge"],
+        desc: "Every dungeon run needs a scapegoat, and tonight it's bad luck. A bold, self-deprecating badge for anyone who's ever rolled a natural 1 at the worst possible moment.",
+        prompt: "Create a bold circular badge design. In the center, a simple 20-sided die icon showing the number 1 face up, with a small crack/impact lines around it. Bold condensed sans-serif text arcs along the top reading 'ROLLED A NATURAL 1' and along the bottom reading 'AGAIN', with small skull icons as dividers. Style: flat vector illustration, thick clean black outlines, bold flat colors (deep red, charcoal, cream, mustard), no gradients, no drop shadow. Background: solid flat white (#FFFFFF), no outside texture — crisp clean edges for easy cutout, works well printed on both light and dark garments. Square 1:1 composition, centered, print-ready apparel quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Skeleton Dungeon Crawler with Torch – Bold Fantasy Illustration",
+        tags: ["dungeon crawler illustration","fantasy skeleton art","litrpg illustration design","dungeon adventure art","skeleton adventurer design","fantasy gaming illustration","dark fantasy shirt art","dungeon crawl graphic design","tabletop fantasy art","gamelit illustration shirt","fantasy dungeon graphic","bold skeleton design","adventure fantasy illustration","dungeon explorer art","rpg fantasy graphic tee"],
+        desc: "A lone skeleton adventurer pushes deeper into the dungeon, torch held high against the dark. A bold, moody fantasy illustration for anyone who lives for the next floor down.",
+        prompt: "Create a bold flat-vector illustration of a hooded skeleton adventurer walking forward holding a lit torch, with simple dungeon brick wall shapes faintly outlined behind it. Thick black outlines, moody bold flat colors (charcoal skeleton, deep red robe, orange torch flame, stone gray walls), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out for apparel printing. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "hometown-pride",
+    signal: "🏙️ Regionalna duma — powtarzalny wzorzec od 2 niezależnych twórców",
+    name: "Vintage Hometown Pride Badge (customizable template)",
+    rationale: "Format \"duma z mojego miasta\" pojawił się jednocześnie od dwóch różnych, niepowiązanych twórców w top liście Trending — silny, powtarzalny wzorzec sprzedażowy niezależny od konkretnej lokalizacji. Poniższy szablon jest celowo ogólny (bez nazwy konkretnego miasta), żeby dało się go łatwo dostosować do dowolnej lokalizacji bez tworzenia dziesiątek osobnych wariantów graficznych.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Small Town Big Pride Compass Badge – Vintage Hometown Shirt Design",
+        tags: ["hometown pride shirt design","small town shirt badge","vintage city pride design","hometown badge illustration","local pride shirt design","retro hometown gift shirt","small town big pride design","city pride badge template","hometown love shirt design","vintage travel badge shirt","local roots shirt design","hometown pride gift idea","retro compass shirt design","small town nostalgia shirt","hometown pride apparel"],
+        desc: "Wherever home is, this badge says it loud. A vintage compass-and-banner design built to work for any small town, any hometown, any zip code worth being proud of.",
+        prompt: "Create a bold circular vintage badge design. In the center, a simple compass rose icon with a small house silhouette at its center point. Bold condensed serif text arcs along the top reading 'SMALL TOWN' and along the bottom reading 'BIG PRIDE', with small star icons as dividers. Style: flat vector illustration, thick clean black outlines, retro flat colors (navy, mustard, cream, brick red), subtle halftone texture only inside the badge. Background: solid flat white (#FFFFFF), no gradient, no drop shadow, no outside texture — crisp clean edges for easy cutout. Square 1:1 composition, centered, print-ready apparel quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Retro Skyline Silhouette Sunset – Bold Hometown Illustration",
+        tags: ["hometown skyline illustration","retro city silhouette art","vintage sunset city design","hometown nostalgia art","city pride illustration","retro skyline graphic tee","small town skyline art","vintage travel poster illustration","hometown apparel art","city silhouette badge design","retro city nostalgia graphic","hometown love illustration","vintage skyline sunset art","local pride graphic design","city roots illustration"],
+        desc: "A generic small-town skyline silhouette glows against a bold retro sunset — instantly nostalgic, endlessly adaptable to any hometown without redrawing a single line.",
+        prompt: "Create a bold flat-vector illustration of a generic small-town skyline silhouette (a water tower, a few low buildings, a church steeple) set against a large retro sunset made of concentric flat-colored semi-circles. Thick black outlines, warm retro flat colors (orange, mustard, deep red sun bands, navy silhouette), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out for apparel printing. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "minimalist-line-art",
+    signal: "🌿 Estetyka — typowana przez branżę jako najbezpieczniejszy kierunek 2026",
+    name: "Minimalist Single-Line Aesthetic Art",
+    rationale: "Raporty branżowe (Merch Titans, Accio) wskazują minimalistyczną, \"pinterestową\" estetykę line-art jako segment o najniższym ryzyku prawnym i stabilnym, rosnącym wolumenie wyszukiwań frazy \"aesthetic\"/\"minimalist\" — w przeciwieństwie do fandomu pop-kulturowego, nie wymaga odwołań do chronionych postaci ani nazwisk.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Grow at Your Own Pace Line Art Badge – Minimalist Aesthetic Shirt Design",
+        tags: ["minimalist line art shirt","aesthetic badge design","pinterest style shirt design","single line art design","minimalist plant shirt","aesthetic quote shirt design","botanical line art badge","minimalist wellness shirt","calm aesthetic shirt design","simple line art tee design","minimalist nature badge","aesthetic self care shirt","boho line art design","minimalist typography shirt","soft aesthetic graphic tee"],
+        desc: "A quiet reminder in a single continuous line: growth doesn't need to be rushed. A soft, minimalist badge for the aesthetic-shirt crowd who want something calmer than another loud slogan.",
+        prompt: "Create a minimalist circular badge design. In the center, a single continuous-line illustration of a small sprouting plant. Thin, elegant sans-serif text arcs along the bottom reading 'GROW AT YOUR OWN PACE'. Style: minimalist single-line vector illustration, clean thin black line work (not thick badge outlines this time — delicate line art), muted soft flat color accents used sparingly (sage green, terracotta), mostly negative space. Background: solid flat white (#FFFFFF), no gradient, no drop shadow, no outside texture — crisp clean edges for easy cutout. Square 1:1 composition, centered, print-ready apparel quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Single Line Cat Silhouette – Minimalist Aesthetic Illustration",
+        tags: ["minimalist cat illustration","single line cat art","aesthetic cat shirt design","line art animal illustration","minimalist pet art design","boho cat illustration","simple line cat design","aesthetic pet lover shirt","minimalist animal line art","soft aesthetic cat graphic","continuous line cat art","minimalist illustration shirt","calm aesthetic animal art","line art pet illustration","minimalist boho design"],
+        desc: "One uninterrupted line traces a sitting cat in profile — elegant, quiet, and endlessly wearable. Exactly the kind of understated design the aesthetic-shirt crowd keeps searching for.",
+        prompt: "Create a minimalist single continuous-line illustration of a cat sitting in profile, drawn as one unbroken thin black line with no fill. A small sprig of leaves rendered in the same single-line style sits beside the cat. No text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture, no additional color — crisp, delicate line art so the illustration can be perfectly cut out for apparel printing. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "retro-hometown-league",
+    signal: "⚾ Sport — silny wzorzec wizualny, wymaga generycznego podejścia",
+    name: "Vintage Small-Town Sports League Nostalgia",
+    rationale: "Retro, \"distressed\" typografia drużynowa (hokej, baseball, koszykówka lat 80.) to jeden z najczęściej powtarzających się motywów w top listach TeePublic. Realne nazwy i logo drużyn są jednak chronione prawnie — poniższe pomysły celowo używają fikcyjnej, ogólnej maskotki i generycznego \"od zawsze\" sloganu, żeby uchwycić estetykę trendu bez ryzyka naruszenia znaku towarowego.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Home Team Since Forever Vintage Bear Badge – Retro Sports Shirt Design",
+        tags: ["vintage sports badge shirt","retro team pride design","home team shirt design","vintage mascot badge","retro baseball badge design","distressed sports shirt design","vintage league badge shirt","retro team spirit design","nostalgic sports badge","vintage varsity shirt design","retro mascot illustration shirt","classic sports badge design","vintage hometown team shirt","retro league pride design","old school sports badge"],
+        desc: "No real team, no real logo — just pure retro team-spirit energy for anyone who grew up on Saturday morning games. A vintage badge built to feel instantly nostalgic without picking a side.",
+        prompt: "Create a bold circular vintage sports badge design. In the center, a simple friendly bear mascot head icon wearing a small vintage cap. Bold condensed collegiate-style text arcs along the top reading 'HOME TEAM' and along the bottom reading 'SINCE FOREVER', with small baseball stitch icons as dividers. Style: flat vector illustration, thick clean black outlines, distressed retro flat colors (maroon, mustard, cream), subtle worn halftone texture only inside the badge. Background: solid flat white (#FFFFFF), no gradient, no drop shadow, no outside texture — crisp clean edges for easy cutout. Square 1:1 composition, centered, print-ready apparel quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Vintage Bear Mascot at Bat – Bold Retro Sports Illustration",
+        tags: ["vintage mascot illustration","retro sports bear art","vintage baseball illustration","retro team mascot design","nostalgic sports art","vintage sports graphic tee","retro league illustration","classic mascot art design","vintage team spirit graphic","retro baseball bear design","old school sports illustration","vintage sports apparel art","distressed mascot illustration","retro varsity graphic design","vintage hometown sports art"],
+        desc: "A cheerful cartoon bear mascot winds up mid-swing in full vintage-illustration style — the kind of nostalgic sports art that feels like it's been on a hometown tee for forty years.",
+        prompt: "Create a bold flat-vector illustration of a friendly cartoon bear mascot in a vintage baseball uniform, mid-swing with a bat, in a dynamic action pose. Thick black outlines, distressed retro flat colors (maroon uniform, mustard accents, cream fur), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out for apparel printing. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "trash-panda",
+    signal: "🦝 Viral — bezpieczna wersja aktualnego trendu memowego",
+    name: "Chaotic Trash Panda Internet Animal Humor",
+    rationale: "Aktualny wirusowy mem \"Jimothy\" (szop pracz) dominuje moduły trendowe na TeePublic, ale niesie ryzyko praw autorskich (to konkretne, rozpoznawalne zwierzę) i zdążył się już upolitycznić. Poniższe pomysły jeżdżą na tej samej fali \"chaotycznego, ukochanego zwierzęcia internetu\" z oryginalną, własną grafiką — bezpieczny, ewergrinowy wariant pasujący też do istniejącej estetyki \"gremlin energy\" rozwijanej już w innych sklepach.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Certified Unhinged Raccoon Energy Badge – Funny Trash Panda Shirt Design",
+        tags: ["trash panda shirt design","funny raccoon badge","chaotic animal energy shirt","raccoon lover gift shirt","unhinged raccoon design","funny wildlife badge shirt","raccoon meme shirt design","chaotic good raccoon gift","funny animal energy badge","raccoon humor shirt design","wild animal chaos shirt","trash panda lover gift","funny raccoon graphic tee","chaotic critter badge design","raccoon energy gift shirt"],
+        desc: "Certified unhinged, fully feral, zero regrets — this raccoon badge speaks for every chaotic-good creature (and their humans). A bold, giftable design riding the trash-panda wave without copying anyone's viral photo.",
+        prompt: "Create a bold circular badge design. In the center, a simple mischievous raccoon face icon with wide round eyes and a raised paw. Bold condensed sans-serif text arcs along the top reading 'CERTIFIED UNHINGED' and along the bottom reading 'RACCOON ENERGY', with small trash-can icons as dividers. Style: flat vector illustration, thick clean black outlines, bold flat colors (charcoal, gray, cream, orange accent), no gradients, no drop shadow. Background: solid flat white (#FFFFFF), no outside texture — crisp clean edges for easy cutout, works well printed on both light and dark garments. Square 1:1 composition, centered, print-ready apparel quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Raccoon Raiding a Trash Can – Bold Chaotic Illustration",
+        tags: ["raccoon illustration design","trash panda art design","funny raccoon graphic art","chaotic animal illustration","wildlife humor illustration","raccoon mischief art","bold raccoon graphic design","funny critter illustration","trash can raccoon art","chaotic good animal design","raccoon apparel illustration","wild raccoon graphic tee","funny wildlife art design","mischievous raccoon illustration","bold animal humor art"],
+        desc: "Caught red-pawed mid-raid, this raccoon has zero shame and every intention of finishing the job. A bold, funny illustration for anyone who relates a little too much to chaotic trash-panda energy.",
+        prompt: "Create a bold flat-vector illustration of a raccoon standing on its hind legs inside a tipped-over trash can, holding a half-eaten snack, with a few simple motion lines and small stars around its head. Thick black outlines, bold flat colors (charcoal and gray raccoon, silver trash can, orange snack), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out for apparel printing. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  }
+];
+
+function copyBtn(getText){
+  const btn = el('button', {class:'copy-btn'}, 'Copy');
+  btn.addEventListener('click', () => {
+    const text = getText();
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      showToast('Skopiowano do schowka');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1400);
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1400);
+    });
+  });
+  return btn;
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(showToast._tm);
+  showToast._tm = setTimeout(() => t.classList.remove('show'), 1300);
+}
+
+function buildField(name, valueEl, copyText){
+  const top = el('div', {class:'field-top'},
+    el('span', {class:'field-name'}, name),
+    copyBtn(copyText)
+  );
+  return el('div', {class:'field'}, top, valueEl);
+}
+
+function buildIdea(idea, variant){
+  const titleField = buildField('Title', el('div', {class:'field-title'}, idea.title), () => idea.title);
+
+  const tagWrap = el('div', {class:'tag-list'});
+  idea.tags.forEach(t => tagWrap.appendChild(el('span', {class:'tag-chip'}, t)));
+  const tagsField = buildField('15 Tags', tagWrap, () => idea.tags.join(', '));
+
+  const descField = buildField('Description', el('div', {class:'field-desc'}, idea.desc), () => idea.desc);
+
+  const promptField = buildField('Nano Banana 2 Pro Prompt', el('div', {class:'field-prompt'}, idea.prompt), () => idea.prompt);
+
+  const head = el('div', {class:'idea-head'}, el('span', {class:'idea-label'}, idea.label));
+
+  return el('div', {class:'idea-card idea-' + variant}, head, titleField, tagsField, descField, promptField);
+}
+
+function buildNiche(niche, index){
+  const head = el('div', {class:'niche-head'},
+    el('div', {class:'niche-title-block'},
+      el('div', {class:'num'}, 'NISZA ' + (index+1) + ' / 5'),
+      el('h3', {class:'niche-name'}, niche.name)
+    )
+  );
+  const pill = el('div', {class:'signal-pill'}, niche.signal);
+  const rationale = el('p', {class:'rationale', html: niche.rationale});
+
+  const ideasWrap = el('div', {class:'ideas'});
+  ideasWrap.appendChild(buildIdea(niche.ideas[0], 'a'));
+  ideasWrap.appendChild(buildIdea(niche.ideas[1], 'b'));
+
+  return el('div', {class:'niche-block', id: niche.id}, head, pill, rationale, ideasWrap);
+}
+
+const nichesRoot = document.getElementById('niches-root');
+NICHE_DATA.forEach((n, i) => nichesRoot.appendChild(buildNiche(n, i)));
+</script>
+</body>
+</html>

@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spreadshirt Market Report, Sierpień 2026</title>
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../favicon-180.png">
+<style>
+  :root{
+    --bg: #121316;
+    --panel: #1b1d22;
+    --panel-2: #22242b;
+    --line: #33353c;
+    --text: #f1f1ee;
+    --text-dim: #a9abb4;
+    --accent: #ffd23f;
+    --accent-2: #ff5d5d;
+    --accent-3: #5ee6c8;
+    --accent-4: #b98bff;
+    --accent-5: #6fb3ff;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height:1.5;
+    padding-bottom: 80px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  header.hero{
+    background:
+      radial-gradient(circle at 12% 20%, rgba(255,210,63,0.10), transparent 40%),
+      radial-gradient(circle at 88% 0%, rgba(185,139,255,0.12), transparent 45%),
+      linear-gradient(180deg, #17181c 0%, #121316 100%);
+    border-bottom: 3px solid var(--accent);
+    padding: 56px 0 40px;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--accent);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-weight:700;
+    margin-bottom: 18px;
+  }
+  h1{
+    font-size: 38px;
+    line-height:1.1;
+    margin: 0 0 14px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+  }
+  h1 span{color:var(--accent);}
+  .hero p.lead{
+    font-size: 16px;
+    color: var(--text-dim);
+    max-width: 760px;
+    margin: 0 0 26px;
+  }
+  .stat-row{
+    display:flex; flex-wrap:wrap; gap:14px; margin-top: 18px;
+  }
+  .stat{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 16px;
+    min-width: 150px;
+  }
+  .stat .n{font-size:20px; font-weight:800; color:var(--accent-3);}
+  .stat .l{font-size:12px; color:var(--text-dim); text-transform:uppercase; letter-spacing:.05em;}
+
+  section.block{ padding: 46px 0 10px; border-bottom: 1px solid var(--line); }
+  section.block h2{
+    font-size: 24px;
+    margin: 0 0 6px;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    font-weight: 900;
+  }
+  section.block .subtitle{
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0 0 22px;
+    padding-left: 16px;
+  }
+  section.block > .wrap > p.body-text{
+    color: var(--text-dim);
+    font-size: 14.5px;
+    max-width: 820px;
+    margin: 0 0 20px;
+  }
+  section.block > .wrap > p.body-text b{color:var(--text);}
+
+  .findings{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 14px;
+    margin: 8px 0 8px;
+  }
+  .finding-card{
+    background: var(--panel);
+    border:1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .finding-card .tag{
+    font-family: var(--mono);
+    font-size:11px;
+    color:var(--bg);
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:6px;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .finding-card h3{
+    font-size: 15px;
+    margin: 0 0 6px;
+  }
+  .finding-card p{margin:0; font-size:13.5px; color:var(--text-dim); line-height:1.5;}
+  .finding-card b{color:var(--text);}
+  .finding-card .ex{
+    margin-top:10px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--text-dim);
+    border-top: 1px dashed var(--line);
+    padding-top: 8px;
+  }
+
+  .callout{
+    background: linear-gradient(135deg, rgba(255,210,63,0.08), rgba(185,139,255,0.08));
+    border: 1px dashed var(--accent);
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 14px;
+    color: var(--text-dim);
+    margin: 8px 0 24px;
+  }
+  .callout b{color:var(--accent);}
+  .callout.warn{border-color: var(--accent-2);}
+  .callout.warn b{color:var(--accent-2);}
+
+  nav.jumpnav{
+    position: sticky; top:0; z-index: 50;
+    background: rgba(18,19,22,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+    margin-top: 30px;
+  }
+  nav.jumpnav .wrap{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+  nav.jumpnav a{
+    font-size:13px;
+    color: var(--text);
+    text-decoration:none;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    padding:7px 12px;
+    border-radius:999px;
+    transition: all .15s ease;
+    white-space:nowrap;
+  }
+  nav.jumpnav a:hover{border-color:var(--accent); color:var(--accent);}
+
+  /* charts */
+  .chart-card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px 10px;
+    margin-bottom: 18px;
+  }
+  .chart-card .chart-title{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 2px;
+  }
+  .chart-card .chart-sub{
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 18px;
+  }
+  .bar-row{
+    display:grid;
+    grid-template-columns: 160px 1fr 70px;
+    align-items:center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .bar-row .bl{
+    font-size: 12.5px;
+    color: var(--text-dim);
+    text-align:right;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .bar-track{
+    background: var(--panel-2);
+    border-radius: 6px;
+    height: 14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .bar-fill{
+    height: 100%;
+    border-radius: 6px;
+    background: var(--accent);
+  }
+  .bar-fill.alt{background: var(--accent-3);}
+  .bar-val{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text);
+    font-weight:700;
+  }
+
+  table.data-table{
+    width:100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 10px 0 20px;
+  }
+  table.data-table th{
+    text-align:left;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing:.05em;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 10px;
+    font-weight:700;
+  }
+  table.data-table td{
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-dim);
+  }
+  table.data-table td.strong{color:var(--text); font-weight:700;}
+  table.data-table tr:hover td{background: rgba(255,255,255,0.02);}
+  table.data-table .up{color: var(--accent-3); font-family: var(--mono);}
+  table.data-table .flat{color: var(--text-dim); font-family: var(--mono);}
+  table.data-table .warn-cell{color: var(--accent-2); font-family: var(--mono);}
+
+  .pill-row{display:flex; flex-wrap:wrap; gap:8px; margin: 6px 0 20px;}
+  .pill{
+    font-size:12px;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    color: var(--text-dim);
+    padding: 5px 11px;
+    border-radius: 999px;
+  }
+
+  .two-col{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 780px){ .two-col{grid-template-columns: 1fr;} }
+
+  footer.report-footer{
+    padding: 50px 20px 30px;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  footer.report-footer .wrap{max-width:1080px;}
+  .sources-list{
+    columns: 2;
+    gap: 30px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .sources-list li{margin-bottom:8px; break-inside: avoid;}
+  .sources-list a{color: var(--accent-5); text-decoration:none;}
+  .sources-list a:hover{text-decoration:underline;}
+  footer.report-footer b{color:var(--accent);}
+
+  /* niche idea cards */
+  .niche-block{ margin-bottom: 40px; }
+  .niche-block:last-child{ margin-bottom: 10px; }
+  .niche-head{
+    display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    margin-bottom: 8px;
+  }
+  .niche-title-block .num{
+    font-family: var(--mono);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight:700;
+    letter-spacing:.08em;
+  }
+  .niche-block h3.niche-name{
+    font-size: 22px;
+    margin: 4px 0 6px;
+    font-weight: 900;
+  }
+  .niche-block .signal-pill{
+    display:inline-block;
+    font-size:12px;
+    font-weight:700;
+    padding:4px 10px;
+    border-radius:999px;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+  .niche-block .rationale{
+    color: var(--text-dim);
+    font-size: 14.5px;
+    max-width: 780px;
+    margin: 6px 0 20px;
+  }
+  .niche-block .rationale b{color:var(--text);}
+
+  .ideas{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  @media (max-width: 820px){ .ideas{grid-template-columns: 1fr;} }
+
+  .idea-card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .idea-card .idea-head{
+    padding: 14px 18px;
+    display:flex; align-items:center; justify-content:space-between;
+    border-bottom: 1px solid var(--line);
+  }
+  .idea-card .idea-label{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .idea-a .idea-head{background: rgba(255,210,63,0.08);}
+  .idea-a .idea-label{color: var(--accent);}
+  .idea-b .idea-head{background: rgba(94,230,200,0.08);}
+  .idea-b .idea-label{color: var(--accent-3);}
+
+  .field{
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .field:last-child{border-bottom:none;}
+  .field-top{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom: 8px;
+  }
+  .field-name{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing:.08em;
+    color: var(--text-dim);
+    font-weight: 700;
+  }
+  .copy-btn{
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight:700;
+    color: var(--bg);
+    background: var(--text);
+    border: none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: transform .1s ease, background .15s ease;
+  }
+  .copy-btn:hover{background: var(--accent);}
+  .copy-btn:active{transform: scale(0.94);}
+  .copy-btn.copied{background: var(--accent-3); color:#0a0a0a;}
+
+  .field-title{
+    font-size: 16px;
+    font-weight: 800;
+    line-height:1.3;
+  }
+  .field-desc{
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height:1.55;
+  }
+  .field-prompt{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: #d8dae0;
+    background: #0e0f12;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px;
+    line-height:1.5;
+    white-space: pre-wrap;
+  }
+  .tag-list{
+    display:flex; flex-wrap:wrap; gap:6px;
+  }
+  .tag-chip{
+    font-size: 11.5px;
+    background: var(--panel-2);
+    border: 1px solid var(--line);
+    color: var(--text-dim);
+    padding: 4px 9px;
+    border-radius: 999px;
+  }
+
+  .toast{
+    position: fixed;
+    bottom: 22px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--accent-3);
+    color: #0a0a0a;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    opacity: 0;
+    transition: all .25s ease;
+    pointer-events:none;
+    z-index: 100;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  }
+  .toast.show{opacity:1; transform: translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<div style="border-bottom:1px solid var(--line); background:rgba(18,19,22,0.92);">
+  <div class="wrap" style="max-width:1080px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+    <div style="font-family:var(--mono); font-size:12.5px; color:var(--text-dim); display:flex; align-items:center; gap:6px;">
+      <a href="../index.html" style="color:var(--text-dim); text-decoration:none;">Insider POD Raport</a>
+      <span style="opacity:.4;">/</span>
+      <a href="index.html" style="color:var(--text-dim); text-decoration:none;">Spreadshirt.de</a>
+      <span style="opacity:.4;">/</span>
+      <span style="color:var(--text); font-weight:700;">sierpień 2026</span>
+    </div>
+    <a href="../../platforma.html" style="font-size:12.5px; font-family:var(--mono); text-decoration:none; color:var(--bg); background:var(--accent); padding:6px 12px; border-radius:999px; font-weight:700;">← Platforma CyberBober</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Spreadshirt — Raport Rynkowy</span>
+    <h1>Sierpień 2026: co się dzieje i co <span>naprawdę sprzedaje się</span> na Spreadshirt</h1>
+    <p class="lead">
+      Ogólny, niespersonalizowany przegląd rynku Spreadshirt na sierpień 2026 — oparty na bezpośrednim przeglądzie
+      list "Popular products" w kluczowych kategoriach (T-Shirts męskie, Stickers, T-Shirts damskie), danych
+      keywordowych eRank (Etsy jako wskaźnik wyprzedzający popytu na design — Spreadshirt nie jest bezpośrednio
+      wspierany przez eRank) oraz aktualnych raportach branżowych print-on-demand (Printify, Merch Titans).
+    </p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">3</div><div class="l">kategorie Spreadshirt przeanalizowane</div></div>
+      <div class="stat"><div class="n">95%</div><div class="l">designów przegrywa przez brak researchu słów kluczowych</div></div>
+      <div class="stat"><div class="n">+200%</div><div class="l">wzrost stylu "mental health awareness"</div></div>
+      <div class="stat"><div class="n">2×</div><div class="l">wzrost rynku gaming/geek merch do 2030</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="jumpnav">
+  <div class="wrap">
+    <a href="#tldr">TL;DR</a>
+    <a href="#metodologia">Metodologia</a>
+    <a href="#sezon">Sezonowość</a>
+    <a href="#erank">Dane eRank</a>
+    <a href="#kategorie">Co się sprzedaje</a>
+    <a href="#nisze">5 Nisz + Produkty</a>
+    <a href="#estetyki">Estetyki i nisze</a>
+    <a href="#format">Format produktu</a>
+    <a href="#ryzyka">Na co uważać</a>
+    <a href="#rekomendacje">Rekomendacje</a>
+    <a href="#zrodla">Źródła</a>
+  </div>
+</nav>
+
+<section class="block" id="tldr">
+  <div class="wrap">
+    <h2>TL;DR</h2>
+    <p class="subtitle">Najważniejsze wnioski w 5 punktach</p>
+    <p class="body-text">
+      Spreadshirt to zupełnie inna publiczność niż Redbubble: mniej internetowego mema i fandomu, więcej
+      <b>mainstreamowego "gift shop"</b> — dumy zawodowej (pielęgniarki, nauczycielki, kierowcy), wiary i cytatów
+      biblijnych, patriotyzmu/weteranów oraz pamiątek z parków narodowych. Sierpień nakłada na to sezon
+      <b>powrotu do szkoły i "Senior Year"</b> — a dane eRank pokazują wyraźnie niedocenioną, prawie pustą
+      niszę <b>"Class of 2027"</b>, rok przed tym, jak zrobi to większość konkurencji. Równolegle najbardziej
+      ogólne frazy ("christian shirt", "national park") są już tak nasycone (setki tysięcy konkurencyjnych
+      ofert na samym Etsy), że wejście bez unikalnego kąta się nie opłaca. Z danych branżowych (Printify,
+      Merch Titans) wynika, że <b>95% designów w POD przegrywa nie przez jakość, tylko przez brak researchu
+      słów kluczowych</b> — a rosnące najszybciej style to nisze zdrowia psychicznego (+200%), retro-sportowe
+      i profesjo-specyficzne. Capybara — nisza, którą Oommen Studio już rozwija — potwierdza się w danych
+      eRank jako realnie silna, ogólnorynkowa nisza (92% CTR), a nie tylko marka własna.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="metodologia">
+  <div class="wrap">
+    <h2>Metodologia</h2>
+    <p class="subtitle">Skąd pochodzą dane w tym raporcie</p>
+    <p class="body-text">
+      Dane zebrano 21 sierpnia 2026 z trzech źródeł: <b>(1)</b> bezpośredni przegląd list posortowanych jako
+      "Popular products" na Spreadshirt w 3 kategoriach (T-Shirts męskie, Stickers, T-Shirts damskie) — jako
+      proxy dla bestsellerów, ponieważ Spreadshirt nie publikuje jawnej listy "Trending"; <b>(2)</b> eRank
+      Keyword Tool i Trend Buzz (dane z Etsy — eRank <u>nie obsługuje bezpośrednio Spreadshirt</u> jako
+      marketplace, więc dane Etsy traktowane są tu jako wskaźnik wyprzedzający ogólnego popytu na design, nie
+      jako dane bezpośrednio z platformy Spreadshirt); <b>(3)</b> aktualne raporty branżowe print-on-demand
+      (Printify, Merch Titans) opisujące trendy sezonu 2026 dla całej branży odzieżowej POD. Pełna lista źródeł
+      znajduje się na końcu raportu.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="sezon">
+  <div class="wrap">
+    <h2>Sezonowość sierpnia — co napędza ruch</h2>
+    <p class="subtitle">Nakładające się sezony i cykle zakupowe typowe dla Spreadshirt</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">SEZON</span>
+        <h3>Senior Year i "Class of 2027" startują wcześnie</h3>
+        <p>eRank pokazuje, że fraza <b>"senior 2027 shirt"</b> ma już solidny popyt (145 śr. wyszukiwań/mies.,
+        134% CTR) przy zaskakująco niskiej konkurencji (953 ofert) — kupujący planują rok szkolny 2026/2027
+        z dużym wyprzedzeniem.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">SEZON</span>
+        <h3>Powrót do szkoły napędza dumę zawodową</h3>
+        <p>Sierpień to też szczyt sezonu "back to school" dla nauczycielek — koszulki z zawodowym humorem
+        ("teacher life", "librarian era") regularnie pojawiają się w top listach Spreadshirt równolegle z
+        motywami studenckimi.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">HALLOWEEN</span>
+        <h3>Halloween rusza już teraz</h3>
+        <p>Podobnie jak w innych kanałach POD, wzorce sezonowe na Etsy (proxy) pokazują, że popyt na motywy
+        halloweenowe zaczyna rosnąć już w sierpniu — warto mieć pierwsze projekty gotowe przed wrześniem.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">PODRÓŻE</span>
+        <h3>Ostatnia fala letnich wyjazdów i parków narodowych</h3>
+        <p>Sierpień to wciąż szczyt sezonu na pamiątki z podróży i parków narodowych — kategoria mocno
+        obecna w listach Spreadshirt, choć bardzo nasycona ogólnymi frazami (patrz sekcja Ryzyka).</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#ff9b6f; color:#2b1400;">SEZON+1</span>
+        <h3>Święta i prezenty — czas zacząć przygotowania</h3>
+        <p>Podobnie jak na innych platformach, wrzesień to ostatni dobry moment na start kolekcji świątecznej
+        — cykl produkcyjny odzieży POD wymaga 8–10 tygodni wyprzedzenia przed grudniowym szczytem (wg Merch
+        Titans).</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#8fe36b; color:#0d2400;">EWERGREEN</span>
+        <h3>Zwierzęcy humor i pet-pride nie tracą pary</h3>
+        <p>Niezależnie od sezonu, motywy zwierzęce (capybara, psy, koty rasowe) i prosty humor rodzinny
+        utrzymują stabilną obecność w kategoriach T-Shirts i Stickers na Spreadshirt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="erank">
+  <div class="wrap">
+    <h2>Dane eRank — kontekst popytu (Etsy jako proxy)</h2>
+    <p class="subtitle">Trend Buzz (30 dni, rynek USA) + głębszy research 4 fraz celowanych pod Spreadshirt</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Top 10 fraz wg Search Interest (30 dni, cały rynek Etsy)</div>
+      <div class="chart-sub">Ogólny obraz popytu na Etsy — kontekst, nie dane bezpośrednio ze Spreadshirt</div>
+      <div id="chart1"></div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Fraza</th><th>Śr. wyszukiwania/mies.</th><th>CTR</th><th>Konkurencja (Etsy)</th><th>Ocena</th></tr>
+      </thead>
+      <tbody id="erank-table"></tbody>
+    </table>
+
+    <div class="callout">
+      <b>Ciekawostka z danych:</b> "senior 2027 shirt" ma bardzo wysoki CTR (134%) i realny popyt (145
+      wyszukiwań/mies.) przy konkurencji zaledwie 953 ofert — to rok wyprzedzenia względem konkurencji, która
+      dopiero zacznie robić "Class of 2027" w 2027 roku. "christian shirt" i "national park sticker" mają
+      znacznie wyższy wolumen, ale konkurencja rzędu 500 tys. i 18,6 tys. ofert czyni wejście z generycznym
+      designem praktycznie nieopłacalnym bez unikalnego kąta.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="kategorie">
+  <div class="wrap">
+    <h2>Co faktycznie sprzedaje się teraz na Spreadshirt</h2>
+    <p class="subtitle">Obserwacje z realnych list "Popular products" w 3 kategoriach (T-Shirts męskie, Stickers, T-Shirts damskie)</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">ZAWÓD</span>
+        <h3>Duma zawodowa dominuje kategorię T-Shirts</h3>
+        <p>Pielęgniarki, nauczycielki, kierowcy ciężarówek, listonosze — koszulki z zawodowym humorem i dumą
+        zawodową to najczęściej powtarzający się motyw w top listach. Odbiorca Spreadshirt kupuje "dla siebie"
+        i "dla znajomej z pracy" znacznie częściej niż na Redbubble.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-2); color:#2b0a0a;">WIARA</span>
+        <h3>Chrześcijańskie cytaty i grafiki biblijne</h3>
+        <p>Silna, stała kategoria — koszulki z cytatami biblijnymi, krzyżami i frazami wiary regularnie
+        pojawiają się w top listach. To jednocześnie jedna z najbardziej nasyconych kategorii na całym rynku
+        (patrz sekcja Ryzyka).</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">PATRIOTYZM</span>
+        <h3>Motywy patriotyczne i weterańskie</h3>
+        <p>Flagi, orły, hasła związane ze służbą wojskową — stały, mainstreamowy segment, wyraźnie mocniejszy
+        na Spreadshirt niż na Redbubble, gdzie dominują bardziej niszowe fandomy.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">PODRÓŻE</span>
+        <h3>Pamiątki z parków narodowych</h3>
+        <p>Odznaki i naklejki w stylu "vintage national park" pojawiają się masowo — bardzo popularna, ale
+        też bardzo generyczna kategoria (patrz: wysoka konkurencja w danych eRank powyżej).</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">RODZINA</span>
+        <h3>Nostalgia rocznikowa i duma "sportowej mamy/taty"</h3>
+        <p>Koszulki w stylu "est. [rok]", motywy dekad (lata 70./80.) dla grupy wiekowej 25–45 oraz "girl mom",
+        "soccer dad" — silny, powtarzalny segment tożsamości rodzinnej.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#8fe36b; color:#0d2400;">HOBBY</span>
+        <h3>Nisze hobbystyczne: golf, kręgle, kickboxing</h3>
+        <p>Mniejsze, ale lojalne społeczności hobbystyczne kupują koszulki tematyczne regularnie — mniej
+        konkurencji niż w dużych kategoriach ogólnych.</p>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <b>Do odnotowania:</b> w przeglądanych listach pojawiły się też projekty nawiązujące do chronionych marek
+      i postaci (m.in. Minionki, Miraculous Ladybug, Pokémon) — realny, aktywny segment sprzedaży na
+      Spreadshirt, ale obarczony wysokim ryzykiem praw autorskich i usunięcia oferty. W tym ogólnym raporcie
+      odnotowujemy to jako sygnał rynkowy, bez rekomendowania go jako kierunku do naśladowania.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="nisze">
+  <div class="wrap">
+    <h2>5 nisz i gotowe pomysły na produkt</h2>
+    <p class="subtitle">Wyprowadzone bezpośrednio z sygnałów opisanych powyżej — ogólne, bez personalizacji pod konkretny sklep. Każda nisza: Pomysł A (typografia + prosta grafika) i Pomysł B (sama grafika), z tytułem, 15 tagami, opisem sprzedażowym i promptem do Nano Banana 2 Pro. Każde pole ma przycisk Copy.</p>
+    <div id="niches-root"></div>
+  </div>
+</section>
+
+<section class="block" id="estetyki">
+  <div class="wrap">
+    <h2>Estetyki i nisze — perspektywa branżowa 2026</h2>
+    <p class="subtitle">Na podstawie raportów Printify i Merch Titans (cały rynek odzieży print-on-demand, nie tylko Spreadshirt)</p>
+
+    <div class="pill-row">
+      <span class="pill">Fitness / Gym Humor</span>
+      <span class="pill">Gaming / Geek Culture</span>
+      <span class="pill">Pet Breed-Specific</span>
+      <span class="pill">Mental Health Awareness</span>
+      <span class="pill">Food &amp; Drink Humor</span>
+      <span class="pill">Travel &amp; Adventure</span>
+      <span class="pill">Retro / Nostalgia (70.–80.)</span>
+      <span class="pill">Handwritten / Doodle Graphics</span>
+      <span class="pill">Profession-Based</span>
+      <span class="pill">Digital Minimalism / Introvert Humor</span>
+      <span class="pill">Retro Sports / Varsity</span>
+      <span class="pill">Minimalist Nature</span>
+      <span class="pill">Tech Humor</span>
+      <span class="pill">Cottagecore</span>
+      <span class="pill">Retirement Humor</span>
+    </div>
+
+    <div class="two-col">
+      <div class="chart-card">
+        <div class="chart-title">Wzrost wybranych stylów i rynków odzieży POD</div>
+        <div class="chart-sub">Źródło: Printify — Print-on-demand trends 2026, Merch Titans — Best Selling Designs 2026</div>
+        <div id="chart2"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">Najczęściej powtarzające się kategorie bestsellerów wg Merch Titans</div>
+        <div class="chart-sub">Ranking jakościowy (nie liczbowy) z uzasadnieniem</div>
+        <table class="data-table" style="margin-top:6px;">
+          <tbody>
+            <tr><td class="strong">Occupation / Profession</td><td>lider kategorii — najsilniej: pielęgniarki</td></tr>
+            <tr><td class="strong">Pet Breed-Specific</td><td>lojalna, powtarzalna baza kupujących</td></tr>
+            <tr><td class="strong">Humor / Sarkazm</td><td>organiczny zasięg społecznościowy</td></tr>
+            <tr><td class="strong">Family Identity</td><td>"est. rok", "soccer mom/dad" — stały popyt</td></tr>
+            <tr><td class="strong">Retro / Vintage 70.–80.</td><td>silne wśród grupy wiekowej 25–45 lat</td></tr>
+            <tr><td class="strong">Regional / Patriotic Pride</td><td>mainstreamowy, powtarzalny segment</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="body-text">
+      Kluczowy wniosek z raportu Merch Titans: <b>95% designów w POD przegrywa nie z powodu słabej jakości,
+      tylko braku researchu słów kluczowych</b> przed publikacją. Sezonowe kolekcje (święta, absolutorium)
+      wymagają <b>8–10 tygodni wyprzedzenia produkcyjnego</b> — kolekcję świąteczną trzeba zaplanować już we
+      wrześniu, a nie w listopadzie.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="format">
+  <div class="wrap">
+    <h2>Format produktu — specyfika Spreadshirt</h2>
+    <p class="subtitle">Czym różni się katalog i odbiorca Spreadshirt od Redbubble</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">APPAREL-FIRST</span>
+        <h3>Spreadshirt to przede wszystkim odzież</h3>
+        <p>W przeciwieństwie do Redbubble (naklejki, wall art, etui) katalog Spreadshirt jest zdominowany przez
+        koszulki, bluzy i odzież premium/organiczną — warto projektować od razu z myślą o T-shircie, nie
+        o naklejce.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">KOLORY ODZIEŻY</span>
+        <h3>Projektuj pod wiele kolorów koszulki</h3>
+        <p>Design musi działać zarówno na jasnym, jak i ciemnym materiale — czysty, kontrastowy cutout bez tła
+        pozwala łatwo dopasować grafikę do różnych wariantów kolorystycznych produktu w panelu Spreadshirt.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">SLOTY DESIGNÓW</span>
+        <h3>50 slotów na tierze Star Class 2 (pilot)</h3>
+        <p>Awans z 10 do 50 możliwych slotów na designy otwiera przestrzeń na budowanie "drabinki kategorii"
+        (kilka nisz × kilka wariantów) zamiast pojedynczych, punktowych publikacji.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">LEAD TIME</span>
+        <h3>Sezonowe kolekcje wymagają wyprzedzenia</h3>
+        <p>Wg Merch Titans kolekcje świąteczne i absolutoryjne potrzebują <b>8–10 tygodni</b> wyprzedzenia przed
+        szczytem sezonu — warto planować kalendarz publikacji z tym wyprzedzeniem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ryzyka">
+  <div class="wrap">
+    <h2>Na co uważać</h2>
+    <p class="subtitle">Ryzyka i pułapki widoczne w danych</p>
+    <p class="body-text">
+      <b>Skrajne nasycenie generycznych fraz.</b> "christian shirt" ma na Etsy ok. <b>518 tys.</b> konkurencyjnych
+      ofert, a "national park sticker" ok. <b>18,6 tys.</b> — wejście z ogólnikowym designem w tych frazach jest
+      praktycznie nieopłacalne. Potrzebny jest wyraźnie różnicujący kąt (konkretny dowcip, konkretna stylistyka),
+      a nie kolejna generyczna wersja tego samego hasła.<br><br>
+      <b>Prawa autorskie i znaki towarowe.</b> W przeglądanych listach Spreadshirt widoczne są projekty
+      nawiązujące do chronionych postaci (Minionki, Miraculous Ladybug, Pokémon) — realne ryzyko usunięcia
+      oferty i konsekwencji dla konta. Bezpieczniejsze są motywy inspirowane (oryginalna typografia, ogólne
+      symbole) niż bezpośrednie odwołania.<br><br>
+      <b>Brak bezpośrednich danych eRank dla Spreadshirt.</b> Wszystkie liczby wolumenu/konkurencji w tym
+      raporcie pochodzą z Etsy i są traktowane jako <i>wskaźnik wyprzedzający</i> ogólnego zainteresowania
+      tematem — nie jako dokładne dane sprzedażowe ze Spreadshirt. Realny popyt na samej platformie może się
+      różnić, szczególnie w kategoriach mocno mainstreamowych (wiara, patriotyzm), gdzie odbiorca Spreadshirt
+      bywa mniej "internetowy" niż typowy kupujący na Etsy.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="rekomendacje">
+  <div class="wrap">
+    <h2>Rekomendacje na najbliższe tygodnie</h2>
+    <p class="subtitle">Ogólne, niezależne od konkretnego sklepu</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">TERAZ</span>
+        <h3>Wejdź w "Class of 2027" już teraz</h3>
+        <p>Niska konkurencja (953 oferty) przy solidnym, potwierdzonym popycie (134% CTR) to rzadka okazja —
+        rok wyprzedzenia względem konkurencji, która ruszy z tym tematem dopiero w 2027.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">RÓŻNICUJ</span>
+        <h3>Unikaj generycznych fraz bez unikalnego kąta</h3>
+        <p>W kategoriach "christian shirt" i "national park" wchodź tylko z konkretnym, różnicującym pomysłem
+        (specyficzny żart, specyficzna stylistyka) — generyczna wersja utonie w setkach tysięcy ofert.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">WYKORZYSTAJ SLOTY</span>
+        <h3>Zbuduj drabinkę kategorii na 50 slotach</h3>
+        <p>Zamiast pojedynczych punktowych publikacji — rozłóż 50 dostępnych slotów na kilka silnych nisz
+        (zawód, wiara, patriotyzm, hobby) × kilka wariantów każda.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">EWERGRIN</span>
+        <h3>Rozwijaj dalej capybarę jako potwierdzoną niszę</h3>
+        <p>Dane eRank potwierdzają, że capybara to nie tylko marka własna, ale realnie silna, ogólnorynkowa
+        nisza (92% CTR, umiarkowana konkurencja) — bezpieczny filar do dalszej rozbudowy.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="report-footer" id="zrodla">
+  <div class="wrap">
+    <b>Źródła</b>
+    <ul class="sources-list">
+      <li><a href="https://www.spreadshirt.com/shop/men+t-shirts/" target="_blank" rel="noopener">Spreadshirt — T-Shirts męskie, sortowanie Popular products</a></li>
+      <li><a href="https://www.spreadshirt.com/shop/stickers/" target="_blank" rel="noopener">Spreadshirt — Stickers, sortowanie Popular products</a></li>
+      <li><a href="https://www.spreadshirt.com/shop/women+t-shirts/" target="_blank" rel="noopener">Spreadshirt — T-Shirts damskie, sortowanie Popular products</a></li>
+      <li><a href="https://members.erank.com/keyword-tool" target="_blank" rel="noopener">eRank — Keyword Tool (capybara sticker, national park sticker, senior 2027 shirt, christian shirt)</a></li>
+      <li><a href="https://members.erank.com/trend-buzz/etsy/us/thirty" target="_blank" rel="noopener">eRank — Trend Buzz (Etsy, USA, 30 dni)</a></li>
+      <li><a href="https://printify.com/blog/print-on-demand-trends/" target="_blank" rel="noopener">Printify — Print-on-demand trends 2026 (10 trending t-shirt niches)</a></li>
+      <li><a href="https://merchtitans.com/blog/best-selling-t-shirt-designs" target="_blank" rel="noopener">Merch Titans — Best Selling T-Shirt Designs 2026</a></li>
+    </ul>
+    <p style="margin-top:20px;">Ogólny raport rynkowy — bez personalizacji pod konkretny sklep · dane zebrane 21 sierpnia 2026</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Skopiowano!</div>
+
+<script>
+const erankData = [
+  {k:"tshirt", v:64870, change:"↓1", comp:"10 171 530"},
+  {k:"wall art", v:55860, change:"↑1", comp:"15 248 319"},
+  {k:"halloween", v:49850, change:"–", comp:"4 118 370"},
+  {k:"halloween shirt", v:41850, change:"–", comp:"1 246 507"},
+  {k:"womens clothing", v:39840, change:"↓1", comp:"12 162 657"},
+  {k:"earrings", v:37840, change:"↑1", comp:"2 872 064"},
+  {k:"jewelry", v:37840, change:"↓2", comp:"12 852 273"},
+  {k:"digital products", v:35840, change:"↓3", comp:"156 839"},
+  {k:"furniture", v:33830, change:"↓3", comp:"368 568"},
+  {k:"crochet pattern", v:32840, change:"↑2", comp:"600 496"}
+];
+
+const targetedData = [
+  {k:"capybara sticker", searches:"—", ctr:"92%", comp:"3 010", verdict:"Silna, umiarkowana konkurencja", warn:false},
+  {k:"senior 2027 shirt", searches:"145", ctr:"134%", comp:"953", verdict:"Niedoceniona nisza — wejdź teraz", warn:false},
+  {k:"national park sticker", searches:"—", ctr:"—", comp:"18 654", verdict:"Duży wolumen, wymaga unikalnego kąta", warn:true},
+  {k:"christian shirt", searches:"—", ctr:"—", comp:"518 074", verdict:"Skrajnie nasycone — unikaj generycznej wersji", warn:true}
+];
+
+const aestheticData = [
+  {k:"Rynek gaming/geek merch (2024→2030)", v:100},
+  {k:"Styl 'mental health awareness'", v:200},
+  {k:"Retro sports / varsity", v:55}
+];
+
+function el(tag, attrs, ...children){
+  const e = document.createElement(tag);
+  if(attrs) for(const k in attrs){
+    if(k === 'class') e.className = attrs[k];
+    else if(k === 'html') e.innerHTML = attrs[k];
+    else e.setAttribute(k, attrs[k]);
+  }
+  children.forEach(c => {
+    if(c === null || c === undefined) return;
+    if(typeof c === 'string') e.appendChild(document.createTextNode(c));
+    else e.appendChild(c);
+  });
+  return e;
+}
+
+function buildBarChart(container, data, opts){
+  const max = Math.max(...data.map(d => d.v));
+  data.forEach(d => {
+    const pct = Math.max(4, (d.v / max) * 100);
+    const track = el('div', {class:'bar-track'},
+      el('div', {class: 'bar-fill' + (opts.alt ? ' alt' : ''), style: 'width:' + pct + '%'})
+    );
+    const row = el('div', {class:'bar-row'},
+      el('div', {class:'bl'}, d.k),
+      track,
+      el('div', {class:'bar-val'}, opts.suffix ? (d.v + opts.suffix) : d.v.toLocaleString('pl-PL'))
+    );
+    container.appendChild(row);
+  });
+}
+
+buildBarChart(document.getElementById('chart1'), erankData, {alt:false});
+buildBarChart(document.getElementById('chart2'), aestheticData, {alt:true, suffix:'%'});
+
+const tbody = document.getElementById('erank-table');
+erankData.forEach(d => {
+  const changeClass = d.change.includes('↑') ? 'up' : 'flat';
+  tbody.appendChild(el('tr', null,
+    el('td', {class:'strong'}, d.k),
+    el('td', null, d.v.toLocaleString('pl-PL')),
+    el('td', {class: changeClass}, d.change),
+    el('td', null, d.comp)
+  ));
+});
+
+const targetedBody = document.createElement('tbody');
+const targetedTable = el('table', {class:'data-table'},
+  el('thead', null, el('tr', null,
+    el('th', null, 'Fraza (research celowany pod Spreadshirt)'),
+    el('th', null, 'Śr. wyszukiwania/mies.'),
+    el('th', null, 'CTR'),
+    el('th', null, 'Konkurencja (Etsy)'),
+    el('th', null, 'Ocena')
+  )),
+  targetedBody
+);
+targetedData.forEach(d => {
+  targetedBody.appendChild(el('tr', null,
+    el('td', {class:'strong'}, d.k),
+    el('td', null, d.searches),
+    el('td', {class: d.ctr !== '—' ? 'up' : 'flat'}, d.ctr),
+    el('td', {class: d.warn ? 'warn-cell' : 'flat'}, d.comp),
+    el('td', null, d.verdict)
+  ));
+});
+const targetedHeading = el('div', {class:'chart-title', style:'margin-top:20px;'}, 'Głębszy research: 4 frazy celowane pod Spreadshirt');
+const erankTableEl = document.getElementById('erank-table').closest('table');
+erankTableEl.parentNode.insertBefore(targetedTable, erankTableEl.nextSibling);
+erankTableEl.parentNode.insertBefore(targetedHeading, targetedTable);
+</script>
+
+<script>
+/* ===== 5 Niches + Product Ideas ===== */
+const NICHE_DATA = [
+  {
+    id: "capybara",
+    signal: "🐹 Ewergrin — potwierdzony w eRank (92% CTR)",
+    name: "Quirky Capybara Humor",
+    rationale: "Capybara potwierdza się w danych eRank jako realnie silna, ogólnorynkowa nisza — 92% CTR i umiarkowana konkurencja (3 010 ofert na Etsy). To nie jest tylko marka własna, tylko legalnie mocny, powtarzalny trend zwierzęcego humoru, świetnie pasujący do katalogu odzieżowego Spreadshirt.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Emotional Support Capybara Badge – Funny Animal Lover Shirt Design",
+        tags: ["capybara shirt design","funny capybara gift","emotional support animal shirt","capybara lover gift","quirky animal shirt","capybara badge design","funny animal tshirt","capybara meme shirt","cute capybara design","animal humor shirt","capybara sticker design","weird animal lover gift","capybara fan shirt","funny pet shirt design","capybara graphic tee"],
+        desc: "Every stressful day deserves an emotional support capybara. A bold, giftable badge design that turns quiet capybara appreciation into a wearable statement piece.",
+        prompt: "Create a bold circular badge design. In the center, a simple rounded capybara silhouette icon sitting calmly. Bold condensed sans-serif text arcs along the top reading 'EMOTIONAL SUPPORT' and along the bottom reading 'CAPYBARA', with small leaf icons as dividers. Style: flat vector illustration, thick clean black outlines, warm flat colors (brown, tan, cream, olive green), no gradients, no drop shadow. Background: solid flat white (#FFFFFF), no outside texture — crisp clean edges for easy cutout, works well printed on both light and dark garments. Square 1:1 composition, centered, print-ready apparel quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Capybara in a Hot Spring – Bold Cozy Illustration",
+        tags: ["capybara illustration","capybara hot spring art","cozy animal design","capybara graphic design","cute capybara illustration","bold animal art","capybara nature design","quirky wildlife illustration","capybara relaxing art","animal lover illustration","capybara onsen design","funny wildlife graphic","capybara bath illustration","calm animal art","capybara apparel design"],
+        desc: "Half-submerged in a steaming hot spring with a citrus slice balanced on its head, this capybara is the definition of zero stress. A bold, cozy illustration built to stand out on a tee.",
+        prompt: "Create a bold flat-vector illustration of a capybara relaxing chin-deep in a round hot spring pool with steam lines rising, a citrus fruit slice balanced on top of its head. Thick black outlines, warm flat colors (brown capybara, teal water, orange citrus, cream steam), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out for apparel printing. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "class-of-2027",
+    signal: "🎓 Niedoceniona nisza — 134% CTR, niska konkurencja",
+    name: "Class of 2027 Graduation",
+    rationale: "Rok wyprzedzenia względem konkurencji: fraza \"senior 2027 shirt\" ma solidny popyt (145 śr. wyszukiwań/mies., 134% CTR) przy zaledwie 953 konkurencyjnych ofertach na Etsy — większość sprzedawców zacznie robić \"Class of 2027\" dopiero za rok.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Class of 2027 Senior Badge – Future Graduate Shirt Design",
+        tags: ["class of 2027 shirt","senior 2027 design","future graduate gift","class of 2027 badge","graduation countdown shirt","senior year 2027 design","high school senior gift","class of 2027 sticker","graduate pride shirt","senior squad design","future grad badge","class of 2027 apparel","school pride shirt design","senior year gift idea","graduation year shirt"],
+        desc: "Officially counting down to graduation day. A bold Class of 2027 badge design perfect for senior-year apparel, class trip merch, and early graduation gifts.",
+        prompt: "Create a bold circular badge design. In the center, a simple graduation cap silhouette icon with a hanging tassel. Bold condensed sans-serif text arcs along the top reading 'CLASS OF 2027' and along the bottom reading 'FUTURE GRADUATE', with small star icons as dividers. Style: flat vector illustration, thick clean black outlines, bold flat colors (navy, gold, cream), no gradients, no drop shadow. Background: solid flat white (#FFFFFF), no outside texture — crisp clean edges for easy cutout, works well printed on both light and dark garments. Square 1:1 composition, centered, print-ready apparel quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Flying 2027 Graduation Cap – Bold Celebration Illustration",
+        tags: ["graduation cap illustration 2027","class of 2027 art","senior year illustration","grad cap design","graduation celebration art","future graduate illustration","2027 grad design","school pride illustration","graduation moment design","senior 2027 art","cap toss illustration","celebration confetti design","grad year illustration","class pride graphic","graduation apparel art"],
+        desc: "Cap thrown, confetti mid-air, and the number 2027 front and center — this illustration captures a graduation day that hasn't even happened yet, ready for the early-bird class.",
+        prompt: "Create a bold flat-vector illustration of a graduation cap mid-toss in the air above a large stylized number '2027', with a few simple confetti shapes and light motion lines scattered around. Thick black outlines, bold flat colors (navy cap, gold tassel and numbers, a few colorful confetti pieces), no gradients, no additional text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out for apparel printing. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "national-park-badge",
+    signal: "🏔️ Podróże — wymaga unikalnego kąta (18,6 tys. konkurencji)",
+    name: "Retro National Park Badge (differentiated angle)",
+    rationale: "\"National park sticker\" ma duży wolumen, ale też dużą konkurencję (18 654 ofert na Etsy) — generyczny design z nazwą parku utonie w tłumie. Poniższy kąt celowo omija to, stawiając na uniwersalny motyw kompasu/mapy topograficznej zamiast konkretnej nazwy parku, co dodatkowo ułatwia sprzedaż bez potrzeby tworzenia dziesiątek wariantów per park.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Adventure Awaits Compass Badge – Retro Outdoor Shirt Design",
+        tags: ["national park badge shirt","outdoor adventure design","retro compass badge","hiking shirt design","nature lover gift shirt","adventure awaits design","vintage outdoor badge","camping shirt design","trail badge illustration","mountain compass design","wanderlust shirt design","outdoor explorer badge","retro hiking design","nature badge shirt","adventure seeker gift"],
+        desc: "A retro compass badge for the person who's always planning the next trip. Universal enough to work for any trail, any park, any adventure — no single destination required.",
+        prompt: "Create a bold circular vintage badge design. In the center, a simple compass rose icon with a small mountain range silhouette beneath it. Bold condensed serif text arcs along the top reading 'ADVENTURE AWAITS' and along the bottom reading 'EXPLORE MORE', with small pine tree icons as dividers. Style: flat vector illustration, thick clean black outlines, retro earthy flat colors (forest green, rust orange, cream, brown), subtle halftone texture only inside the badge. Background: solid flat white (#FFFFFF), no gradient, no drop shadow, no outside texture — crisp clean edges for easy cutout. Square 1:1 composition, centered, print-ready apparel quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Topographic Mountain Range – Bold Retro Outdoor Illustration",
+        tags: ["topographic mountain illustration","retro national park art","outdoor adventure illustration","mountain range design","hiking trail art","vintage nature illustration","topo map graphic","wilderness illustration","mountain badge art","nature explorer design","retro camping illustration","outdoor apparel art","trail map design","adventure illustration shirt","mountain silhouette art"],
+        desc: "Layered mountain ridgelines rendered in a bold topographic-map style — a timeless, park-agnostic illustration that reads outdoorsy without pinning itself to one location.",
+        prompt: "Create a bold flat-vector illustration of layered mountain ridgelines in a topographic contour-line style, with a single sun circle rising behind the peaks. Thick black outlines, retro earthy flat colors (forest green, rust orange, cream sky), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out for apparel printing. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "profession-pride",
+    signal: "👩‍⚕️ Duma zawodowa — kategoria #1 na Spreadshirt",
+    name: "Profession Pride Pun (Nurse / Teacher / Librarian)",
+    rationale: "Duma zawodowa to najczęściej powtarzający się motyw w top listach Spreadshirt (pielęgniarki na czele, wg Merch Titans). Zamiast generycznego \"World's Best Nurse\", poniższe pomysły stawiają na konkretny, dowcipny kalambur specyficzny dla zawodu — dokładnie to, czego brakuje w większości nasyconych ofert.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Fluent in Sarcasm and Medical Terminology – Funny Nurse Shirt Design",
+        tags: ["funny nurse shirt design","nurse pun shirt","nurse life badge","medical humor shirt","nurse gift design","nursing school gift shirt","nurse appreciation design","sarcastic nurse shirt","nurse squad design","healthcare worker gift","nurse badge illustration","funny medical shirt","nurse humor design","registered nurse gift","nurse pride shirt"],
+        desc: "Fluent in sarcasm, caffeine, and medical terminology — this badge says everything a nurse needs to say without saying a word. A witty, giftable design for nurse appreciation week and beyond.",
+        prompt: "Create a bold circular badge design. In the center, a simple stethoscope icon shaped into a heart. Bold condensed sans-serif text arcs along the top reading 'FLUENT IN SARCASM' and along the bottom reading 'AND MEDICAL TERMINOLOGY', with small caffeine cup icons as dividers. Style: flat vector illustration, thick clean black outlines, bold flat colors (teal, coral, cream), no gradients, no drop shadow. Background: solid flat white (#FFFFFF), no outside texture — crisp clean edges for easy cutout, works well printed on both light and dark garments. Square 1:1 composition, centered, print-ready apparel quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Stethoscope Heart with Caffeine Cup – Bold Nurse Illustration",
+        tags: ["nurse illustration design","stethoscope heart art","medical humor illustration","nurse life art","healthcare illustration design","nurse graphic tee art","caffeine nurse design","medical worker illustration","nurse pride art","stethoscope illustration","nurse appreciation art","bold medical design","nurse squad illustration","healthcare hero art","nurse apparel graphic"],
+        desc: "A stethoscope curled into a heart shape next to an oversized coffee cup — the two essential tools of nurse life, rendered in one bold, giftable illustration.",
+        prompt: "Create a bold flat-vector illustration of a stethoscope bent into a heart shape, positioned next to a simple oversized coffee cup with steam lines. Thick black outlines, bold flat colors (teal stethoscope, coral heart accent, cream coffee cup), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out for apparel printing. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "faith-pun",
+    signal: "✝️ Wiara — wymaga unikalnego kąta (518 tys. konkurencji)",
+    name: "Faith & Scripture Pun (differentiated angle)",
+    rationale: "\"Christian shirt\" jest skrajnie nasycone (ok. 518 tys. konkurencyjnych ofert na Etsy) — generyczny design z krzyżem się zgubi. Poniższe pomysły celowo unikają najbardziej oklepanych fraz na rzecz konkretnego, ciepłego kalamburu (kawa + wiara), który wciąż trafia w tę samą, lojalną publiczność, ale wyróżnia się na tle tysięcy identycznych ofert.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Grace and a Little Bit of Caffeine – Funny Faith Shirt Design",
+        tags: ["faith shirt design","christian pun shirt","grace and caffeine design","faith based gift shirt","christian humor design","scripture pun shirt","faith coffee design","christian gift idea shirt","church shirt design","faith lifestyle shirt","christian apparel design","grace badge illustration","faith and coffee gift","christian women shirt design","faith pride design"],
+        desc: "Powered by grace and a little bit of caffeine — a warm, witty faith design that skips the overused clichés for something that actually feels personal. A cozy gift for coffee-and-church mornings.",
+        prompt: "Create a bold circular badge design. In the center, a simple coffee cup icon with a small cross shape formed in the rising steam lines. Bold condensed sans-serif text arcs along the top reading 'GRACE AND' and along the bottom reading 'A LITTLE CAFFEINE', with small dot icons as dividers. Style: flat vector illustration, thick clean black outlines, warm flat colors (terracotta, cream, sage green), no gradients, no drop shadow. Background: solid flat white (#FFFFFF), no outside texture — crisp clean edges for easy cutout, works well printed on both light and dark garments. Square 1:1 composition, centered, print-ready apparel quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Sunrise Cross over Rolling Hills – Bold Faith Illustration",
+        tags: ["faith illustration design","cross sunrise art","christian nature illustration","scripture art design","faith based illustration","rolling hills cross art","peaceful faith design","christian apparel art","cross silhouette illustration","faith lifestyle art","sunrise faith graphic","bold christian design","hillside cross illustration","faith gift art","spiritual illustration design"],
+        desc: "A simple cross stands on a rolling hillside as the sun rises behind it — a quiet, warm illustration built for everyday faith apparel rather than another loud scripture slogan.",
+        prompt: "Create a bold flat-vector illustration of a simple cross silhouette standing on a rolling hill, with a large rising sun circle behind it and soft sun rays radiating outward. Thick black outlines, warm flat colors (terracotta sun, sage green hills, cream sky), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out for apparel printing. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  }
+];
+
+function copyBtn(getText){
+  const btn = el('button', {class:'copy-btn'}, 'Copy');
+  btn.addEventListener('click', () => {
+    const text = getText();
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      showToast('Skopiowano do schowka');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1400);
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1400);
+    });
+  });
+  return btn;
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(showToast._tm);
+  showToast._tm = setTimeout(() => t.classList.remove('show'), 1300);
+}
+
+function buildField(name, valueEl, copyText){
+  const top = el('div', {class:'field-top'},
+    el('span', {class:'field-name'}, name),
+    copyBtn(copyText)
+  );
+  return el('div', {class:'field'}, top, valueEl);
+}
+
+function buildIdea(idea, variant){
+  const titleField = buildField('Title', el('div', {class:'field-title'}, idea.title), () => idea.title);
+
+  const tagWrap = el('div', {class:'tag-list'});
+  idea.tags.forEach(t => tagWrap.appendChild(el('span', {class:'tag-chip'}, t)));
+  const tagsField = buildField('15 Tags', tagWrap, () => idea.tags.join(', '));
+
+  const descField = buildField('Description', el('div', {class:'field-desc'}, idea.desc), () => idea.desc);
+
+  const promptField = buildField('Nano Banana 2 Pro Prompt', el('div', {class:'field-prompt'}, idea.prompt), () => idea.prompt);
+
+  const head = el('div', {class:'idea-head'}, el('span', {class:'idea-label'}, idea.label));
+
+  return el('div', {class:'idea-card idea-' + variant}, head, titleField, tagsField, descField, promptField);
+}
+
+function buildNiche(niche, index){
+  const head = el('div', {class:'niche-head'},
+    el('div', {class:'niche-title-block'},
+      el('div', {class:'num'}, 'NISZA ' + (index+1) + ' / 5'),
+      el('h3', {class:'niche-name'}, niche.name)
+    )
+  );
+  const pill = el('div', {class:'signal-pill'}, niche.signal);
+  const rationale = el('p', {class:'rationale', html: niche.rationale});
+
+  const ideasWrap = el('div', {class:'ideas'});
+  ideasWrap.appendChild(buildIdea(niche.ideas[0], 'a'));
+  ideasWrap.appendChild(buildIdea(niche.ideas[1], 'b'));
+
+  return el('div', {class:'niche-block', id: niche.id}, head, pill, rationale, ideasWrap);
+}
+
+const nichesRoot = document.getElementById('niches-root');
+NICHE_DATA.forEach((n, i) => nichesRoot.appendChild(buildNiche(n, i)));
+</script>
+</body>
+</html>
