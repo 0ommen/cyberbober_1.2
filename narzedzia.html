@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alpha PNG Engine, CyberBober 1.2</title>
+<title>CyberBober Studio, CyberBober 1.2</title>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -142,6 +142,36 @@
   }
 
   footer{text-align:center;padding:32px 24px;color:var(--dim);font-size:11.5px;border-top:1px solid var(--border);margin-top:40px}
+
+  /* ── STUDIO TABS ── */
+  .studio-tabs{
+    display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;
+    border-bottom:1px solid var(--border);margin-bottom:32px;
+  }
+  .studio-tab{
+    display:flex;align-items:center;gap:8px;flex:none;
+    padding:12px 18px;border-radius:12px 12px 0 0;cursor:pointer;
+    font-size:12.5px;font-weight:700;letter-spacing:.02em;
+    color:var(--dim);background:transparent;border:1px solid transparent;
+    transition:color .15s ease, background .15s ease;
+    white-space:nowrap;
+  }
+  .studio-tab.active{color:var(--ink);background:var(--dark2);border-color:var(--border);border-bottom-color:var(--dark2);margin-bottom:-1px}
+  .studio-tab.soon{cursor:default;opacity:.55}
+  .studio-tab.soon:hover{color:var(--dim)}
+  .studio-tab .soon-pill{
+    font-size:9px;letter-spacing:.06em;text-transform:uppercase;font-weight:800;
+    color:var(--gold);background:#f59e0b18;border:1px solid #f59e0b40;
+    padding:2px 7px;border-radius:999px;
+  }
+  .tab-panel{display:none}
+  .tab-panel.active{display:block; animation:fadein .3s ease}
+  .soon-panel{
+    text-align:center;padding:64px 24px;border:2px dashed var(--border);border-radius:20px;background:var(--dark2);
+  }
+  .soon-panel .soon-icon{font-size:44px;margin-bottom:16px;display:block;opacity:.6}
+  .soon-panel h3{font-size:16px;color:var(--ink);margin:0 0 8px}
+  .soon-panel p{font-size:13px;color:var(--dim);max-width:44ch;margin:0 auto;line-height:1.6}
 </style>
 </head>
 <body>
@@ -155,12 +185,20 @@
 </div>
 
 <div class="hero">
-  <div class="hero-badge">🔴 Narzędzie CyberBobera</div>
-  <h1>Alpha PNG Engine</h1>
-  <p>Wykrywa resztki szachownicy i pół-przezroczyste piksele, które platformy POD, zwłaszcza Spreadshirt, odrzucają jako „design features semi-transparent areas" lub „not fully cropped". Jeśli coś jest nie tak, jednym kliknięciem naprawia plik i od razu go pobierasz, bez Photopea. Analiza w 100% lokalna, plik nigdzie nie jest wysyłany.</p>
+  <div class="hero-badge">🧰 Narzędzie CyberBobera</div>
+  <h1>CyberBober Studio</h1>
+  <p>Mały kombajn do obróbki plików pod sprzedaż, wszystko w 100% lokalnie w przeglądarce, plik nigdzie nie jest wysyłany. Dziś dostępna jest jedna funkcja, kolejne w drodze.</p>
 </div>
 
 <div class="wrap">
+  <div class="studio-tabs">
+    <div class="studio-tab active" data-tab="alpha">🩺 Kanał Alfa</div>
+    <div class="studio-tab soon" data-tab="bg">✂️ Usuń tło <span class="soon-pill">Wkrótce</span></div>
+    <div class="studio-tab soon" data-tab="upscale">🔍 Powiększ <span class="soon-pill">Wkrótce</span></div>
+    <div class="studio-tab soon" data-tab="export">📤 Eksport <span class="soon-pill">Wkrótce</span></div>
+  </div>
+
+  <div class="tab-panel active" id="tab-alpha">
   <div class="drop" id="drop">
     <input type="file" id="file" accept="image/png">
     <span class="icon">📤</span>
@@ -214,11 +252,46 @@
     </div>
     <p style="font-size:12.5px;color:var(--dim);margin-top:16px">Pełna instrukcja krok po kroku: <a href="platforma.html#ch3" style="color:var(--red)">Rozdział 3.5 platformy szkoleniowej →</a></p>
   </div>
+  </div>
+
+  <div class="tab-panel" id="tab-bg">
+    <div class="soon-panel">
+      <span class="soon-icon">✂️</span>
+      <h3>Usuwanie tła</h3>
+      <p>Ta funkcja jest w budowie. Wkrótce wytniesz tło z pliku jednym kliknięciem, bez wychodzenia z przeglądarki.</p>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="tab-upscale">
+    <div class="soon-panel">
+      <span class="soon-icon">🔍</span>
+      <h3>Powiększanie (upscale)</h3>
+      <p>Ta funkcja jest w budowie. Wkrótce podniesiesz rozdzielczość designu bez utraty jakości, prosto tutaj.</p>
+    </div>
+  </div>
+
+  <div class="tab-panel" id="tab-export">
+    <div class="soon-panel">
+      <span class="soon-icon">📤</span>
+      <h3>Eksport</h3>
+      <p>Ta funkcja jest w budowie. Wkrótce wyeksportujesz gotowy plik do PNG, JPG albo PDF, w jednym miejscu.</p>
+    </div>
+  </div>
 </div>
 
 <footer>🦫 CyberBober 1.2, Narzędzia dla twórców POD © 2026</footer>
 
 <script>
+document.querySelectorAll('.studio-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    if (tab.classList.contains('soon')) return;
+    document.querySelectorAll('.studio-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+  });
+});
+
 const drop = document.getElementById('drop');
 const fileInput = document.getElementById('file');
 const resultEl = document.getElementById('result');
