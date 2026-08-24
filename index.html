@@ -70,7 +70,7 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
 .landing::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 50% 0%,#a855f720 0%,transparent 60%),radial-gradient(ellipse at 80% 50%,#f59e0b10 0%,transparent 50%);pointer-events:none}
 
 /* NAV BAR */
-.lp-nav{display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:1px solid #ffffff08;position:relative;z-index:2;max-width:1200px;margin:0 auto}
+.lp-nav{display:flex;align-items:center;justify-content:center;padding:18px 48px;border-bottom:1px solid #ffffff08;position:relative;z-index:2;max-width:1200px;margin:0 auto}
 .lp-nav-logo{display:flex;align-items:center;gap:10px}
 .lp-nav-logo span{font-size:22px}
 .lp-nav-logo strong{font-family:'Orbitron',monospace;font-size:13px;font-weight:900;color:var(--gold)}
@@ -481,10 +481,7 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
   .landing{margin-left:0 !important;width:100% !important}
   .lp-nav,.lp-hero,.pricing-section,.features-section,.free-section,.lp-divider{padding-left:20px !important;padding-right:20px !important;max-width:100% !important}
   .lp-nav{padding-left:64px !important}
-  .lp-nav{flex-direction:column;align-items:stretch;row-gap:12px}
   .lp-nav-logo{justify-content:center}
-  .lp-nav-links{justify-content:center;width:100%}
-  .lp-nav-link{flex:1 1 auto;justify-content:center;text-align:center}
   .pricing-grid{grid-template-columns:1fr}
   .free-card{flex-direction:column;text-align:center}
   .lp-h1{font-size:22px}
@@ -527,6 +524,15 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
     <a href="#" class="nav-link active" style="background:#f59e0b15;border:1px solid #f59e0b30;margin-bottom:6px">
       <span class="ch-icon">🦫</span>
       <span><span class="ch-num" style="color:var(--gold)">CyberBober 1.2</span><span style="color:var(--gold);font-weight:700">Kup dostęp</span></span>
+    </a>
+    <div class="nav-sep">Narzędzia</div>
+    <a href="research/index.html" class="nav-link">
+      <span class="ch-icon">📊</span>
+      <span><span class="ch-num">Otwarte</span>Insider POD Raport</span>
+    </a>
+    <a href="narzedzia.html" class="nav-link">
+      <span class="ch-icon">🧰</span>
+      <span><span class="ch-num">W przeglądarce</span>CyberBober Studio</span>
     </a>
     <div class="nav-sep">Platforma</div>
     <a href="platforma.html#intro" class="nav-link">
@@ -571,11 +577,6 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
     <div class="lp-nav-logo">
       <span>🦫</span>
       <strong>CyberBober 1.2</strong>
-    </div>
-    <div class="lp-nav-links">
-      <a href="research/index.html" class="lp-nav-link lp-nav-link--gold">📊 Insider POD Raport</a>
-      <a href="narzedzia.html" class="lp-nav-link lp-nav-link--red">🧰 CyberBober Studio</a>
-      <a href="#pricing" class="lp-nav-link lp-nav-link--cta">🚀 Kup subskrypcję</a>
     </div>
   </div>
 
