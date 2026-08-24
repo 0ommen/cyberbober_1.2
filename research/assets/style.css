@@ -43,6 +43,7 @@ a{color:inherit;}
 .crumbs a:hover{color:var(--accent);}
 .crumbs .sep{opacity:.4;}
 .crumbs .current{color:var(--text); font-weight:700;}
+.topbar .home-links{display:flex; align-items:center; gap:8px; flex-wrap:wrap;}
 .topbar .home-link{
   font-size:12.5px; font-family:var(--mono); text-decoration:none;
   color: var(--bg); background: var(--accent);
