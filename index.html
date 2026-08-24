@@ -499,8 +499,9 @@ body{background:var(--dark);color:var(--text);font-family:'Inter',sans-serif;fon
 /* ── LANDING FULL WIDTH (desktop only) ── */
 @media(min-width:769px){
   body.on-landing #sidebar{transform:translateX(-240px)}
+  body.on-landing #sidebar.open{transform:translateX(0)}
   body.on-landing #main{margin-left:0;width:100%;transition:margin-left .3s}
-  body.on-landing #menu-toggle{display:none}
+  body.on-landing #menu-toggle{display:flex}
 }
 .landing{background:linear-gradient(180deg,#06060f 0%,#0f0f1a 40%,#0f0f1a 100%);position:relative;overflow:hidden;scroll-margin-top:0}
 </style>
@@ -842,12 +843,13 @@ function toggleSidebar(){
 }
 document.addEventListener('click',e=>{
   const sb=document.getElementById('sidebar');
-  if(window.innerWidth<=768&&!sb.contains(e.target)&&!e.target.closest('#menu-toggle')){
+  const isLandingDesktop=document.body.classList.contains('on-landing')&&window.innerWidth>768;
+  if((window.innerWidth<=768||isLandingDesktop)&&!sb.contains(e.target)&&!e.target.closest('#menu-toggle')){
     sb.classList.remove('open');
   }
 });
 
-// On landing page: sidebar always hidden on desktop too (full width)
+// On landing page: sidebar hidden by default, opens as overlay via hamburger on both mobile and desktop
 document.body.classList.add('on-landing');
 
 // PROGRESS BAR
