@@ -34,6 +34,19 @@
   .topbar a:hover{color:var(--ink)}
   .tb-brand{display:flex;align-items:center;gap:10px}
   .tb-brand span{font-family:'Orbitron',monospace;font-size:13px;font-weight:900;color:var(--gold);letter-spacing:.5px}
+  .crumbs{font-size:12.5px;color:var(--dim);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+  .crumbs a{color:var(--dim);text-decoration:none}
+  .crumbs a:hover{color:var(--ink)}
+  .crumbs .sep{opacity:.4}
+  .crumbs .current{color:var(--ink);font-weight:700}
+  .topbar .home-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .topbar .home-link{
+    font-size:12.5px;font-family:'JetBrains Mono',monospace;text-decoration:none;
+    color:#0a0a0f;background:var(--gold);
+    padding:6px 12px;border-radius:999px;font-weight:700;
+    display:flex;align-items:center;gap:6px;
+  }
+  .topbar .home-link:hover{color:#0a0a0f;filter:brightness(1.1)}
 
   .hero{
     text-align:center;padding:64px 24px 48px;
@@ -177,10 +190,14 @@
 <body>
 
 <div class="topbar">
-  <a href="index.html" class="tb-brand" style="text-decoration:none">🦫 <span>CYBERBOBER 1.2</span></a>
-  <div style="display:flex;align-items:center;gap:18px">
-    <a href="research/index.html">📊 Insider POD Raport</a>
-    <a href="platforma.html">← Wróć do platformy szkoleniowej</a>
+  <div class="crumbs">
+    <a href="index.html">CyberBober 1.2</a>
+    <span class="sep">/</span>
+    <span class="current">CyberBober Studio</span>
+  </div>
+  <div class="home-links">
+    <a class="home-link" href="platforma.html">← Wstecz</a>
+    <a class="home-link" href="index.html">🦫 CyberBober</a>
   </div>
 </div>
 
