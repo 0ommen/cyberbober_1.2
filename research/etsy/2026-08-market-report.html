@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Etsy Market Report — Sierpień 2026</title>
+<link rel="icon" href="../../favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../favicon-180.png">
+<style>
+  :root{
+    --bg: #121316;
+    --panel: #1b1d22;
+    --panel-2: #22242b;
+    --line: #33353c;
+    --text: #f1f1ee;
+    --text-dim: #a9abb4;
+    --accent: #ffd23f;
+    --accent-2: #ff5d5d;
+    --accent-3: #5ee6c8;
+    --accent-4: #b98bff;
+    --accent-5: #6fb3ff;
+    --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height:1.5;
+    padding-bottom: 80px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  header.hero{
+    background:
+      radial-gradient(circle at 12% 20%, rgba(255,210,63,0.10), transparent 40%),
+      radial-gradient(circle at 88% 0%, rgba(185,139,255,0.12), transparent 45%),
+      linear-gradient(180deg, #17181c 0%, #121316 100%);
+    border-bottom: 3px solid var(--accent);
+    padding: 56px 0 40px;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--bg);
+    background: var(--accent);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-weight:700;
+    margin-bottom: 18px;
+  }
+  h1{
+    font-size: 38px;
+    line-height:1.1;
+    margin: 0 0 14px;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+  }
+  h1 span{color:var(--accent);}
+  .hero p.lead{
+    font-size: 16px;
+    color: var(--text-dim);
+    max-width: 760px;
+    margin: 0 0 26px;
+  }
+  .stat-row{
+    display:flex; flex-wrap:wrap; gap:14px; margin-top: 18px;
+  }
+  .stat{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 16px;
+    min-width: 150px;
+  }
+  .stat .n{font-size:20px; font-weight:800; color:var(--accent-3);}
+  .stat .l{font-size:12px; color:var(--text-dim); text-transform:uppercase; letter-spacing:.05em;}
+
+  section.block{ padding: 46px 0 10px; border-bottom: 1px solid var(--line); }
+  section.block h2{
+    font-size: 24px;
+    margin: 0 0 6px;
+    border-left: 4px solid var(--accent);
+    padding-left: 12px;
+    font-weight: 900;
+  }
+  section.block .subtitle{
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0 0 22px;
+    padding-left: 16px;
+  }
+  section.block > .wrap > p.body-text{
+    color: var(--text-dim);
+    font-size: 14.5px;
+    max-width: 820px;
+    margin: 0 0 20px;
+  }
+  section.block > .wrap > p.body-text b{color:var(--text);}
+
+  .findings{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+    gap: 14px;
+    margin: 8px 0 8px;
+  }
+  .finding-card{
+    background: var(--panel);
+    border:1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .finding-card .tag{
+    font-family: var(--mono);
+    font-size:11px;
+    color:var(--bg);
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:6px;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .finding-card h3{
+    font-size: 15px;
+    margin: 0 0 6px;
+  }
+  .finding-card p{margin:0; font-size:13.5px; color:var(--text-dim); line-height:1.5;}
+  .finding-card b{color:var(--text);}
+  .finding-card .ex{
+    margin-top:10px;
+    font-family: var(--mono);
+    font-size: 11.5px;
+    color: var(--text-dim);
+    border-top: 1px dashed var(--line);
+    padding-top: 8px;
+  }
+
+  .callout{
+    background: linear-gradient(135deg, rgba(255,210,63,0.08), rgba(185,139,255,0.08));
+    border: 1px dashed var(--accent);
+    border-radius: 12px;
+    padding: 18px 20px;
+    font-size: 14px;
+    color: var(--text-dim);
+    margin: 8px 0 24px;
+  }
+  .callout b{color:var(--accent);}
+  .callout.warn{border-color: var(--accent-2);}
+  .callout.warn b{color:var(--accent-2);}
+  .callout.info{border-color: var(--accent-5);}
+  .callout.info b{color:var(--accent-5);}
+
+  nav.jumpnav{
+    position: sticky; top:0; z-index: 50;
+    background: rgba(18,19,22,0.92);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+    margin-top: 30px;
+  }
+  nav.jumpnav .wrap{display:flex; gap:8px; flex-wrap:wrap; align-items:center;}
+  nav.jumpnav a{
+    font-size:13px;
+    color: var(--text);
+    text-decoration:none;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    padding:7px 12px;
+    border-radius:999px;
+    transition: all .15s ease;
+    white-space:nowrap;
+  }
+  nav.jumpnav a:hover{border-color:var(--accent); color:var(--accent);}
+
+  /* charts */
+  .chart-card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px 10px;
+    margin-bottom: 18px;
+  }
+  .chart-card .chart-title{
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 2px;
+  }
+  .chart-card .chart-sub{
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-bottom: 18px;
+  }
+  .bar-row{
+    display:grid;
+    grid-template-columns: 160px 1fr 70px;
+    align-items:center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .bar-row .bl{
+    font-size: 12.5px;
+    color: var(--text-dim);
+    text-align:right;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .bar-track{
+    background: var(--panel-2);
+    border-radius: 6px;
+    height: 14px;
+    position:relative;
+    overflow:hidden;
+  }
+  .bar-fill{
+    height: 100%;
+    border-radius: 6px;
+    background: var(--accent);
+  }
+  .bar-fill.alt{background: var(--accent-3);}
+  .bar-val{
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--text);
+    font-weight:700;
+  }
+
+  table.data-table{
+    width:100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin: 10px 0 20px;
+  }
+  table.data-table th{
+    text-align:left;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing:.05em;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--line);
+    padding: 8px 10px;
+    font-weight:700;
+  }
+  table.data-table td{
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--line);
+    color: var(--text-dim);
+  }
+  table.data-table td.strong{color:var(--text); font-weight:700;}
+  table.data-table tr:hover td{background: rgba(255,255,255,0.02);}
+  table.data-table .up{color: var(--accent-3); font-family: var(--mono);}
+  table.data-table .flat{color: var(--text-dim); font-family: var(--mono);}
+  table.data-table .warn-cell{color: var(--accent-2); font-family: var(--mono);}
+
+  .pill-row{display:flex; flex-wrap:wrap; gap:8px; margin: 6px 0 20px;}
+  .pill{
+    font-size:12px;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    color: var(--text-dim);
+    padding: 5px 11px;
+    border-radius: 999px;
+  }
+
+  .two-col{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 780px){ .two-col{grid-template-columns: 1fr;} }
+
+  footer.report-footer{
+    padding: 50px 20px 30px;
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  footer.report-footer .wrap{max-width:1080px;}
+  .sources-list{
+    columns: 2;
+    gap: 30px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  .sources-list li{margin-bottom:8px; break-inside: avoid;}
+  .sources-list a{color: var(--accent-5); text-decoration:none;}
+  .sources-list a:hover{text-decoration:underline;}
+  footer.report-footer b{color:var(--accent);}
+
+  /* niche idea cards */
+  .niche-block{ margin-bottom: 40px; }
+  .niche-block:last-child{ margin-bottom: 10px; }
+  .niche-head{
+    display:flex; align-items:flex-start; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    margin-bottom: 8px;
+  }
+  .niche-title-block .num{
+    font-family: var(--mono);
+    color: var(--accent);
+    font-size: 13px;
+    font-weight:700;
+    letter-spacing:.08em;
+  }
+  .niche-block h3.niche-name{
+    font-size: 22px;
+    margin: 4px 0 6px;
+    font-weight: 900;
+  }
+  .niche-block .signal-pill{
+    display:inline-block;
+    font-size:12px;
+    font-weight:700;
+    padding:4px 10px;
+    border-radius:999px;
+    background: var(--panel-2);
+    border:1px solid var(--line);
+    color: var(--text-dim);
+    margin-bottom: 10px;
+  }
+  .niche-block .rationale{
+    color: var(--text-dim);
+    font-size: 14.5px;
+    max-width: 780px;
+    margin: 6px 0 20px;
+  }
+  .niche-block .rationale b{color:var(--text);}
+
+  .ideas{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+  @media (max-width: 820px){ .ideas{grid-template-columns: 1fr;} }
+
+  .idea-card{
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+  }
+  .idea-card .idea-head{
+    padding: 14px 18px;
+    display:flex; align-items:center; justify-content:space-between;
+    border-bottom: 1px solid var(--line);
+  }
+  .idea-card .idea-label{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    font-weight:700;
+  }
+  .idea-a .idea-head{background: rgba(255,210,63,0.08);}
+  .idea-a .idea-label{color: var(--accent);}
+  .idea-b .idea-head{background: rgba(94,230,200,0.08);}
+  .idea-b .idea-label{color: var(--accent-3);}
+
+  .field{
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .field:last-child{border-bottom:none;}
+  .field-top{
+    display:flex; align-items:center; justify-content:space-between;
+    margin-bottom: 8px;
+  }
+  .field-name{
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing:.08em;
+    color: var(--text-dim);
+    font-weight: 700;
+  }
+  .copy-btn{
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight:700;
+    color: var(--bg);
+    background: var(--text);
+    border: none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: transform .1s ease, background .15s ease;
+  }
+  .copy-btn:hover{background: var(--accent);}
+  .copy-btn:active{transform: scale(0.94);}
+  .copy-btn.copied{background: var(--accent-3); color:#0a0a0a;}
+
+  .field-title{
+    font-size: 16px;
+    font-weight: 800;
+    line-height:1.3;
+  }
+  .field-desc{
+    font-size: 14px;
+    color: var(--text-dim);
+    line-height:1.55;
+  }
+  .field-prompt{
+    font-family: var(--mono);
+    font-size: 12.5px;
+    color: #d8dae0;
+    background: #0e0f12;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 10px 12px;
+    line-height:1.5;
+    white-space: pre-wrap;
+  }
+  .tag-list{
+    display:flex; flex-wrap:wrap; gap:6px;
+  }
+  .tag-chip{
+    font-size: 11.5px;
+    background: var(--panel-2);
+    border: 1px solid var(--line);
+    color: var(--text-dim);
+    padding: 4px 9px;
+    border-radius: 999px;
+  }
+
+  .toast{
+    position: fixed;
+    bottom: 22px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--accent-3);
+    color: #0a0a0a;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    opacity: 0;
+    transition: all .25s ease;
+    pointer-events:none;
+    z-index: 100;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+  }
+  .toast.show{opacity:1; transform: translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+
+<div style="border-bottom:1px solid var(--line); background:rgba(18,19,22,0.92);">
+  <div class="wrap" style="max-width:1080px; margin:0 auto; padding:14px 24px; display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+    <div style="font-family:var(--mono); font-size:12.5px; color:var(--text-dim); display:flex; align-items:center; gap:6px;">
+      <a href="../index.html" style="color:var(--text-dim); text-decoration:none;">Insider POD Raport</a>
+      <span style="opacity:.4;">/</span>
+      <a href="index.html" style="color:var(--text-dim); text-decoration:none;">Etsy</a>
+      <span style="opacity:.4;">/</span>
+      <span style="color:var(--text); font-weight:700;">sierpień 2026</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+      <a href="index.html" style="font-size:12.5px; font-family:var(--mono); text-decoration:none; color:var(--bg); background:var(--accent); padding:6px 12px; border-radius:999px; font-weight:700;">← Wstecz</a>
+      <a href="../../index.html" style="font-size:12.5px; font-family:var(--mono); text-decoration:none; color:var(--bg); background:var(--accent); padding:6px 12px; border-radius:999px; font-weight:700;">🦫 CyberBober</a>
+    </div>
+  </div>
+</div>
+
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Etsy — Raport Rynkowy</span>
+    <h1>Sierpień 2026: co się dzieje i co <span>naprawdę sprzedaje się</span> na Etsy</h1>
+    <p class="lead">
+      Ogólny, niespersonalizowany przegląd rynku Etsy na sierpień 2026 — oparty na bezpośrednim przeglądzie
+      żywych wyników wyszukiwania w 4 kategoriach (naklejki, zabawne koszulki, koszulki na Halloween, prezenty
+      zodiakalne) oraz aktualnych raportach branżowych i publikacjach samego eRank na temat trendów 2026.
+    </p>
+    <div class="stat-row">
+      <div class="stat"><div class="n">4</div><div class="l">kategorie Etsy przeanalizowane na żywo</div></div>
+      <div class="stat"><div class="n">6,5%+3%</div><div class="l">łączne opłaty transakcyjne + płatnicze Etsy</div></div>
+      <div class="stat"><div class="n">62%</div><div class="l">pokolenia Z utożsamia się ze znakiem zodiaku</div></div>
+      <div class="stat"><div class="n">"Patina Blue"</div><div class="l">oficjalny Kolor Roku Etsy na 2026</div></div>
+    </div>
+  </div>
+</header>
+
+<nav class="jumpnav">
+  <div class="wrap">
+    <a href="#tldr">W skrócie</a>
+    <a href="#metodologia">Metodologia</a>
+    <a href="#sezon">Sezonowość</a>
+    <a href="#erank">Dane eRank</a>
+    <a href="#kategorie">Co się sprzedaje</a>
+    <a href="#nisze">5 Nisz + Produkty</a>
+    <a href="#estetyki">Estetyki i nisze</a>
+    <a href="#format">Format produktu</a>
+    <a href="#ryzyka">Na co uważać</a>
+    <a href="#rekomendacje">Rekomendacje</a>
+    <a href="#zrodla">Źródła</a>
+  </div>
+</nav>
+
+<section class="block" id="tldr">
+  <div class="wrap">
+    <h2>W skrócie</h2>
+    <p class="subtitle">Najważniejsze wnioski w 5 punktach</p>
+    <p class="body-text">
+      Etsy to rynek, na którym <b>humor zwierzęcy — zwłaszcza koty — dosłownie zalewa</b> kategorie naklejek i
+      koszulek: sklepy takie jak CatDistributor czy EliStickerWelt powtarzają się dziesiątki razy w wynikach
+      wyszukiwania. Równolegle żywy jest fandom <b>gamelit/dungeon-crawl</b> (ta sama fraza widoczna już
+      wcześniej w eRank i teraz potwierdzona bezpośrednio w bestsellerach koszulek) oraz wirusowy mem
+      internetowego szopa pracza, który przeskoczył już z TikToka na naklejki Etsy. <b>Sezon Halloween wystartował
+      na dobre</b> mimo że to dopiero koniec sierpnia — szkielety, czarne koty i gotycki humor dominują wyniki.
+      Jesteśmy też w środku <b>sezonu Panny w astrologii</b> — 62% pokolenia Z utożsamia się ze swoim znakiem
+      zodiaku, a świeże dane eRank pokazują, że fraza "zodiac shirt" ma wyraźny sezonowy szczyt dokładnie teraz
+      (sierpień–wrzesień), z drugim, mniejszym szczytem w okresie świątecznym. W tle działa silna presja cenowa
+      — pojedynczy sprzedawcy regularnie obniżają ceny o 25–68%, a do tego dochodzą opłaty Etsy (6,5% +
+      3%+0,25 USD, plus do 15% za Offsite Ads), które realnie potrafią pochłonąć ponad jedną czwartą przychodu.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="metodologia">
+  <div class="wrap">
+    <h2>Metodologia</h2>
+    <p class="subtitle">Skąd pochodzą dane w tym raporcie</p>
+    <p class="body-text">
+      Dane zebrano 28 sierpnia 2026 z trzech źródeł: <b>(1)</b> bezpośredni, żywy przegląd wyników
+      wyszukiwania na Etsy w 4 kategoriach ("funny sticker", "funny t-shirt", "halloween shirt", "zodiac gift")
+      wraz ze stroną główną i sekcją sezonowych rekomendacji Etsy; <b>(2)</b> opublikowany raport eRank
+      "Top Trends and Products to Sell in 2026" oraz zestawienia branżowe (Printify — Top-Selling Niches on
+      Etsy 2026, Merch Titans — Etsy Fees Guide 2026); <b>(3)</b> dane liczbowe z narzędzia eRank Keyword Tool
+      — 5 fraz przeszukanych na żywo tego samego dnia (28 sierpnia 2026), bezpośrednio powiązanych z niszami
+      z sekcji "5 Nisz + Produkty" poniżej, plus tabela Top 10 fraz z tego samego tygodnia (18 sierpnia 2026).
+    </p>
+    <div class="callout info">
+      <b>Aktualizacja:</b> sesja eRank została odświeżona po publikacji wcześniejszej wersji tego raportu —
+      sekcja "Dane eRank" poniżej zawiera teraz świeże dane na żywo z Keyword Tool (5 fraz, limit dzienny
+      wykorzystany w całości) zamiast wcześniej zastrzeżonych danych historycznych. Tabela Top 10 fraz
+      (Trend Buzz) pozostaje z 18 sierpnia, ponieważ pełny widok tego narzędzia wymaga wyższego planu eRank.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="sezon">
+  <div class="wrap">
+    <h2>Sezonowość sierpnia — co napędza ruch</h2>
+    <p class="subtitle">Nakładające się sezony i cykle zakupowe widoczne w żywych wynikach wyszukiwania</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">SEZON</span>
+        <h3>Halloween już mocno widoczny, mimo że to koniec sierpnia</h3>
+        <p>Wyszukiwanie "halloween shirt" zwraca ponad 1000 aktywnych, dobrze sprzedających się ofert —
+        szkielety, czarne koty w "spooky season", vintage kostiumy z lat 80. i gotycki humor dominują wyniki
+        już teraz, ponad miesiąc przed świętem.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">ASTROLOGIA</span>
+        <h3>Sezon Panny napędza personalizowane prezenty zodiakalne</h3>
+        <p>Pierwszy wynik wyszukiwania "zodiac gift" to wprost "prezent urodzinowy dla Panny we wrześniu" —
+        sprzedawcy aktywnie targetują aktualny znak zodiaku. Kategoria jest jednak evergreen: rotuje co miesiąc
+        wraz z kalendarzem astrologicznym.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">JESIEŃ</span>
+        <h3>Start sezonu "jesiennego wystroju"</h3>
+        <p>Strona główna Etsy promuje już "Jesienny wystrój werandy" i naturalne tekstury (kamień, len, surowe
+        drewno) w odcieniach "Patina Blue" — oficjalnego Koloru Roku Etsy na 2026, wg Printify.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">VIRAL</span>
+        <h3>Wirusowy mem szopa pracza dotarł na Etsy</h3>
+        <p>Ten sam internetowy trend widoczny wcześniej na TeePublic ("Jimothy") ma już własny, dedykowany
+        pakiet 12 naklejek na Etsy — potwierdzenie, że viralowe memy internetowe przenikają między platformami
+        POD niemal natychmiast.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#ff9b6f; color:#2b1400;">GAMELIT</span>
+        <h3>Fandom dungeon-crawl widoczny też na Etsy</h3>
+        <p>Ten sam fandom gamelit, który w naszym wcześniejszym researchu eRank pokazywał 1 663 śr.
+        wyszukiwań/mies. przy niskiej konkurencji, ma już realne, sprzedające się koszulki w bestsellerach
+        Etsy — potwierdzenie międzyplatformowe siły tej niszy.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#8fe36b; color:#0d2400;">EWERGREEN</span>
+        <h3>Koci humor nie zna sezonu</h3>
+        <p>Niezależnie od pory roku, memy o kotach (naukowy kot, kot-mafia, "brainrot" kot) dominują zarówno
+        naklejki, jak i koszulki — najbardziej nasycona, ale też najbardziej stabilna kategoria w całym
+        researchu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="erank">
+  <div class="wrap">
+    <h2>Dane eRank</h2>
+    <p class="subtitle">5 fraz przeszukanych na żywo 28 sierpnia 2026, bezpośrednio powiązanych z niszami z tego raportu</p>
+
+    <div class="chart-card">
+      <div class="chart-title">Top 10 fraz wg Search Interest (30 dni, rynek USA) — dane z 18 sierpnia 2026</div>
+      <div class="chart-sub">Ogólny obraz popytu na Etsy zebrany we wcześniejszym researchu tego samego tygodnia — pełny widok Trend Buzz wymaga wyższego planu eRank</div>
+      <div id="chart1"></div>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Fraza</th><th>Search Interest</th><th>Zmiana rankingu (30 dni)</th><th>Konkurencja (Etsy)</th></tr>
+      </thead>
+      <tbody id="erank-table"></tbody>
+    </table>
+
+    <div class="chart-card">
+      <div class="chart-title">Spotlight 1/5: "dungeon crawler carl shirt" — potwierdzone na żywo</div>
+      <div class="chart-sub">Identyczne dane co w researchu z 21 sierpnia — nisza stabilna, nie chwilowy szum</div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">1 663</div><div class="l">śr. wyszukiwania / mies.</div></div>
+        <div class="stat"><div class="n">2 040</div><div class="l">śr. kliknięcia / mies.</div></div>
+        <div class="stat"><div class="n">123%</div><div class="l">CTR</div></div>
+        <div class="stat"><div class="n">925</div><div class="l">konkurencja (Etsy)</div></div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Spotlight 2/5: "funny cat sticker" — pułapka generycznej frazy</div>
+      <div class="chart-sub">Dokładna fraza ma bardzo niski wolumen mimo ogromnej konkurencji — sprzedawcy targetują inne, bardziej opisowe warianty</div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">&lt;20</div><div class="l">śr. wyszukiwania / mies.</div></div>
+        <div class="stat"><div class="n">&lt;20</div><div class="l">śr. kliknięcia / mies.</div></div>
+        <div class="stat"><div class="n">&lt;20%</div><div class="l">CTR</div></div>
+        <div class="stat"><div class="n">24 923</div><div class="l">konkurencja (Etsy)</div></div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Spotlight 3/5: "zodiac shirt" — sezonowy podwójny szczyt</div>
+      <div class="chart-sub">Wykres trendu pokazuje wyraźny szczyt sierpień–wrzesień (dokładnie teraz) i drugi, mniejszy w listopadzie–grudniu</div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">529</div><div class="l">śr. wyszukiwania / mies.</div></div>
+        <div class="stat"><div class="n">531</div><div class="l">śr. kliknięcia / mies.</div></div>
+        <div class="stat"><div class="n">100%</div><div class="l">CTR</div></div>
+        <div class="stat"><div class="n">46 756</div><div class="l">konkurencja (Etsy)</div></div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Spotlight 4/5: "raccoon sticker" — zdrowa, umiarkowana nisza</div>
+      <div class="chart-sub">Solidny wolumen przy rozsądnej konkurencji — dobry balans ryzyka i popytu</div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">292</div><div class="l">śr. wyszukiwania / mies.</div></div>
+        <div class="stat"><div class="n">384</div><div class="l">śr. kliknięcia / mies.</div></div>
+        <div class="stat"><div class="n">132%</div><div class="l">CTR</div></div>
+        <div class="stat"><div class="n">8 421</div><div class="l">konkurencja (Etsy)</div></div>
+      </div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Spotlight 5/5: "black cat halloween sticker" — "Unknown" nie znaczy "brak popytu"</div>
+      <div class="chart-sub">Zbyt długa, specyficzna fraza, by eRank pokazał wolumen — ale prawie 6 tys. sprzedawców i tak w nią celuje</div>
+      <div class="stat-row">
+        <div class="stat"><div class="n">Unknown</div><div class="l">śr. wyszukiwania / mies.</div></div>
+        <div class="stat"><div class="n">Unknown</div><div class="l">śr. kliknięcia / mies.</div></div>
+        <div class="stat"><div class="n">Unknown</div><div class="l">CTR</div></div>
+        <div class="stat"><div class="n">5 991</div><div class="l">konkurencja (Etsy)</div></div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <b>Dwa wnioski z odświeżonych danych:</b> po pierwsze, fraza "dungeon crawler carl shirt" ma dziś
+      identyczne statystyki co tydzień temu — to dobry znak stabilności niszy, nie chwilowego szumu. Po drugie,
+      aż 4 z 5 przeszukanych fraz mają nietypowy rozkład geograficzny wyszukujących (dominacja Wietnamu,
+      Indonezji i Pakistanu zamiast USA) — silny sygnał, że część wolumenu w tym segmencie generują inni
+      sprzedawcy POD researchujący nisze, a nie wyłącznie końcowi kupujący. Warto traktować bezwzględny wolumen
+      jako punkt odniesienia do porównań między frazami, a nie jako dokładną liczbę realnych kupujących.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="kategorie">
+  <div class="wrap">
+    <h2>Co faktycznie sprzedaje się teraz na Etsy</h2>
+    <p class="subtitle">Obserwacje z żywych wyników wyszukiwania w 4 kategoriach (naklejki, koszulki, Halloween, zodiak)</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">HUMOR</span>
+        <h3>Koci mem to osobna, ogromna gospodarka</h3>
+        <p>Dziesiątki niezależnych sklepów sprzedają warianty tego samego pomysłu — "sarkastyczny kot",
+        "kot-mafia", "brainrot kot" — pakiety po 50–200 naklejek, często z rabatem 50%+.</p>
+        <div class="ex">przykłady: CatDistributor, EssentialTeeLab, PurrAndPeel, EliStickerWelt</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-2); color:#2b0a0a;">GAMELIT</span>
+        <h3>Fandom dungeon-crawl ma realne, sprzedające się koszulki</h3>
+        <p>Ta sama nisza, którą wcześniej wskazały dane eRank jako niedocenioną, ma już aktywne listingi w
+        bestsellerach Etsy — silny sygnał, że to nie chwilowy szum w danych, tylko realny popyt.</p>
+        <div class="ex">przykłady: MatteTShirts</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">VIRAL</span>
+        <h3>Szop pracz "Jimothy" ma już dedykowany pakiet naklejek</h3>
+        <p>Ten sam mem, który dominował trendy na TeePublic, pojawił się na Etsy jako "12 wirusowych naklejek z
+        szopem" — potwierdzenie, że popularne memy internetowe trzeba śledzić na bieżąco niezależnie od
+        platformy.</p>
+        <div class="ex">przykłady: NalaraCrafts</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">ASTROLOGIA</span>
+        <h3>Zodiak sprzedaje się we wszystkich formatach produktu</h3>
+        <p>Ten sam temat pojawia się jako koszulki, biżuteria, kubki, naszyjniki z kamieniem urodzenia i
+        drukowane wykresy urodzeniowe — rzadki przykład niszy, która skaluje się na cały katalog produktowy
+        Etsy, nie tylko na jeden format.</p>
+        <div class="ex">przykłady: IoolaCo, SilkPurseSowsEar, HanaLight, WanderingRabbitPrint</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">HALLOWEEN</span>
+        <h3>Format "Comfort Colors" i haftowane bluzy dominują sezon</h3>
+        <p>Grubszy, "vintage-wash" materiał (marka Comfort Colors) oraz haftowane motywy zwierzęce (duch-pies,
+        czarny kot) to powtarzający się format premium w sezonowych bestsellerach Halloween.</p>
+        <div class="ex">przykłady: Thesmalltowngiftco, JanaPrintHaus, TeeChillDesign</div>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:#8fe36b; color:#0d2400;">CYFROWE</span>
+        <h3>Wykresy urodzeniowe i planery to czysto cyfrowa nisza</h3>
+        <p>Spersonalizowany wykres astrologiczny do wydruku (folia, różne kolory) sprzedaje się jako plik
+        cyfrowy — zero kosztów produkcji i wysyłki, w przeciwieństwie do platform POD z pozostałych raportów.</p>
+        <div class="ex">przykłady: WanderingRabbitPrint</div>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <b>Do odnotowania:</b> w wynikach wyszukiwania obecny jest też duży segment wulgarnego/dosadnego humoru
+      dla dorosłych oraz treści z ryzykiem prawnym (dokładny, chroniony tytuł serii książkowej w niszy gamelit,
+      podobizna konkretnego wirusowego zwierzęcia z mema). To aktywny segment rynku, ale w tym ogólnym raporcie
+      odnotowujemy go jako sygnał, bez rekomendowania go jako kierunku do bezpośredniego naśladowania.
+    </div>
+  </div>
+</section>
+
+<section class="block" id="nisze">
+  <div class="wrap">
+    <h2>5 nisz i gotowe pomysły na produkt</h2>
+    <p class="subtitle">Wyprowadzone bezpośrednio z sygnałów opisanych powyżej — ogólne, bez personalizacji pod konkretny sklep. Każda nisza: Pomysł A (typografia + prosta grafika) i Pomysł B (sama grafika), z tytułem, 15 tagami, opisem sprzedażowym i promptem do Nano Banana 2 Pro. Każde pole ma przycisk Copy.</p>
+    <div id="niches-root"></div>
+  </div>
+</section>
+
+<section class="block" id="estetyki">
+  <div class="wrap">
+    <h2>Estetyki i nisze — perspektywa branżowa 2026</h2>
+    <p class="subtitle">Na podstawie raportów Printify i eRank (cały rynek Etsy, kontekst dla wszystkich kategorii)</p>
+
+    <div class="pill-row">
+      <span class="pill">Patina Blue (Kolor Roku Etsy)</span>
+      <span class="pill">Naturalne tekstury / Heritage</span>
+      <span class="pill">Miękkie lata 80. / Balloon Pants</span>
+      <span class="pill">Biżuteria inwestycyjna</span>
+      <span class="pill">Astrologia / Zodiak</span>
+      <span class="pill">Produkty eco-conscious</span>
+      <span class="pill">Cottagecore / Vintage</span>
+      <span class="pill">Zdrowie psychiczne / Afirmacje</span>
+      <span class="pill">Produkty cyfrowe / Printables</span>
+      <span class="pill">Fandomy niszowe</span>
+    </div>
+
+    <div class="two-col">
+      <div class="chart-card">
+        <div class="chart-title">17 rosnących nisz Etsy 2026 — wybrane, z realnymi danymi</div>
+        <div class="chart-sub">Źródło: Printify — Top-Selling Niches on Etsy 2026</div>
+        <table class="data-table" style="margin-top:6px;">
+          <tbody>
+            <tr><td class="strong">Eco-conscious</td><td>kupujący płacą do ~10% więcej za produkty ekologiczne</td></tr>
+            <tr><td class="strong">Produkty dla zwierząt</td><td>56,3 mln gospodarstw domowych w USA ma psa, 43,1 mln kota</td></tr>
+            <tr><td class="strong">Astrologia / duchowość</td><td>62% pokolenia Z utożsamia się ze znakiem zodiaku</td></tr>
+            <tr><td class="strong">Produkty cyfrowe</td><td>niski koszt startu, brak produkcji i wysyłki</td></tr>
+            <tr><td class="strong">Zdrowie psychiczne / afirmacje</td><td>wall art i journale z naciskiem na wellness</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title">4 kierunki estetyczne na 2026 wg Printify</div>
+        <div class="chart-sub">Home &amp; Interior, Fashion, Jewelry, Niche Collectibles</div>
+        <table class="data-table" style="margin-top:6px;">
+          <tbody>
+            <tr><td class="strong">Dom i wnętrza</td><td>ciepłe, "przeżyte" przestrzenie zamiast surowego minimalizmu; kolor "Patina Blue"</td></tr>
+            <tr><td class="strong">Moda i dodatki</td><td>miękka odsłona lat 80., odważne nadruki na delikatnych tkaninach</td></tr>
+            <tr><td class="strong">Biżuteria</td><td>personalizacja (grawery, kamienie urodzenia, zodiak), matowe wykończenia</td></tr>
+            <tr><td class="strong">Kolekcjonerskie nisze</td><td>rosnący popyt na regionalne/mniej znane edycje vintage</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p class="body-text">
+      Wspólny mianownik wszystkich czterech kierunków: <b>personalizacja i emocjonalne połączenie z produktem</b>
+      — wg Printify to główny motor decyzji zakupowych na Etsy w 2026 roku, silniejszy niż sama estetyka czy cena.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="format">
+  <div class="wrap">
+    <h2>Format produktu i opłaty — specyfika Etsy</h2>
+    <p class="subtitle">Czym różni się Etsy od platform print-on-demand z poprzednich raportów</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">NIE TYLKO POD</span>
+        <h3>Sprzedawca kontroluje cenę i produkcję</h3>
+        <p>W przeciwieństwie do TeePublic czy Redbubble, na Etsy to sprzedawca ustala cenę i decyduje o
+        promocjach — stąd ogromny rozrzut rabatów (25–68% widoczny w researchu) jako indywidualna strategia
+        konkurencyjna, nie mechanika platformy.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">OPŁATY</span>
+        <h3>Opłaty realnie zjadają 11–25%+ przychodu</h3>
+        <p>$0,20 za listing (co 4 miesiące), 6,5% opłaty transakcyjnej (liczonej też od wysyłki), 3%+0,25 USD
+        za płatność, plus opcjonalne/obowiązkowe Offsite Ads: 15% (przychód poniżej 10 000 USD/rok, można się
+        wypisać) lub 12% (powyżej, obowiązkowe).</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">CYFROWE</span>
+        <h3>Produkty cyfrowe to unikalna przewaga Etsy</h3>
+        <p>W przeciwieństwie do wszystkich trzech platform POD z poprzednich raportów, Etsy pozwala sprzedawać
+        czysto cyfrowe pliki do pobrania (naklejki do planerów, wykresy, printables) — zero kosztów produkcji i
+        wysyłki, wyższa realna marża mimo tych samych opłat procentowych.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">SKALA KATALOGU</span>
+        <h3>Jedna nisza, wiele formatów produktu</h3>
+        <p>Zodiak sprzedaje się jako koszulka, biżuteria, kubek i plik cyfrowy jednocześnie — Etsy pozwala
+        rozciągnąć jedną silną niszę na cały katalog produktowy w sposób niedostępny na platformach
+        ograniczonych do apparel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="ryzyka">
+  <div class="wrap">
+    <h2>Na co uważać</h2>
+    <p class="subtitle">Ryzyka i pułapki widoczne w danych</p>
+    <p class="body-text">
+      <b>Skumulowane opłaty potrafią przekroczyć 25% przychodu.</b> Wg Merch Titans produkt za 25 USD generuje
+      ok. 11,3% opłat podstawowych — ale z aktywnym Offsite Ads suma potrafi przekroczyć ćwierć przychodu.
+      Warto liczyć rentowność niszy z pełnym stosem opłat, nie tylko prowizją transakcyjną.<br><br>
+      <b>Wyścig rabatowy między sprzedawcami.</b> Rabaty 25–68% widoczne niemal w każdej przejrzanej kategorii
+      to nie promocja platformy (jak na TeePublic), tylko indywidualna strategia konkurencyjna sprzedawców —
+      wejście w mocno nasyconą niszę bez planu na wyróżnienie się prowadzi prosto w wojnę cenową.<br><br>
+      <b>Prawa autorskie i wizerunkowe.</b> Dokładny, chroniony tytuł serii książkowej w niszy gamelit oraz
+      podobizna konkretnego, rozpoznawalnego zwierzęcia z wirusowego mema niosą realne ryzyko usunięcia oferty
+      — bezpieczniejsze są oryginalne nazwy własne i grafiki inspirowane trendem, nie kopiujące konkretnego
+      źródła.<br><br>
+      <b>Brak danych eRank na żywo z tej sesji.</b> Ten raport opiera się częściowo na danych liczbowych sprzed
+      kilku dni (patrz Metodologia) — zalecamy odświeżenie sekcji eRank przy następnym raporcie, gdy dostęp do
+      konta będzie aktywny.
+    </p>
+  </div>
+</section>
+
+<section class="block" id="rekomendacje">
+  <div class="wrap">
+    <h2>Rekomendacje na najbliższe tygodnie</h2>
+    <p class="subtitle">Ogólne, niezależne od konkretnego sklepu</p>
+    <div class="findings">
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent); color:#1a1500;">TERAZ</span>
+        <h3>Zacznij od produktu cyfrowego jako punktu wejścia</h3>
+        <p>Zero kosztów produkcji i wysyłki oznacza wyższą realną marżę mimo tych samych opłat procentowych —
+        dobry, tani sposób na przetestowanie niszy przed inwestycją w warianty fizyczne.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-3); color:#08211c;">ROTUJ</span>
+        <h3>Planuj kolekcję zodiakalną z wyprzedzeniem co miesiąc</h3>
+        <p>Kategoria jest evergreen, ale sprzedaje się najlepiej w oknie "swojego" znaku — warto mieć gotowy,
+        rotujący kalendarz publikacji dla wszystkich 12 znaków, nie tylko aktualnego.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-4); color:#1c1230;">MARŻA</span>
+        <h3>Licz rentowność z pełnym stosem opłat</h3>
+        <p>6,5% + 3%+0,25 USD to punkt startowy, nie suma końcowa — jeśli przychód przekroczy próg 10 000
+        USD/rok, dolicz też obowiązkowe 12% Offsite Ads do kalkulacji ceny.</p>
+      </div>
+      <div class="finding-card">
+        <span class="tag" style="background:var(--accent-5); color:#0b1a2e;">CROSS-LISTING</span>
+        <h3>Przenieś sprawdzone ewergriny z pozostałych platform</h3>
+        <p>Zwierzęcy chaotyczny humor (koty, szopy) sprawdza się identycznie na Redbubble, Spreadshirt,
+        TeePublic i teraz Etsy — te same silne pomysły warto publikować równolegle na wszystkich czterech
+        platformach.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="report-footer" id="zrodla">
+  <div class="wrap">
+    <b>Źródła</b>
+    <ul class="sources-list">
+      <li><a href="https://www.etsy.com/search?q=funny+sticker" target="_blank" rel="noopener">Etsy — wyniki wyszukiwania "funny sticker"</a></li>
+      <li><a href="https://www.etsy.com/search?q=funny+t-shirt" target="_blank" rel="noopener">Etsy — wyniki wyszukiwania "funny t-shirt"</a></li>
+      <li><a href="https://www.etsy.com/search?q=halloween+shirt" target="_blank" rel="noopener">Etsy — wyniki wyszukiwania "halloween shirt"</a></li>
+      <li><a href="https://www.etsy.com/search?q=zodiac+gift" target="_blank" rel="noopener">Etsy — wyniki wyszukiwania "zodiac gift"</a></li>
+      <li><a href="https://help.erank.com/blog/etsy-trends-2026/" target="_blank" rel="noopener">eRank — Top Trends and Products to Sell in 2026</a></li>
+      <li><a href="https://printify.com/blog/top-selling-niches-on-etsy/" target="_blank" rel="noopener">Printify — Top-Selling Niches on Etsy 2026</a></li>
+      <li><a href="https://merchtitans.com/blog/etsy-fees-guide" target="_blank" rel="noopener">Merch Titans — Etsy Fees Guide 2026</a></li>
+      <li><a href="https://members.erank.com/keyword-tool" target="_blank" rel="noopener">eRank — Keyword Tool (5 fraz na żywo, 28 sierpnia 2026)</a></li>
+    </ul>
+    <p style="margin-top:20px;">Ogólny raport rynkowy — bez personalizacji pod konkretny sklep · dane zebrane 28 sierpnia 2026</p>
+  </div>
+</footer>
+
+<div class="toast" id="toast">Skopiowano!</div>
+
+<script>
+const erankData = [
+  {k:"tshirt", v:64870, change:"↓1", comp:"10 171 530"},
+  {k:"wall art", v:55860, change:"↑1", comp:"15 248 319"},
+  {k:"halloween", v:49850, change:"–", comp:"4 118 370"},
+  {k:"halloween shirt", v:41850, change:"–", comp:"1 246 507"},
+  {k:"womens clothing", v:39840, change:"↓1", comp:"12 162 657"},
+  {k:"earrings", v:37840, change:"↑1", comp:"2 872 064"},
+  {k:"jewelry", v:37840, change:"↓2", comp:"12 852 273"},
+  {k:"digital products", v:35840, change:"↓3", comp:"156 839"},
+  {k:"furniture", v:33830, change:"↓3", comp:"368 568"},
+  {k:"crochet pattern", v:32840, change:"↑2", comp:"600 496"}
+];
+
+function el(tag, attrs, ...children){
+  const e = document.createElement(tag);
+  if(attrs) for(const k in attrs){
+    if(k === 'class') e.className = attrs[k];
+    else if(k === 'html') e.innerHTML = attrs[k];
+    else e.setAttribute(k, attrs[k]);
+  }
+  children.forEach(c => {
+    if(c === null || c === undefined) return;
+    if(typeof c === 'string') e.appendChild(document.createTextNode(c));
+    else e.appendChild(c);
+  });
+  return e;
+}
+
+function buildBarChart(container, data, opts){
+  const max = Math.max(...data.map(d => d.v));
+  data.forEach(d => {
+    const pct = Math.max(4, (d.v / max) * 100);
+    const track = el('div', {class:'bar-track'},
+      el('div', {class: 'bar-fill' + (opts.alt ? ' alt' : ''), style: 'width:' + pct + '%'})
+    );
+    const row = el('div', {class:'bar-row'},
+      el('div', {class:'bl'}, d.k),
+      track,
+      el('div', {class:'bar-val'}, opts.suffix ? (d.v + opts.suffix) : d.v.toLocaleString('pl-PL'))
+    );
+    container.appendChild(row);
+  });
+}
+
+buildBarChart(document.getElementById('chart1'), erankData, {alt:false});
+
+const tbody = document.getElementById('erank-table');
+erankData.forEach(d => {
+  const changeClass = d.change.includes('↑') ? 'up' : 'flat';
+  tbody.appendChild(el('tr', null,
+    el('td', {class:'strong'}, d.k),
+    el('td', null, d.v.toLocaleString('pl-PL')),
+    el('td', {class: changeClass}, d.change),
+    el('td', null, d.comp)
+  ));
+});
+</script>
+
+<script>
+/* ===== 5 Niches + Product Ideas ===== */
+const NICHE_DATA = [
+  {
+    id: "cat-meme",
+    signal: "🐱 Humor — dominująca kategoria w całym researchu",
+    name: "Chaotic Cat Meme Humor",
+    rationale: "Koci humor internetowy dosłownie zdominował każdą przejrzaną kategorię Etsy — od naklejek po koszulki. Świeże dane eRank potwierdzają jednak ważną pułapkę: dokładna fraza \"funny cat sticker\" ma niemal zerowy wolumen (&lt;20 wyszukiwań/mies.) przy ogromnej konkurencji (24 923 oferty) — sprzedawcy najwyraźniej wygrywają dzięki bardziej opisowym, konkretnym frazom, nie ogólnikowi. Poniższe pomysły celowo mają rozpoznawalny, konkretny kąt żartu zamiast generycznego \"funny cat\".",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Emotionally Unavailable Cat Badge – Funny Sarcastic Cat Sticker",
+        tags: ["funny cat sticker design","sarcastic cat badge","emotionally unavailable cat gift","funny cat meme sticker","cat lover gift sticker","chaotic cat energy design","funny cat owner gift","sarcastic pet sticker design","cat humor sticker","funny feline badge design","cat attitude sticker gift","introvert cat sticker design","funny cat quote sticker","cat mood badge design","sassy cat lover gift"],
+        desc: "Emotionally unavailable, financially demanding, and fully aware of it. A bold, sarcastic badge for cat owners who know exactly who's really in charge of the house.",
+        prompt: "Create a bold circular badge design. In the center, a simple flat-illustration cat face icon with a deadpan, half-closed-eyes expression. Bold condensed sans-serif text arcs along the top reading 'EMOTIONALLY UNAVAILABLE' and along the bottom reading 'BUT MAKE IT CAT', with small paw-print icons as dividers. Style: flat vector illustration, thick clean black outlines, bold flat colors (charcoal, mustard, cream, orange accent), no gradients, no drop shadow. Background: solid flat white (#FFFFFF), no outside texture — crisp clean edges for easy cutout, works well printed on both light and dark garments. Square 1:1 composition, centered, print-ready quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Chaotic Orange Cat Knocking Things Over – Bold Illustration",
+        tags: ["orange cat illustration","chaotic cat art design","funny cat graphic design","cat knocking things art","cat chaos illustration","bold cat meme graphic","funny pet illustration design","orange cat lover art","cat mischief illustration","chaotic good cat design","funny feline graphic art","cat energy illustration","bold cat sticker art","cat lover graphic design","chaotic cat humor art"],
+        desc: "Mid-crime, zero remorse — this orange cat knocks a cup off the table with the calm confidence of an animal who has never once faced consequences. Pure chaotic-cat energy in one bold illustration.",
+        prompt: "Create a bold flat-vector illustration of an orange tabby cat with one paw extended, mid-action of knocking a small cup off an edge, with a few simple motion lines and a small 'crash' star burst. Thick black outlines, bold flat colors (orange cat with darker stripes, cream cup, small red burst accent), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "gamelit",
+    signal: "🐉 Gamelit — potwierdzony dwukrotnie: eRank + realne bestsellery Etsy",
+    name: "Dungeon-Crawl Gamelit Humor",
+    rationale: "Ta sama nisza gamelit/dungeon-crawl, którą research eRank oznaczył jako niedocenioną (1 663 śr. wyszukiwań/mies., 123% CTR, konkurencja 925), ma już realne, sprzedające się koszulki w bestsellerach Etsy — a świeże dane z dzisiaj (28 sierpnia) pokazują identyczne liczby co tydzień temu, czyli stabilny, rosnący trend, nie chwilowy szum. Poniższe pomysły celowo używają oryginalnych nazw zamiast dokładnego, chronionego tytułu serii książkowej.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "This Is Outrageous Dungeon Badge – Funny Gamelit Fantasy Shirt Design",
+        tags: ["dungeon crawl shirt design","gamelit fan gift shirt","funny fantasy badge design","tabletop gaming humor shirt","dungeon adventure gift design","litrpg lover shirt design","fantasy gamer badge","funny rpg shirt design","dungeon crawler gift idea","gamelit fandom shirt design","fantasy adventure humor tee","dungeon master gift shirt","tabletop fantasy badge design","funny gaming gift shirt","dungeon crawl fan apparel"],
+        desc: "Outrage level: maximum. A bold badge for anyone deep enough in the dungeon-crawl genre to have strong feelings about a talking mongoose sidekick.",
+        prompt: "Create a bold circular badge design. In the center, a simple shocked/offended cartoon mongoose face icon with wide eyes. Bold condensed sans-serif text arcs along the top reading 'THIS IS OUTRAGEOUS' and along the bottom reading 'DUNGEON DIVISION', with small exclamation icons as dividers. Style: flat vector illustration, thick clean black outlines, bold flat colors (forest green, mustard, cream, charcoal), no gradients, no drop shadow. Background: solid flat white (#FFFFFF), no outside texture — crisp clean edges for easy cutout, works well printed on both light and dark garments. Square 1:1 composition, centered, print-ready quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Level Up Sword and Shield – Bold Fantasy Gaming Illustration",
+        tags: ["fantasy gaming illustration","dungeon crawl graphic art","level up illustration design","gamelit fan art design","sword and shield illustration","fantasy adventure graphic","rpg gamer illustration art","bold fantasy sticker design","tabletop gaming graphic art","fantasy quest illustration","dungeon adventure art design","gamer level up graphic","fantasy badge illustration","bold sword illustration design","gamelit apparel art"],
+        desc: "A crossed sword and shield rendered in bold, flat fantasy style — simple enough for a thumbnail, sturdy enough to carry an entire dungeon-crawl merch line.",
+        prompt: "Create a bold flat-vector illustration of a crossed sword and shield emblem, with a small burst of stars above where they cross to suggest a 'level up' moment. Thick black outlines, bold flat colors (steel gray blade, forest green shield, mustard accents), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "spooky-cat",
+    signal: "🎃 Sezon — Halloween już aktywny w wynikach Etsy",
+    name: "Spooky Season Black Cat",
+    rationale: "Halloween jest już w pełni widoczny w wynikach wyszukiwania Etsy pod koniec sierpnia — szkielety, czarne koty i gotycki humor dominują kategorię. Ciekawostka ze świeżych danych eRank: dokładna fraza \"black cat halloween sticker\" pokazuje \"Unknown\" wolumenu (zbyt specyficzna, długa fraza dla modelu eRank), ale ma mimo to prawie 6 tys. konkurencyjnych ofert — dowód, że realny popyt sezonowy istnieje, nawet gdy narzędzia keywordowe go nie pokazują wprost.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Spooky Season Starts Now Badge – Funny Black Cat Halloween Sticker",
+        tags: ["spooky season sticker design","black cat halloween badge","funny halloween sticker gift","october sticker design","witchy cat sticker badge","halloween season gift idea","black cat lover sticker","spooky cat badge design","autumn halloween sticker","cute halloween sticker gift","black cat halloween art","spooky season gift design","october witch sticker","halloween cat lover gift","early halloween sticker design"],
+        desc: "It's not too early — spooky season starts whenever this badge says it does. A bold black-cat design for the people who have their Halloween decorations up before Labor Day.",
+        prompt: "Create a bold circular badge design. In the center, a simple black cat silhouette icon with an arched back and a small crescent moon behind it. Bold condensed sans-serif text arcs along the top reading 'SPOOKY SEASON' and along the bottom reading 'STARTS NOW', with small star icons as dividers. Style: flat vector illustration, thick clean black outlines, bold flat colors (purple, orange, black, cream), subtle halftone texture only inside the badge. Background: solid flat white (#FFFFFF), no gradient, no drop shadow, no outside texture — crisp clean edges for easy cutout. Square 1:1 composition, centered, print-ready quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Skeleton Cat Stretching in a Pumpkin Patch – Bold Halloween Illustration",
+        tags: ["skeleton cat illustration","halloween pumpkin patch art","spooky cat graphic design","october illustration design","bold halloween sticker art","skeleton animal illustration","witchy halloween graphic","autumn cat illustration design","halloween decor art design","spooky season graphic","black cat pumpkin illustration","gothic halloween art design","bold skeleton illustration","cute spooky cat art","halloween apparel illustration"],
+        desc: "Half skeleton, half stretch — this cat is fully committed to the bit, mid-yawn in a moonlit pumpkin patch. A bold, playfully macabre illustration for peak spooky season.",
+        prompt: "Create a bold flat-vector illustration of a skeleton cat mid-stretch (visible simple ribcage lines) standing among a few carved pumpkins, with a large full moon glowing behind it. Thick black outlines, bold flat colors (bone white skeleton, black outline, orange pumpkins, deep purple night sky), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "zodiac-sass",
+    signal: "♍ Astrologia — 62% pokolenia Z, aktualnie sezon Panny",
+    name: "Zodiac Sass — Personalized Astrology Humor",
+    rationale: "62% pokolenia Z utożsamia się ze swoim znakiem zodiaku (wg Printify), a świeże dane eRank pokazują dla frazy \"zodiac shirt\" wyraźny sezonowy szczyt dokładnie teraz — sierpień/wrzesień (529 śr. wyszukiwań/mies., 100% CTR) — z drugim, mniejszym szczytem w listopadzie/grudniu. Poniższy szablon jest celowo napisany tak, by dało się go łatwo dostosować do dowolnego z 12 znaków bez przerysowywania całej grafiki.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "It's a Zodiac Sign Personality Trait Badge – Funny Astrology Shirt Design",
+        tags: ["zodiac sign shirt design","funny astrology badge","zodiac personality gift shirt","astrology humor sticker design","zodiac lover gift idea","funny horoscope shirt design","zodiac season gift","astrology badge design","star sign shirt design","zodiac sass gift idea","funny zodiac quote shirt","astrology lover badge design","zodiac birthday gift shirt","horoscope humor sticker","zodiac personalized gift design"],
+        desc: "It's not an attitude problem, it's a zodiac sign personality trait. A bold, customizable badge template ready to be dropped into any of the 12 signs for a full rotating astrology collection.",
+        prompt: "Create a bold circular badge design. In the center, a simple constellation-of-stars icon connected by thin lines forming a generic star-sign shape (not a specific zodiac symbol). Bold condensed sans-serif text arcs along the top reading 'IT'S A ZODIAC SIGN' and along the bottom reading 'PERSONALITY TRAIT', with small sparkle icons as dividers. Style: flat vector illustration, thick clean black outlines, bold flat colors (deep indigo, gold, cream), no gradients, no drop shadow. Background: solid flat white (#FFFFFF), no outside texture — crisp clean edges for easy cutout, works well printed on both light and dark garments. Square 1:1 composition, centered, print-ready quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Celestial Constellation Arch – Bold Astrology Illustration",
+        tags: ["constellation illustration design","celestial astrology art design","zodiac star illustration","bold astrology graphic art","star sign illustration design","celestial arch graphic design","astrology apparel art design","zodiac themed illustration","night sky constellation art","bold celestial sticker art","astrology gift illustration","star chart graphic design","zodiac lover illustration art","celestial badge graphic","astrology aesthetic illustration"],
+        desc: "A simple constellation arcs across a deep indigo sky, connected by thin gold lines and scattered stars — generic enough to represent any sign, elegant enough to work as pure celestial decor.",
+        prompt: "Create a bold flat-vector illustration of a curved constellation made of small gold dots connected by thin gold lines, arching across a deep indigo night sky background shape, with a few scattered smaller stars around it. No specific zodiac symbol, no text anywhere in the image. Thick black outline around the indigo shape, flat colors only, no gradients. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  },
+  {
+    id: "digital-planner-raccoon",
+    signal: "🦝 Cyfrowe + viral — bezpieczna wersja trendu, wysoka marża",
+    name: "Digital Planner Sticker Pack — Chaotic Raccoon Energy",
+    rationale: "Etsy pozwala sprzedawać czysto cyfrowe pliki do pobrania — zero kosztów produkcji i wysyłki, wyższa realna marża mimo tych samych opłat procentowych. Świeże dane eRank pokazują, że ogólna fraza \"raccoon sticker\" ma zdrowy, zbalansowany profil (292 śr. wyszukiwań/mies., 132% CTR, umiarkowana konkurencja 8 421) — a wirusowy mem szopa pracza (potwierdzony teraz i na TeePublic, i na Etsy) pokazuje, że chaotyczny humor zwierzęcy ma realny, międzyplatformowy popyt. Poniższy pakiet cyfrowych naklejek do planera jeździ na tej samej fali z oryginalną grafiką, bez kopiowania konkretnego wirusowego zwierzęcia.",
+    ideas: [
+      {
+        label: "Pomysł A — Typografia + prosta grafika",
+        title: "Chaotic Raccoon Digital Planner Sticker Pack Label – Funny Digital Download",
+        tags: ["digital planner sticker pack","raccoon planner sticker design","chaotic energy sticker download","goodnotes sticker pack design","digital download sticker set","funny raccoon digital sticker","planner sticker label design","printable sticker pack design","digital journal sticker set","raccoon lover digital download","cute chaotic sticker pack","digital planner accessory design","funny productivity sticker","raccoon energy planner design","digital sticker bundle design"],
+        desc: "For the planner that's as chaotic as you are. A bold cover-label design for a digital raccoon sticker pack — instant download, zero shipping, pure chaotic productivity energy.",
+        prompt: "Create a bold rectangular label/cover design for a digital sticker pack. In the center, a simple mischievous raccoon face icon peeking from behind a rounded rectangle 'sticker' shape. Bold condensed sans-serif text across the top reading 'CHAOTIC RACCOON ENERGY' and smaller text below reading 'DIGITAL STICKER PACK'. Style: flat vector illustration, thick clean black outlines, bold flat colors (charcoal, gray, cream, orange accent), no gradients, no drop shadow. Background: solid flat white (#FFFFFF), no outside texture — crisp clean edges for easy cutout and clean digital presentation. Square 1:1 composition, centered, print-ready quality."
+      },
+      {
+        label: "Pomysł B — Sama grafika",
+        title: "Raccoon Holding a Coffee Cup Sticker Icon – Bold Digital Illustration",
+        tags: ["raccoon coffee illustration design","digital sticker icon design","cute raccoon graphic art","planner sticker illustration","bold raccoon digital art","coffee lover sticker design","chaotic animal illustration art","digital download graphic design","raccoon character illustration","funny animal sticker icon","bold digital planner art","raccoon mascot illustration design","cute chaotic sticker art","digital journal illustration","raccoon coffee break design"],
+        desc: "A small, round raccoon clutches an oversized coffee cup with both paws, eyes wide with caffeinated determination — a single, giftable sticker icon built for a whole planner sticker pack.",
+        prompt: "Create a bold flat-vector illustration of a round, chubby raccoon character holding an oversized coffee cup with both paws, wide-eyed expression, small steam lines rising from the cup. Thick black outlines, bold flat colors (charcoal and gray raccoon, cream coffee cup, orange steam accent), no gradients, no text anywhere in the image. Background: solid flat white (#FFFFFF), no shadow, no outside texture — crisp high-contrast edges so the illustration can be perfectly cut out for digital sticker use. Square 1:1 composition, centered, print-ready quality."
+      }
+    ]
+  }
+];
+
+function copyBtn(getText){
+  const btn = el('button', {class:'copy-btn'}, 'Copy');
+  btn.addEventListener('click', () => {
+    const text = getText();
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      showToast('Skopiowano do schowka');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1400);
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 1400);
+    });
+  });
+  return btn;
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(showToast._tm);
+  showToast._tm = setTimeout(() => t.classList.remove('show'), 1300);
+}
+
+function buildField(name, valueEl, copyText){
+  const top = el('div', {class:'field-top'},
+    el('span', {class:'field-name'}, name),
+    copyBtn(copyText)
+  );
+  return el('div', {class:'field'}, top, valueEl);
+}
+
+function buildIdea(idea, variant){
+  const titleField = buildField('Title', el('div', {class:'field-title'}, idea.title), () => idea.title);
+
+  const tagWrap = el('div', {class:'tag-list'});
+  idea.tags.forEach(t => tagWrap.appendChild(el('span', {class:'tag-chip'}, t)));
+  const tagsField = buildField('15 Tags', tagWrap, () => idea.tags.join(', '));
+
+  const descField = buildField('Description', el('div', {class:'field-desc'}, idea.desc), () => idea.desc);
+
+  const promptField = buildField('Nano Banana 2 Pro Prompt', el('div', {class:'field-prompt'}, idea.prompt), () => idea.prompt);
+
+  const head = el('div', {class:'idea-head'}, el('span', {class:'idea-label'}, idea.label));
+
+  return el('div', {class:'idea-card idea-' + variant}, head, titleField, tagsField, descField, promptField);
+}
+
+function buildNiche(niche, index){
+  const head = el('div', {class:'niche-head'},
+    el('div', {class:'niche-title-block'},
+      el('div', {class:'num'}, 'NISZA ' + (index+1) + ' / 5'),
+      el('h3', {class:'niche-name'}, niche.name)
+    )
+  );
+  const pill = el('div', {class:'signal-pill'}, niche.signal);
+  const rationale = el('p', {class:'rationale', html: niche.rationale});
+
+  const ideasWrap = el('div', {class:'ideas'});
+  ideasWrap.appendChild(buildIdea(niche.ideas[0], 'a'));
+  ideasWrap.appendChild(buildIdea(niche.ideas[1], 'b'));
+
+  return el('div', {class:'niche-block', id: niche.id}, head, pill, rationale, ideasWrap);
+}
+
+const nichesRoot = document.getElementById('niches-root');
+NICHE_DATA.forEach((n, i) => nichesRoot.appendChild(buildNiche(n, i)));
+</script>
+</body>
+</html>
